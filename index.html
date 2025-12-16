@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>万物百宝 - 饥荒模组百科</title>
+    <style>
+        :root {
+            --primary-orange: #d35400;
+            --secondary-amber: #f39c12;
+            --bg-parchment: #fdf5e6;
+            --text-dark: #2c3e50;
+            --card-bg: #fffbf0;
+            --border-color: #e67e22;
+            --placeholder-bg: #fae5d3;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-parchment);
+            color: var(--text-dark);
+            margin: 0; padding: 0;
+            background-image: radial-gradient(#e67e22 0.5px, transparent 0.5px), radial-gradient(#e67e22 0.5px, var(--bg-parchment) 0.5px);
+            background-size: 20px 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-orange), var(--secondary-amber));
+            color: white; padding: 20px 40px;
+            position: sticky; top: 0; z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex; justify-content: space-between; align-items: center;
+        }
+
+        header h1 { margin: 0; font-size: 2.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+
+        .search-box input {
+            padding: 10px 15px; border-radius: 20px; border: 2px solid #fff;
+            width: 300px; font-size: 1rem; outline: none; transition: width 0.3s;
+        }
+
+        .container { display: flex; max-width: 1400px; margin: 20px auto; gap: 20px; }
+
+        .sidebar {
+            width: 200px; background: white; border-right: 4px solid var(--border-color);
+            padding: 20px; height: calc(100vh - 120px); position: sticky; top: 100px;
+            border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow-y: auto; 
+        }
+        .sidebar ul { list-style: none; padding: 0; }
+        .sidebar li { margin-bottom: 10px; }
+        .sidebar a {
+            text-decoration: none; color: var(--text-dark); font-weight: bold;
+            display: block; padding: 8px 10px; border-radius: 5px; transition: background 0.3s;
+        }
+        .sidebar a:hover { background-color: var(--secondary-amber); color: white; }
+
+        .main-content { flex: 1; padding: 0 20px; }
+        .section-title {
+            border-bottom: 3px solid var(--primary-orange); color: var(--primary-orange);
+            font-size: 2rem; margin-bottom: 20px; padding-bottom: 10px;
+        }
+
+        .grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px; margin-bottom: 40px;
+        }
+
+        .item-card {
+            background: var(--card-bg); border: 2px solid var(--secondary-amber);
+            border-radius: 15px; padding: 20px; transition: transform 0.2s, box-shadow 0.2s;
+            display: flex; flex-direction: column; position: relative;
+        }
+        .item-card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(230, 126, 34, 0.2); }
+
+        .img-placeholder {
+            width: 100%; height: 150px; background-color: var(--placeholder-bg);
+            border: 2px dashed var(--border-color); border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 15px; overflow: hidden;
+        }
+        .img-placeholder img { width: 100%; height: 100%; object-fit: contain; }
+
+        .item-name {
+            font-size: 1.4rem; color: var(--primary-orange);
+            margin: 0 0 10px 0; border-bottom: 1px dashed var(--secondary-amber);
+            padding-bottom: 5px;
+        }
+        .item-code {
+            font-family: monospace; color: #7f8c8d; font-size: 0.8rem;
+            background: #eee; padding: 2px 5px; border-radius: 4px; float: right;
+        }
+
+        .recipe-box {
+            background: rgba(243, 156, 18, 0.1); padding: 10px;
+            border-radius: 8px; margin-bottom: 10px; font-size: 0.9rem;
+        }
+        .recipe-link { color: var(--primary-orange); font-weight: bold; text-decoration: underline; cursor: pointer; }
+
+        .stats-table { width: 100%; font-size: 0.9rem; border-collapse: collapse; }
+        .stats-label { font-weight: bold; color: #8e44ad; width: 70px; }
+
+        .feature-list { margin: 5px 0; padding-left: 20px; font-size: 0.9rem; flex-grow: 1; }
+        .feature-list li { margin-bottom: 4px; }
+
+        .buff-tag { background: #e74c3c; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.8rem; margin-right: 5px; }
+        .collaborative-tag { background: #3498db; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.8rem; margin-right: 5px; }
+
+        .detail-btn {
+            margin-top: 15px; padding: 8px; background: var(--secondary-amber);
+            color: white; border: none; border-radius: 8px; cursor: pointer;
+            font-weight: bold; transition: 0.3s;
+        }
+        .detail-btn:hover { background: var(--primary-orange); }
+
+        .modal {
+            display: none; position: fixed; z-index: 2000;
+            left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.7); backdrop-filter: blur(4px);
+        }
+        .modal-content {
+            background-color: var(--bg-parchment);
+            margin: 5vh auto; padding: 0;
+            border: 4px solid var(--primary-orange);
+            width: 70%; max-width: 900px;
+            border-radius: 20px; position: relative;
+            max-height: 85vh; display: flex; flex-direction: column;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            overflow: hidden; 
+        }
+        #modal-header {
+            padding: 20px 30px; background: var(--primary-orange); color: white;
+            font-size: 1.5rem; font-weight: bold;
+        }
+        #modal-body {
+            padding: 30px; overflow-y: auto; flex: 1;
+            line-height: 1.6; font-size: 1.1rem;
+        }
+        .close-btn {
+            position: absolute; right: 20px; top: 15px;
+            font-size: 2.5rem; color: white; cursor: pointer; z-index: 10;
+        }
+
+        #modal-body::-webkit-scrollbar { width: 10px; }
+        #modal-body::-webkit-scrollbar-track { background: transparent; margin: 10px; }
+        #modal-body::-webkit-scrollbar-thumb {
+            background: rgba(211, 84, 0, 0.15); border-radius: 10px;
+            border: 2px solid var(--bg-parchment);
+        }
+        #modal-body::-webkit-scrollbar-thumb:hover { background: rgba(211, 84, 0, 0.4); }
+
+        footer { text-align: center; padding: 20px; color: #7f8c8d; margin-top: 50px; border-top: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div>
+        <h1>万物百宝</h1>
+        <small>Mod Wiki</small>
+    </div>
+    <div class="search-box">
+        <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="搜索名称、ID或功能...">
+    </div>
+</header>
+
+<div class="container">
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#plants">🌺 奇花异草</a></li>
+            <li><a href="#architecture">🏛️ 核心建筑</a></li>
+            <li><a href="#tools">🔮 魔法工具</a></li>
+            <li><a href="#weapons">⚔️ 战斗武器</a></li>
+            <li><a href="#cuisine">🍲 珍馐料理</a></li>
+            <li><a href="#boss">👹 专属BOSS</a></li>
+            <li><a href="#character">🎭 专属角色</a></li>
+            <li><a href="#terrain">⛰️ 专属地形</a></li>
+            <li><a href="#changelog">📜 更新日志</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section id="plants" class="wiki-section"><h2 class="section-title">奇花异草 (植物)</h2><div class="grid" id="grid-plants"></div></section>
+        <section id="architecture" class="wiki-section"><h2 class="section-title">核心建筑</h2><div class="grid" id="grid-architecture"></div></section>
+        <section id="tools" class="wiki-section"><h2 class="section-title">魔法工具</h2><div class="grid" id="grid-tools"></div></section>
+        <section id="weapons" class="wiki-section"><h2 class="section-title">战斗武器</h2><div class="grid" id="grid-weapons"></div></section>
+        <section id="cuisine" class="wiki-section"><h2 class="section-title">珍馐料理</h2><div class="grid" id="grid-cuisine"></div></section>
+        
+        <section id="boss" class="wiki-section"><h2 class="section-title">专属BOSS</h2><div class="grid" id="boss-grid"></div></section>
+        <section id="character" class="wiki-section"><h2 class="section-title">专属角色</h2><div class="grid" id="character-grid"></div></section>
+        <section id="terrain" class="wiki-section"><h2 class="section-title">专属地形</h2><div class="grid" id="terrain-grid"></div></section>
+        <section id="changelog" class="wiki-section"><h2 class="section-title">更新日志</h2><div id="changelog-content"></div></section>
+    </main>
+</div>
+
+<div id="detailModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div id="modal-header">详细信息</div>
+        <div id="modal-body"></div>
+    </div>
+</div>
+
+<footer><p>© 2025 万物百宝模组百科</p></footer>
+
+<script src="data.js"></script>
+<script src="bossData.js"></script>
+<script src="characterData.js"></script>
+<script src="terrainData.js"></script>
+<script src="logData.js"></script>
+<script src="detailData.js"></script> <script>
+const parseLinks = (text) => {
+    if (typeof text !== 'string') return text;
+    return text.replace(/\[\[(.*?)\]\]/g, (match, itemName) => {
+        return `<span class="recipe-link" onclick="jumpTo('${itemName}')">${itemName}</span>`;
+    });
+};
+
+function openModal(id, name) {
+    const modal = document.getElementById("detailModal");
+    const body = document.getElementById("modal-body");
+    const header = document.getElementById("modal-header");
+    
+    header.innerText = name + " - 详细资料";
+    const content = (typeof detailData !== 'undefined' && detailData[id]) ? 
+                    detailData[id] : `<p>暂无关于 <b>${name}</b> 的详细文字介绍。</p>`;
+    
+    body.innerHTML = content;
+    modal.style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("detailModal").style.display = "none";
+}
+
+function createCard(item) {
+    const card = document.createElement('div');
+    card.className = 'item-card';
+    card.id = `item-${item.name.replace(/\s+/g, '')}`;
+
+    const hasDetail = typeof detailData !== 'undefined' && detailData[item.id || item.version];
+    const btnHtml = hasDetail ? `<button class="detail-btn" onclick="openModal('${item.id || item.version}', '${item.name || item.version}')">📜 查看详细信息</button>` : '';
+
+    let detailsHtml = '';
+    if (item.features && item.features.length) {
+        detailsHtml += '<ul class="feature-list">' + item.features.map(f => `<li>${parseLinks(f)}</li>`).join('') + '</ul>';
+    } else if (item.attributes) {
+        detailsHtml += `<table class="stats-table"><tr><td class="stats-label">属性:</td><td>${item.attributes}</td></tr></table>`;
+    }
+
+    let recipeHtml = (item.recipe || item.tech) ? `
+        <div class="recipe-box">
+            ${item.recipe ? `<strong>配方：</strong>${parseLinks(item.recipe)}<br>` : ''}
+            ${item.tech ? `<strong>科技：</strong>${item.tech}` : ''}
+        </div>` : '';
+
+    let tagsHtml = (item.collaborative_item ? `<span class="collaborative-tag">联动物品</span>` : '') + 
+                   (item.buff ? `<span class="buff-tag">${item.buff}</span>` : '');
+
+    card.innerHTML = `
+        <div class="img-placeholder">
+            <img src="${item.image || `images/${item.id}.png`}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span style="display:none;">📦 ${item.name}</span>
+        </div>
+        <h3 class="item-name">${item.name || item.version} ${tagsHtml}<span class="item-code">${item.id || ''}</span></h3>
+        ${recipeHtml}
+        ${detailsHtml}
+        ${btnHtml}`;
+    return card;
+}
+function renderAll() {
+    if (typeof itemData !== 'undefined') {
+        const categoryMap = {'plants':'grid-plants','architecture':'grid-architecture','tools':'grid-tools','weapons':'grid-weapons','cuisine':'grid-cuisine'};
+        itemData.forEach(item => {
+            const grid = document.getElementById(categoryMap[item.category]);
+            if(grid) grid.appendChild(createCard(item));
+        });
+    }
+
+    const extraModules = [
+        { data: typeof bossData !== 'undefined' ? bossData : [], id: 'boss-grid' },
+        { data: typeof characterData !== 'undefined' ? characterData : [], id: 'character-grid' },
+        { data: typeof terrainData !== 'undefined' ? terrainData : [], id: 'terrain-grid' }
+    ];
+    extraModules.forEach(mod => {
+        const grid = document.getElementById(mod.id);
+        if(grid) mod.data.forEach(item => grid.appendChild(createCard(item)));
+    });
+
+    const logContainer = document.getElementById('changelog-content');
+    if (logContainer && typeof logData !== 'undefined') {
+        logData.forEach(log => {
+            const div = document.createElement('div');
+            div.className = 'item-card';
+            div.style.width = '100%';
+            let btnHtml = log.hasDetail ? `<button class="detail-btn" onclick="openModal('${log.version}', '版本 ${log.version}')">📜 查看完整更新列表</button>` : '';
+            div.innerHTML = `<h3>${log.version} <small>(${log.date})</small></h3>
+                             <ul>${log.updates.map(u => `<li>${parseLinks(u)}</li>`).join('')}</ul>
+                             ${btnHtml}`;
+            logContainer.appendChild(div);
+        });
+    }
+}
+
+function searchFunction() {
+    const filter = document.getElementById("searchInput").value.toUpperCase();
+    const cards = document.getElementsByClassName("item-card");
+    for (let card of cards) card.style.display = card.innerText.toUpperCase().includes(filter) ? "" : "none";
+    document.querySelectorAll(".wiki-section").forEach(sec => {
+        const hasVisible = Array.from(sec.querySelectorAll(".item-card")).some(c => c.style.display !== "none");
+        sec.style.display = hasVisible ? "" : "none";
+    });
+}
+
+function jumpTo(itemName) {
+    const targetId = `item-${itemName.replace(/\s+/g, '')}`;
+    const element = document.getElementById(targetId);
+    if (element) {
+        element.scrollIntoView({behavior: "smooth", block: "center"});
+        element.style.borderColor = "red";
+        setTimeout(() => element.style.borderColor = "", 1500);
+    } else {
+        alert(`【${itemName}】未找到对应词条。`);
+    }
+}
+
+window.onclick = (event) => {
+    if (event.target == document.getElementById("detailModal")) closeModal();
+};
+
+window.onload = renderAll;
+</script>
+</body>
+</html>
