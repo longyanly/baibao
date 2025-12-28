@@ -9,7 +9,7 @@
 const bossData = [
     {
         id: 'test_boss',
-        name: '测试boss',
+        name: '测试预留格式boss',
         image: 'images/test_boss.png',
         features: [
             '血量：10000',
