@@ -171,9 +171,12 @@
             <li><a href="#tools">🔮 魔法工具</a></li>
             <li><a href="#weapons">⚔️ 战斗武器</a></li>
             <li><a href="#cuisine">🍲 珍馐料理</a></li>
+            <li><a href="#materials">📦 材料篇</a></li>
+            <li><a href="#container">📋 容器篇</a></li>
             <li><a href="#boss">👹 专属BOSS</a></li>
             <li><a href="#character">🎭 专属角色</a></li>
             <li><a href="#terrain">⛰️ 专属地形</a></li>
+            <li><a href="#modconfig">⚙️ Mod配置介绍</a></li>
             <li><a href="#changelog">📜 更新日志</a></li>
         </ul>
     </nav>
@@ -184,10 +187,13 @@
         <section id="tools" class="wiki-section"><h2 class="section-title">魔法工具</h2><div class="grid" id="grid-tools"></div></section>
         <section id="weapons" class="wiki-section"><h2 class="section-title">战斗武器</h2><div class="grid" id="grid-weapons"></div></section>
         <section id="cuisine" class="wiki-section"><h2 class="section-title">珍馐料理</h2><div class="grid" id="grid-cuisine"></div></section>
+        <section id="materials" class="wiki-section"><h2 class="section-title">材料篇</h2><div class="grid" id="grid-materials"></div></section>
+        <section id="container" class="wiki-section"><h2 class="section-title">容器篇</h2><div class="grid" id="grid-container"></div></section>
         
         <section id="boss" class="wiki-section"><h2 class="section-title">专属BOSS</h2><div class="grid" id="boss-grid"></div></section>
         <section id="character" class="wiki-section"><h2 class="section-title">专属角色</h2><div class="grid" id="character-grid"></div></section>
         <section id="terrain" class="wiki-section"><h2 class="section-title">专属地形</h2><div class="grid" id="terrain-grid"></div></section>
+        <section id="modconfig" class="wiki-section"><h2 class="section-title">Mod设置</h2><div id="modconfig-content"></div></section>
         <section id="changelog" class="wiki-section"><h2 class="section-title">更新日志</h2><div id="changelog-content"></div></section>
     </main>
 </div>
@@ -207,6 +213,7 @@
 <script src="characterData.js"></script>
 <script src="terrainData.js"></script>
 <script src="logData.js"></script>
+<script src="modConfigData.js"></script>
 <script src="detailData.js"></script> <script>
 const parseLinks = (text) => {
     if (typeof text !== 'string') return text;
@@ -241,10 +248,11 @@ function createCard(item) {
     const btnHtml = hasDetail ? `<button class="detail-btn" onclick="openModal('${item.id || item.version}', '${item.name || item.version}')">📜 查看详细信息</button>` : '';
 
     let detailsHtml = '';
+    if (item.attributes) {
+        detailsHtml += `<table class="stats-table"><tr><td class="stats-label">属性:</td><td>${item.attributes}</td></tr></table>`;
+    }
     if (item.features && item.features.length) {
         detailsHtml += '<ul class="feature-list">' + item.features.map(f => `<li>${parseLinks(f)}</li>`).join('') + '</ul>';
-    } else if (item.attributes) {
-        detailsHtml += `<table class="stats-table"><tr><td class="stats-label">属性:</td><td>${item.attributes}</td></tr></table>`;
     }
 
     let recipeHtml = (item.recipe || item.tech) ? `
@@ -269,7 +277,7 @@ function createCard(item) {
 }
 function renderAll() {
     if (typeof itemData !== 'undefined') {
-        const categoryMap = {'plants':'grid-plants','architecture':'grid-architecture','tools':'grid-tools','weapons':'grid-weapons','cuisine':'grid-cuisine'};
+        const categoryMap = {'plants':'grid-plants','architecture':'grid-architecture','tools':'grid-tools','weapons':'grid-weapons','cuisine':'grid-cuisine','materials':'grid-materials','container':'grid-container'};
         itemData.forEach(item => {
             const grid = document.getElementById(categoryMap[item.category]);
             if(grid) grid.appendChild(createCard(item));
@@ -285,6 +293,56 @@ function renderAll() {
         const grid = document.getElementById(mod.id);
         if(grid) mod.data.forEach(item => grid.appendChild(createCard(item)));
     });
+
+    const modConfigContainer = document.getElementById('modconfig-content');
+    if (modConfigContainer && typeof modConfigData !== 'undefined') {
+        // 添加图片展示
+        const imageDiv = document.createElement('div');
+        imageDiv.style.textAlign = 'center';
+        imageDiv.style.marginBottom = '30px';
+        imageDiv.innerHTML = `
+            <div style="text-align:center; margin: 15px 0;">
+                <img src="img/mod1.png" alt="Mod配置1" style="max-width:100%; border: 2px solid #d35400; border-radius: 8px; margin-bottom: 10px;">
+            </div>
+            <div style="text-align:center; margin: 15px 0;">
+                <img src="img/mod2.png" alt="Mod配置2" style="max-width:100%; border: 2px solid #d35400; border-radius: 8px; margin-bottom: 10px;">
+            </div>
+        `;
+        modConfigContainer.appendChild(imageDiv);
+        
+        const categories = {};
+        modConfigData.forEach(config => {
+            if (!categories[config.category]) {
+                categories[config.category] = [];
+            }
+            categories[config.category].push(config);
+        });
+        
+        Object.keys(categories).forEach(category => {
+            const categoryDiv = document.createElement('div');
+            categoryDiv.style.marginBottom = '30px';
+            categoryDiv.innerHTML = `<h3 style="color: var(--primary-orange); border-bottom: 2px solid var(--secondary-amber); padding-bottom: 5px; margin-bottom: 15px;">${category}</h3>`;
+            
+            categories[category].forEach(config => {
+                const div = document.createElement('div');
+                div.className = 'item-card';
+                div.style.width = '100%';
+                div.style.marginBottom = '15px';
+                div.innerHTML = `
+                    <h3 class="item-name">${config.name} <span class="item-code">${config.id}</span></h3>
+                    <div class="recipe-box">
+                        <strong>配置名称：</strong>${config.id}<br>
+                        <strong>作用：</strong>${config.description}<br>
+                        <strong>选项：</strong>${config.options}<br>
+                        <strong>默认值：</strong>${config.defaultValue}
+                    </div>
+                `;
+                categoryDiv.appendChild(div);
+            });
+            
+            modConfigContainer.appendChild(categoryDiv);
+        });
+    }
 
     const logContainer = document.getElementById('changelog-content');
     if (logContainer && typeof logData !== 'undefined') {
