@@ -688,7 +688,7 @@ const itemData = [
         name: '星空宝石',
         image:'img/zhe_xkbaoshi.png',
         category: 'materials',
-        recipe: '在月食雕像珍品通过Boss试炼后掉落',
+        recipe: '在太阳雕像珍品通过Boss试炼后掉落',
         tech: '无',
         features: [
             '可在地下档案馆解密为[[解密后的星空]]',
@@ -743,4 +743,5 @@ const itemData = [
         hasDetail: true
     },
 ];
+
 
