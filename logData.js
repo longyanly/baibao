@@ -6,6 +6,13 @@
  */
 const logData = [
     {
+        version: 'V1.2.28',
+        date: '2025-01-31',
+        updates: [
+            '【修复】属于太阳雕像科技的物品在其他分类栏处于解锁状态的问题'
+        ]
+    },
+    {
         version: 'V1.2.27',
         date: '2025-12-30',
         updates: [
