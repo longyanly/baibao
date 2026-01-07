@@ -6,7 +6,7 @@
  */
 const logData = [
     {
-        version: 'V1.2.30',
+        version: 'V1.3.0',
         date: '2026-01-08',
         updates: [
             '【修复】修复星翼宣告问题',
@@ -70,3 +70,4 @@ const logData = [
         ]
     }
 ];
+
