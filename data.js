@@ -500,7 +500,7 @@ const itemData = [
         name: '猫屎咖啡',
         image:'img/zhei_kopi_luwak.png',
         category: 'cuisine',
-        recipe: '浆果或多汁浆果 × 1 + 甜味剂 × 2 + 冰冻物品 × 1',
+        recipe: '浆果或多汁浆果或烤熟的浆果 × 1 + 甜味剂 × 2 + 冰冻物品 × 1',
         buff: '移动速度buff',
         attributes: '生命值：+5 / 饥饿值：+5 / 理智值：+50',
         features: ['食物类型：好东西', '保鲜时间：15天（PERISH_SLOW）', '烹饪时间：1分钟', '移动速度buff', '持续时间：4分钟', '效果：移动速度提升80%（1.8倍）', '用途：制作[[千机伞]]的材料（需要1个）']
@@ -743,5 +743,6 @@ const itemData = [
         hasDetail: true
     },
 ];
+
 
 
