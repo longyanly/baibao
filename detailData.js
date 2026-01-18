@@ -907,7 +907,7 @@ const detailData = {
     "zhei_moon_statue": `
         <p><b>月食雕像仿品</b>是散发紫色光芒的雕像仿品，可兑换月食遗物和献祭料理。</p>
         
-        <p><b>图片展示：</b></p>
+        <p><b>图片展示：</b><span style="color:red;">（感谢群友"呵"提供的原版料理配方列表）</span></p>
         <div style="text-align:center; margin: 15px 0;">
             <img src="img/liaoli.png" alt="月食雕像仿品" style="max-width:100%; border: 2px solid #d35400; border-radius: 8px;">
             <img src="img/yuanbanliaoli.png" alt="原版料理" style="max-width:100%; border: 2px solid #d35400; border-radius: 8px; margin-top: 15px;">
@@ -1480,6 +1480,7 @@ const detailData = {
         <p>百宝背包是一个功能背包，结合了坎普斯背包的容量、盐盒的保鲜、雨衣的防水和防雷电，并支持升级为无限堆叠。制作需要太阳雕像科技，每次制作都必须在太阳雕像科技站附近。</p>
     `
 };
+
 
 
 
