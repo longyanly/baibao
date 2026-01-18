@@ -910,6 +910,7 @@ const detailData = {
         <p><b>图片展示：</b></p>
         <div style="text-align:center; margin: 15px 0;">
             <img src="img/liaoli.png" alt="月食雕像仿品" style="max-width:100%; border: 2px solid #d35400; border-radius: 8px;">
+            <img src="img/yuanbanliaoli.png" alt="原版料理" style="max-width:100%; border: 2px solid #d35400; border-radius: 8px; margin-top: 15px;">
         </div>
         
         <p><b>制作配方：</b>月食遗物 × 1 + 大理石 × 5 + 荧光果 × 8 + 月岩 × 3</p>
@@ -949,6 +950,27 @@ const detailData = {
                     <li>3个大理石</li>
                     <li>4个荧光果</li>
                     <li>2个月岩</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <p><b>特殊效果：</b>光照：紫色微光（半径 <b>2.0格</b>）</p>
+    `,
+    "zhei_moon_statue1": `
+        <p><b>月食雕像珍品</b>是散发紫色光芒的古老雕像，上面的符号似乎在诉说着什么。</p>
+        
+        <p><b>生成位置：</b>地下世界，周围有16个蓝蘑菇</p>
+        
+        <p><b>兑换功能：</b></p>
+        <ul>
+            <li><b>物品1：</b>接受物品：月食遗物（zhei_eclipserelics）</li>
+            <li>给予物品：月食雕像仿品蓝图（zhei_moon_statue_blueprint）</li>
+            <li><b>物品2：</b>接受物品：莎草纸（papyrus）</li>
+            <li>给予物品：随机Boss草图</li>
+            <li>草图概率：
+                <ul>
+                    <li>低概率组（<b>5%</b>）：月后三个Boss、天体英雄、远古守护者</li>
+                    <li>高概率组（<b>95%</b>）：其他所有Boss</li>
                 </ul>
             </li>
         </ul>
@@ -1458,6 +1480,7 @@ const detailData = {
         <p>百宝背包是一个功能背包，结合了坎普斯背包的容量、盐盒的保鲜、雨衣的防水和防雷电，并支持升级为无限堆叠。制作需要太阳雕像科技，每次制作都必须在太阳雕像科技站附近。</p>
     `
 };
+
 
 
 
