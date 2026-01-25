@@ -719,7 +719,7 @@ const detailData = {
         
         <p><b>获取方式：</b></p>
         <ul>
-            <li>来源：在太阳雕像珍品（zhei_sunsculpture1）通过Boss试炼后掉落</li>
+            <li>来源：在月食雕像珍品（zhei_sunsculpture1）通过Boss试炼后掉落</li>
             <li>可交易：与猪王交易，<b>1个兑换50个金块</b></li>
         </ul>
         
@@ -784,6 +784,11 @@ const detailData = {
         <ul>
             <li>目标武器：紫水晶剑（zhei_zishuijingjian）和紫水晶刀（zhei_zishuijingdao）</li>
             <li>效果：武器变为<span style="color:green;">无限耐久</span></li>
+        </ul>
+        
+        <p><b>联动功能：</b></p>
+        <ul>
+            <li><b>丰耘秘境联动：</b>可以对丰耘秘境的自然亲和子塔和辉煌多用工具使用，使其变成无限耐久</li>
         </ul>
         
         <p><b>使用方式：</b></p>
@@ -977,27 +982,6 @@ const detailData = {
         
         <p><b>特殊效果：</b>光照：紫色微光（半径 <b>2.0格</b>）</p>
     `,
-    "zhei_moon_statue1": `
-        <p><b>月食雕像珍品</b>是散发紫色光芒的古老雕像，上面的符号似乎在诉说着什么。</p>
-        
-        <p><b>生成位置：</b>地下世界，周围有16个蓝蘑菇</p>
-        
-        <p><b>兑换功能：</b></p>
-        <ul>
-            <li><b>物品1：</b>接受物品：月食遗物（zhei_eclipserelics）</li>
-            <li>给予物品：月食雕像仿品蓝图（zhei_moon_statue_blueprint）</li>
-            <li><b>物品2：</b>接受物品：莎草纸（papyrus）</li>
-            <li>给予物品：随机Boss草图</li>
-            <li>草图概率：
-                <ul>
-                    <li>低概率组（<b>5%</b>）：月后三个Boss、天体英雄、远古守护者</li>
-                    <li>高概率组（<b>95%</b>）：其他所有Boss</li>
-                </ul>
-            </li>
-        </ul>
-        
-        <p><b>特殊效果：</b>光照：紫色微光（半径 <b>2.0格</b>）</p>
-    `,
     "zhei_sunsculpture": `
         <p><b>太阳雕像仿品</b>是散发温暖光芒的雕像仿品，可作为科技站使用。</p>
         
@@ -1043,7 +1027,7 @@ const detailData = {
             <img src="img/boss.png" alt="太阳雕像珍品" style="max-width:100%; border: 2px solid #d35400; border-radius: 8px;">
         </div>
         
-        <p><b>生成位置：</b>地上世界与住大陆相连，周围有步行手杖、猪皮头盔和木甲</p>
+        <p><b>生成位置：</b>主世界的独立岛屿，周围有步行手杖、猪皮头盔和木甲</p>
         
         <p><b>Boss试炼功能：</b></p>
         <ul>
@@ -1437,7 +1421,7 @@ const detailData = {
         
         <p><b>容器功能：</b></p>
         <ul>
-            <li><b>格子数量：</b>2×7（<b>14格</b>，与坎普斯背包相同）</li>
+            <li><b>格子数量：</b>2×14（<b>28格</b>，与坎普斯背包相同）</li>
             <li><b>保鲜功能：</b>
                 <ul>
                     <li>保鲜倍数：与盐盒相同</li>
@@ -1480,9 +1464,3 @@ const detailData = {
         <p>百宝背包是一个功能背包，结合了坎普斯背包的容量、盐盒的保鲜、雨衣的防水和防雷电，并支持升级为无限堆叠。制作需要太阳雕像科技，每次制作都必须在太阳雕像科技站附近。</p>
     `
 };
-
-
-
-
-
-
