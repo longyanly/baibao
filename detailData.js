@@ -1056,7 +1056,7 @@ const detailData = {
         
         <p><b>奖励系统：</b></p>
         <ul>
-            <li>奖励Boss列表：<b>14种Boss</b>（不包括月后Boss、天体英雄、远古守护者）</li>
+            <li>奖励Boss列表：<b>14种Boss</b>（不包括月后Boss、天体英雄）</li>
             <li>奖励条件：击杀所有奖励Boss后（14个哦别傻傻的以为是18个），掉落 <b>1个星空宝石</b>（zhe_xkbaoshi）</li>
             <li>冷却机制：击杀所有18种Boss后，开始冷却（默认 <b>8天</b>，可配置）</li>
             <li>冷却期间：不能召唤新的Boss</li>
