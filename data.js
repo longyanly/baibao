@@ -63,6 +63,8 @@ const itemData = [
             '保鲜功能：冰块完全停止腐烂，其他物品0.1倍腐烂率',
             '回鲜功能：下雨/下雪时自动恢复食物新鲜度',
             '无限堆叠功能（支持两种模式）',
+            '快捷按钮：整理（一键排序）、合并（收集半径3格内其他白熊冰箱食材）',
+            '微弱发光',
             '可存特殊物品（噩梦燃料、骨头、树枝等）'
         ],
         hasDetail: true
@@ -259,7 +261,7 @@ const itemData = [
         recipe: '蓝色月眼 × 1 + [[太阳火种]] × 2 + [[月食遗物]] × 3 + 70点血量',
         tech: '太阳雕像科技',
         features: [
-            '容器：2×7 格子（14格，与坎普斯背包相同）',
+            '容器：2×14 格子（28格，与坎普斯背包相同）',
             '保鲜功能：保鲜倍数与盐盒相同',
             '防水功能：防水值与雨衣相同',
             '防雷电功能：与雨衣相同',
@@ -410,12 +412,84 @@ const itemData = [
         tech: '太阳雕像科技',
         features: [
             '基础伤害：75，攻击范围：3，移动速度加成：5%，无耐久',
+            '高贵的真伤：攻击附带真实伤害，无视护甲与抗性',
             '随机伤害倍率：0.75倍(10%) / 1.0倍(70%) / 1.5倍(15%) / 5.0倍(5%)',
             '保底机制：连续29次未出5倍时，第30次必定5倍',
             '吸血效果：20%（按实际伤害计算）',
             '跳劈能力：跳劈距离15，跳劈过程中不会触发陷阱',
             '位面伤害：10点（对位面生物额外伤害）',
             '防雨功能：100%（完全防雨）'
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'zhei_qianjisan_chaos',
+        name: '千机伞混沌',
+        image:'img/zhei_qianjisan.png',
+        category: 'weapons',
+        recipe: '[[千机伞]] × 1 + [[混沌水晶]] × 1（对千机伞使用混沌水晶变异）',
+        tech: '无',
+        features: [
+            '由[[千机伞]]使用[[混沌水晶]]变异获得',
+            '高贵的真伤 + 百分比伤害：Boss血量越高伤害越高',
+            '攻击时有30%概率触发铥矿护盾',
+            '保留千机伞的跳劈、防雨等能力'
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'book_moon_chaos',
+        name: '月之魔典混沌',
+        image:'img/book_moon.png',
+        category: 'tools',
+        recipe: '月之魔典 × 1 + [[混沌水晶]] × 1（对月之魔典使用混沌水晶变异）',
+        tech: '无',
+        features: [
+            '由月之魔典使用[[混沌水晶]]变异获得',
+            '读书效果：将月相变为<b>月黑</b>'
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'book_horticulture_chaos',
+        name: '园艺学简编混沌',
+        image:'img/book_horticulture.png',
+        category: 'tools',
+        recipe: '园艺学简编 × 1 + [[混沌水晶]] × 1（对园艺学简编使用混沌水晶变异）',
+        tech: '无',
+        features: [
+            '由园艺学简编使用[[混沌水晶]]变异获得',
+            '催生不影响巨大化，无数量限制',
+            '可催熟起源模组的琉璃树结果'
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'bomb_lunarplant_chaos',
+        name: '亮茄炸弹混沌',
+        image:'img/bomb_lunarplant.png',
+        category: 'weapons',
+        recipe: '亮茄炸弹 × 1 + [[混沌水晶]] × 1（对亮茄炸弹使用混沌水晶变异）',
+        tech: '无',
+        features: [
+            '由亮茄炸弹使用[[混沌水晶]]变异获得',
+            '可无限投掷，不消耗物品',
+            '落地爆炸后在敌人之间弹射，每次弹射都会爆炸',
+            '投掷冷却、弹射次数与伤害可在模组配置中调整'
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'zhei_yushan_chaos',
+        name: '羽扇混沌',
+        image:'img/zhei_yushan.png',
+        category: 'tools',
+        recipe: '[[羽扇]] × 1 + [[混沌水晶]] × 1（对羽扇使用混沌水晶变异）',
+        tech: '无',
+        features: [
+            '由[[羽扇]]使用[[混沌水晶]]变异获得',
+            '一次可划出<b>两道</b>旋风（第二道飞向与目标同距离的最近单位）',
+            '后续模组配置可调节旋风数量'
         ],
         hasDetail: true
     },
@@ -500,7 +574,7 @@ const itemData = [
         name: '猫屎咖啡',
         image:'img/zhei_kopi_luwak.png',
         category: 'cuisine',
-        recipe: '浆果或多汁浆果或烤熟的浆果 × 1 + 甜味剂 × 2 + 冰冻物品 × 1',
+        recipe: '浆果或多汁浆果 × 1 + 甜味剂 × 2 + 冰冻物品 × 1',
         buff: '移动速度buff',
         attributes: '生命值：+5 / 饥饿值：+5 / 理智值：+50',
         features: ['食物类型：好东西', '保鲜时间：15天（PERISH_SLOW）', '烹饪时间：1分钟', '移动速度buff', '持续时间：4分钟', '效果：移动速度提升80%（1.8倍）', '用途：制作[[千机伞]]的材料（需要1个）']
@@ -688,7 +762,7 @@ const itemData = [
         name: '星空宝石',
         image:'img/zhe_xkbaoshi.png',
         category: 'materials',
-        recipe: '在太阳雕像珍品通过Boss试炼后掉落',
+        recipe: '在月食雕像珍品通过Boss试炼后掉落',
         tech: '无',
         features: [
             '可在地下档案馆解密为[[解密后的星空]]',
@@ -743,6 +817,3 @@ const itemData = [
         hasDetail: true
     },
 ];
-
-
-
