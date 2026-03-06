@@ -671,6 +671,7 @@ const itemData = [
         category: 'cuisine',
         recipe: '蔬菜 × 3 + 水果 × 0.5',
         attributes: '生命值：+60 / 饥饿值：+90 / 理智值：+20',
+        buff: '植物人狂欢',
         features: ['食物类型：蔬菜', '保鲜时间：15天（PERISH_SLOW）', '烹饪时间：1分钟', '是带有竹子香味的粽子，做的好精致（Dim的最爱）', '植物人吃了可以在buff期间吃回血料理恢复血量']
     },
     {
@@ -817,4 +818,5 @@ const itemData = [
         hasDetail: true
     },
 ];
+
 
