@@ -878,27 +878,36 @@ const detailData = {
         </ul>
     `,
     "zhei_chaoscrystal": `
-        <p><b>混沌水晶</b>是蕴含混沌力量的水晶，可将紫水晶武器转化为无限耐久状态。</p>
+        <p><b>混沌水晶</b>是蕴含混沌力量的水晶，可对多种物品使用：对紫水晶武器、丰耘秘境工具为<b>移除耐久</b>（变为无限耐久），对月之魔典、千机伞、园艺学简编、亮茄炸弹、羽扇为<b>变异</b>为对应混沌版本。</p>
         
         <p><b>获取方式：</b></p>
         <ul>
             <li>来源：月食雕像仿品（zhei_moon_statue）完成献祭后获得</li>
         </ul>
         
-        <p><b>武器强化功能：</b></p>
+        <p><b>可作用物品：</b></p>
         <ul>
-            <li>目标武器：紫水晶剑（zhei_zishuijingjian）和紫水晶刀（zhei_zishuijingdao）</li>
-            <li>效果：武器变为<span style="color:green;">无限耐久</span></li>
-        </ul>
-        
-        <p><b>联动功能：</b></p>
-        <ul>
-            <li><b>丰耘秘境联动：</b>可以对丰耘秘境的自然亲和子塔和辉煌多用工具使用，使其变成无限耐久</li>
+            <li><b>移除耐久（无限耐久）：</b>
+                <ul>
+                    <li>[[紫水晶剑]]（zhei_zishuijingjian）</li>
+                    <li>[[紫水晶刀]]（zhei_zishuijingdao）</li>
+                    <li>丰耘秘境：自然亲和子塔（honor_stower）、辉煌多用工具（honor_multitool）</li>
+                </ul>
+            </li>
+            <li><b>变异为混沌版本：</b>
+                <ul>
+                    <li>月之魔典（book_moon）→ 月之魔典混沌</li>
+                    <li>[[千机伞]]（zhei_qianjisan）→ [[千机伞混沌]]</li>
+                    <li>园艺学简编（book_horticulture）→ 园艺学简编混沌</li>
+                    <li>亮茄炸弹（bomb_lunarplant）→ 亮茄炸弹混沌</li>
+                    <li>[[羽扇]]（zhei_yushan）→ 羽扇混沌</li>
+                </ul>
+            </li>
         </ul>
         
         <p><b>使用方式：</b></p>
         <ul>
-            <li>使用方法：鼠标拿起混沌水晶，对物品栏中的紫水晶武器使用</li>
+            <li>手持混沌水晶，对物品栏中上述任意目标物品右键使用（移除耐久或变异）</li>
         </ul>
         
         <p><b>消耗：</b></p>
@@ -908,8 +917,8 @@ const detailData = {
         
         <p><b>特殊机制：</b></p>
         <ul>
-            <li>一次性使用：每个武器只能使用一次混沌水晶</li>
-            <li>永久效果：强化后的武器永久保持无限耐久状态</li>
+            <li>每种目标物品只能使用一次混沌水晶</li>
+            <li>移除耐久或变异后为永久效果</li>
         </ul>
     `,
     "zhei_eclipserelics": `
