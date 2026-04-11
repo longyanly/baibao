@@ -12,6 +12,7 @@ category 允许的值 (必须为以下之一):
 'tools',工具
 'weapons',武器
 'cuisine',料理
+'elixirs',灵药篇
 'materials',材料
 'container',容器
 
@@ -99,6 +100,20 @@ const itemData = [
         hasDetail: true
     },
     {
+        id: 'zhei_yots_lantern_post_item',
+        name: '荷花灯柱套装',
+        image:'img/zhei_yots_lantern_post_item.png',
+        category: 'architecture',
+        recipe: '花瓣 × 2 + 莎草纸 × 4 + 绳子 × 1 + 荧光果（灯泡果）× 1',
+        tech: '炼金引擎（二本）；需在炼金引擎旁解锁原型；制作分类为百宝（TC_BAIBAO）',
+        features: [
+            '部署：物品栏中右键部署为地面实体「荷花灯柱」',
+            '点亮：单格槽放入光源（如荧光果、孢子等带 lightbattery / spore / lightcontainer）即可点亮',
+            '星星碎片：槽内放入模组星星碎片时，灯光为偏紫星辉色，照明范围更大，并带与人造日光类似的逻辑，利于夜间农田/作物在夜晚生长'
+        ],
+        hasDetail: true
+    },
+    {
         id: 'zhei_displaytable',
         name: '展示柜',
         image:'img/zhei_displaytable.png',
@@ -155,6 +170,21 @@ const itemData = [
             '快速烹饪支持：支持[[封印法杖2]]的快速烹饪功能',
             '容器系统：4个格子（垂直排列，1×4布局）',
             '兼容智能锅mod'
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'zhei_qiding',
+        name: '百宝鼎',
+        image:'img/zhei_qiding.png',
+        category: 'architecture',
+        recipe: '龙蝇鳞片 × 1 + [[太阳火种]] × 1 + 石砖 × 5 + 红宝石 × 1',
+        tech: '需在[[太阳雕像仿品]]旁作为制作站解锁/制作；百宝制作栏',
+        features: [
+            '鼎内容器按配方放材料，关盖后「炼制」→ 结束「取出」；悬停鼎身可看炼制状态',
+            '部分配方须恰好匹配种类与数量（与别的配方区分）',
+            '可炼：昊天锤、星尘盾、星星粉尘、星星灯笼、四种精华、四种灵药',
+            '昊天锤/星尘盾等长耗时可在模组配置改天数（默认3天）'
         ],
         hasDetail: true
     },
@@ -400,6 +430,20 @@ const itemData = [
         ],
         hasDetail: true
     },
+    {
+        id: 'zhei_lantern_2',
+        name: '星星灯笼',
+        image: 'img/zhei_lantern_2.png',
+        category: 'tools',
+        recipe: '[[百宝鼎]]炼制1天：[[星星碎片]] ×1 + 荧光果 ×10 + 木头 ×5 + 莎草纸 ×5（鼎内须恰好匹配）',
+        tech: '百宝鼎',
+        features: [
+            '手部装备；移速与原版<b>步行手杖</b>相同',
+            '燃料：与原版提灯同类（荧光果等洞穴燃料）；也可用[[星星碎片]]作燃料且加的耐久更多',
+            '初始耐久约比红灯笼多约 18%；雨天会加速消耗（遮蔽/雨免等按原版逻辑减轻）',
+        ],
+        hasDetail: true
+    },
 
     // ====================================================================
     // 武器 (Weapons)
@@ -524,6 +568,86 @@ const itemData = [
             '对月亮阵营生物伤害加成',
             '多种充能方式：避雷针/月熠/电气石/带电晶石',
             '可用[[混沌水晶]]强化为无限耐久'
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'zhei_potato_helmet',
+        name: '土豆头',
+        image: 'img/zhei_potato_helmet.png',
+        category: 'weapons',
+        recipe: '土豆 ×3 + 花瓣 ×2',
+        tech: '炼金引擎（二本）',
+        features: [
+            '头部护甲：耐久 630；<b>80%</b> 防御值',
+            '与 [[土豆甲]] 组成土豆套装（耐饿）：同时装备时饥饿消耗显著变慢',
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'zhei_potato_armor',
+        name: '土豆甲',
+        image: 'img/zhei_potato_armor.png',
+        category: 'weapons',
+        recipe: '土豆 ×3 + 花瓣 ×2 + 绳子 ×1',
+        tech: '炼金引擎（二本）',
+        features: [
+            '身体护甲：耐久 430；防御与<b>木甲</b>同档',
+            '与 [[土豆头]] 组成土豆套装（耐饿）：同时装备时饥饿消耗显著变慢',
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'zhei_tomato_helmet',
+        name: '番茄头',
+        image: 'img/zhei_tomato_helmet.png',
+        category: 'weapons',
+        recipe: '番茄 ×3 + 花瓣 ×2',
+        tech: '炼金引擎（二本）',
+        features: [
+            '头部护甲：耐久 630；防御值 <b>80%</b>',
+            '与 [[番茄甲]] 组成番茄套装（限伤）：单次非位面伤害最多按 50 结算；位面伤害不受该限；扣血约 50×(1−0.8)，见详细介绍',
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'zhei_tomato_armor',
+        name: '番茄甲',
+        image: 'img/zhei_tomato_armor.png',
+        category: 'weapons',
+        recipe: '番茄 ×3 + 花瓣 ×2 + 绳子 ×1',
+        tech: '炼金引擎（二本）',
+        features: [
+            '身体护甲：耐久 430；防御值与<b>木甲</b>相同',
+            '与 [[番茄头]] 组成番茄套装（限伤）：单次非位面伤害最多按 50 结算；位面伤害不受该限；扣血约 50×(1−0.8)，见详细介绍',
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'zhei_haotian',
+        name: '昊天锤',
+        image: 'img/zhei_haotian.png',
+        category: 'weapons',
+        recipe: '[[百宝鼎]]炼制：未烤熟[[星空灵果]]（zhei_xklg）×2 + 犀角×1 + 铥矿×15 + 锤子×1（仅鼎炼；默认 3 日，可配置）',
+        tech: '百宝鼎',
+        features: [
+            '耐久 <b>225</b>：普攻每命中耗 <b>1</b>，凌天一击每次耗 <b>5</b>；耐久为 0 时伤害与有效跳劈失效',
+            '普攻 <b>70 + 位面 10</b>；凌天一击（AOE 跳劈）<b>200</b>；落地电场约 <b>20%</b> 概率，电场内持续触电（半径约 6，约 6.5 秒）',
+            '修理：仅<b>未烤熟</b>[[星空灵果]]，每颗 <b>+20</b> 耐久（熟果不能修）',
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'zhei_stardust_shield',
+        name: '星尘盾',
+        image: 'img/zhei_stardust_shield.png',
+        category: 'weapons',
+        recipe: '[[百宝鼎]]炼制：[[星星粉尘]]×1 + [[星星碎片]]×5 + 月亮玻璃×10 + 克苏鲁之盾×1（鼎内须恰好匹配；炼制时间与[[昊天锤]]同档，默认约 3 日）',
+        tech: '百宝鼎',
+        features: [
+            '盾反：鼠标右键或通过[[百宝花杖]]设置快捷键；可喂食；机制对齐克苏鲁之盾思路',
+            '启迪碎片环绕：最多 5 片，盾反成功 +1；受击可用 1 片抵消本次伤害并消耗；卸下盾牌后碎片仍留在角色身上并可继续挡伤',
+            '格挡成功可吸血（未满血时按本次格挡相关伤害 8%）；满 5 片且本段举盾结束时触发月晶陨石等（见详细介绍）',
         ],
         hasDetail: true
     },
@@ -756,10 +880,209 @@ const itemData = [
         tech: '无',
         features: ['位置：龙蝇沙漠附近', '掉落：[[烈火杏娇疏花]]× 1, 花瓣× 1, 红宝石(5%)× 1, [[烈火杏娇疏芽穗]](8%)× 1', '产物用于烹饪[[火焰牛排]]']
     },
+    {
+        id: 'zhei_xklg',
+        name: '星空灵果',
+        image: 'img/zhei_xklg.png',
+        category: 'plants',
+        recipe: '农田种植；种子来自[[星空种子包]]拆解',
+        tech: '炼金引擎（二本）：[[星空种子包]]',
+        features: [
+            '适宜季节：秋、春、夏；采收产物「星空果实」生/熟均为烹饪果度 fruit = 1',
+            '田里采摘会触电，需佩戴防电类装备',
+            '[[星空种子包]]：二本用普通种子 ×3 合成，拆包得随机 1～2 个星空种子 + 随机 1～2 个灭霸果种子',
+            '[[百宝鼎]]炼 [[昊天锤]] 需未烤熟星空果实（zhei_xklg）×2；每颗可用于修理 20',
+            '巨大作物：巨大的星空灵果可用棱镜模组的幻想法杖幻化（见详细介绍）',
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'zhei_mbg',
+        name: '灭霸果',
+        image: 'img/zhei_mbg.png',
+        category: 'plants',
+        recipe: '农田种植；种子来自[[星空种子包]]拆解（见详细介绍）',
+        tech: '[[星空种子包]]（二本）',
+        features: [
+            '适宜季节：秋、冬、春；采收产物「灭霸果」生/熟均为烹饪蔬菜度 veggie = 1',
+            '种子来源：与星空灵果相同，[[星空种子包]]拆出随机 1～2 粒灭霸果种子',
+            '巨大作物：巨大的灭霸果可用棱镜模组的幻想法杖幻化（见详细介绍）',
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'zhei_seed_bundle',
+        name: '星空种子包',
+        image: 'img/zhei_seed_bundle.png',
+        category: 'plants',
+        recipe: '普通种子 ×3 → 星空种子包 ×1',
+        tech: '炼金引擎（二本）',
+        features: [
+            '拆包：星空果实种子 <code>zhei_xklg_seeds</code> 随机 <b>1～2</b> 颗；灭霸果种子 <code>zhei_mbg_seeds</code> 随机 <b>1～2</b> 颗（两类独立随机，合计一般 2～4 颗）',
+        ],
+        hasDetail: true
+    },
+
+    // ====================================================================
+    // 灵药篇 (Elixirs)
+    // ====================================================================
+    {
+        id: 'zhei_xiangsiyao',
+        name: '相思断肠灵药',
+        image:'img/zhei_xiangsiyao.png',
+        category: 'elixirs',
+        recipe: '[[百宝鼎]]炼制：相思断肠红精华 ×3',
+        tech: '百宝鼎',
+        buff: '名刀司命',
+        attributes: '食用：自身 +10 生命（见详细介绍）',
+        features: [
+            '由[[百宝鼎]]炼制，每份需对应精华 ×3，炼制约 4 分钟/份；精华为 3 的倍数时可一次多份',
+            'Buff作用（对被救队友）：名刀司命——保命类效果 3 秒内免伤',
+            '团队救援：自吃后尝试拉起身边倒地队友；半径约 45 内复活并拉满生命等，见详细介绍'
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'zhei_liehuoyao',
+        name: '烈火杏娇疏灵药',
+        image:'img/zhei_liehuoyao.png',
+        category: 'elixirs',
+        recipe: '[[百宝鼎]]炼制：烈火杏娇疏精华 ×3',
+        tech: '百宝鼎',
+        buff: '火免抗性',
+        features: [
+            '由[[百宝鼎]]炼制，每份需对应精华 ×3，炼制约 4 分钟/份；精华为 3 的倍数时可一次多份',
+            'Buff作用：持续 2 天——火焰免疫、免疫火焰伤害和过热，大力士肌肉不掉；命中敌人额外 +20 位面真伤'
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'zhei_xuanbinyao',
+        name: '八角玄冰灵药',
+        image:'img/zhei_xuanbinyao.png',
+        category: 'elixirs',
+        recipe: '[[百宝鼎]]炼制：八角玄冰草精华 ×3',
+        tech: '百宝鼎',
+        buff: '极致寒冰',
+        features: [
+            '由[[百宝鼎]]炼制，每份需对应精华 ×3，炼制约 4 分钟/份；精华为 3 的倍数时可一次多份',
+            'Buff作用：持续 1 天——免疫过冷导致的扣血；保持干燥、不潮湿；15% 概率冰冻（同类于八角玄冰棕），解冻或碎冰时再受 30 点物理伤害',
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'zhei_jiguanyao',
+        name: '鸡冠凤凰灵药',
+        image:'img/zhei_jiguanyao.png',
+        category: 'elixirs',
+        recipe: '[[百宝鼎]]炼制：鸡冠凤凰葵精华 ×3',
+        tech: '百宝鼎',
+        buff: '熬夜大师',
+        features: [
+            '由[[百宝鼎]]炼制，每份需对应精华 ×3，炼制约 4 分钟/份；精华为 3 的倍数时可一次多份',
+            'Buff作用：持续 1 天——昏睡值抗性 + 免疫；攻击时召唤与启迪之冠同类月灵，每次攻击扣 1 理智',
+        ],
+        hasDetail: true
+    },
 
     // ====================================================================
     // 材料 (Materials)
     // ====================================================================
+    {
+        id: 'zhei_xiangsijh',
+        name: '相思断肠红精华',
+        image: 'img/zhei_xiangsijh.png',
+        category: 'materials',
+        recipe: '[[百宝鼎]]炼制：[[相思断肠红芽穗]] ×3 + [[相思断肠红花]] ×1',
+        tech: '百宝鼎',
+        features: [
+            '检视：相思之力凝成的一滴精粹，温润却有韧性。',
+            '炼制约 2 分钟；芽穗与花按套数成比例可一次炼多份；同种精华 ×3 可炼 [[相思断肠灵药]]（约 4 分钟）',
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'zhei_xuanbinjh',
+        name: '八角玄冰草精华',
+        image: 'img/zhei_xuanbinjh.png',
+        category: 'materials',
+        recipe: '[[百宝鼎]]炼制：[[八角玄冰芽穗]] ×3 + [[八角玄冰草花]] ×1',
+        tech: '百宝鼎',
+        features: [
+            '检视：寒意被提炼得更纯粹，握久了指尖都发凉。',
+            '炼制约 2 分钟；芽穗与花按套数成比例可一次炼多份；同种精华 ×3 可炼 [[八角玄冰灵药]]（约 4 分钟）',
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'zhei_liehuojh',
+        name: '烈火杏娇疏精华',
+        image: 'img/zhei_liehuojh.png',
+        category: 'materials',
+        recipe: '[[百宝鼎]]炼制：[[烈火杏娇疏芽穗]] ×3 + [[烈火杏娇疏花]] ×1',
+        tech: '百宝鼎',
+        features: [
+            '检视：炽热药性被锁在其中，像一簇收束的火苗。',
+            '炼制约 1 分 30 秒；芽穗与花按套数成比例可一次炼多份；同种精华 ×3 可炼 [[烈火杏娇疏灵药]]（约 4 分钟）',
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'zhei_jiguanjh',
+        name: '鸡冠凤凰葵精华',
+        image: 'img/zhei_jiguanjh.png',
+        category: 'materials',
+        recipe: '[[百宝鼎]]炼制：[[鸡冠凤凰葵芽穗]] ×3 + [[鸡冠凤凰葵花]] ×1',
+        tech: '百宝鼎',
+        features: [
+            '检视：如同凤凰尾焰留下的精华，暖意轻盈却绵长。',
+            '炼制约 1 分 10 秒；芽穗与花按套数成比例可一次炼多份；同种精华 ×3 可炼 [[鸡冠凤凰灵药]]（约 4 分钟）',
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'zhei_xingxingsp',
+        name: '星星碎片',
+        image: 'img/zhei_xingxingsp.png',
+        category: 'materials',
+        recipe: '地表夜晚概率坠落；满月流星雨等（见详细介绍）',
+        tech: '无',
+        features: [
+            '堆叠最大 20；丢地有淡紫光（半径约 1.05）',
+            '地表主世界：每进入夜晚默认 25% 概率掉落（洞穴不触发），全员有份，概率见模组配置',
+            '满月夜流星雨：默认 5%（可配 0%），全服公告与祝福；结束可有星沐祝福（微光/缓愈/星屑拖尾等）',
+            '[[百宝鼎]]炼 [[星星粉尘]]：星星碎片 ×4，<b>1天</b>；4 的倍数可一次多份',
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'zhei_xingxingfc1',
+        name: '星星粉尘',
+        image: 'img/zhei_xingxingfc1.png',
+        category: 'materials',
+        recipe: '[[百宝鼎]]炼制：[[星星碎片]] ×4',
+        tech: '百宝鼎',
+        features: [
+            '来源：[[百宝鼎]]炼制，放入[[星星碎片]] ×4，炼制 1 游戏天；碎片为 4 的倍数时可一次炼多份',
+            '用途：炼制 [[星尘盾]] 的材料之一：星星粉尘 ×1、星星碎片 ×5、月亮玻璃 ×10、克苏鲁之盾 ×1（与 [[昊天锤]] 同档长耗时；鼎内须恰好匹配）',
+            '其它：物品带微光，落地时较亮',
+        ],
+        hasDetail: true
+    },
+    {
+        id: 'zhei_exp_stardust',
+        name: '经验星尘',
+        image: 'img/zhei_exp_stardust.png',
+        category: 'materials',
+        recipe: '星澜（zhei_xinglan）击杀 Boss 概率额外掉落',
+        tech: '星澜',
+        features: [
+            '定位：星澜专用成长道具，仅星澜食用时每颗 +50 经验',
+            '掉落：星澜击 Boss 时按概率额外掉落 1 个（默认 30%）',
+            '其它：可食用、可堆叠（最大 20）；地面有淡天蓝微光',
+        ],
+        hasDetail: true
+    },
     {
         id: 'zhe_xkbaoshi',
         name: '星空宝石',
