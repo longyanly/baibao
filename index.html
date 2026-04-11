@@ -171,6 +171,7 @@
             <li><a href="#tools">🔮 魔法工具</a></li>
             <li><a href="#weapons">⚔️ 战斗武器</a></li>
             <li><a href="#cuisine">🍲 珍馐料理</a></li>
+            <li><a href="#elixirs">🧪 灵药篇</a></li>
             <li><a href="#materials">📦 材料篇</a></li>
             <li><a href="#container">📋 容器篇</a></li>
             <li><a href="#boss">👹 专属BOSS</a></li>
@@ -187,6 +188,7 @@
         <section id="tools" class="wiki-section"><h2 class="section-title">魔法工具</h2><div class="grid" id="grid-tools"></div></section>
         <section id="weapons" class="wiki-section"><h2 class="section-title">战斗武器</h2><div class="grid" id="grid-weapons"></div></section>
         <section id="cuisine" class="wiki-section"><h2 class="section-title">珍馐料理</h2><div class="grid" id="grid-cuisine"></div></section>
+        <section id="elixirs" class="wiki-section"><h2 class="section-title">灵药篇</h2><div class="grid" id="grid-elixirs"></div></section>
         <section id="materials" class="wiki-section"><h2 class="section-title">材料篇</h2><div class="grid" id="grid-materials"></div></section>
         <section id="container" class="wiki-section"><h2 class="section-title">容器篇</h2><div class="grid" id="grid-container"></div></section>
         
@@ -277,7 +279,7 @@ function createCard(item) {
 }
 function renderAll() {
     if (typeof itemData !== 'undefined') {
-        const categoryMap = {'plants':'grid-plants','architecture':'grid-architecture','tools':'grid-tools','weapons':'grid-weapons','cuisine':'grid-cuisine','materials':'grid-materials','container':'grid-container'};
+        const categoryMap = {'plants':'grid-plants','architecture':'grid-architecture','tools':'grid-tools','weapons':'grid-weapons','cuisine':'grid-cuisine','elixirs':'grid-elixirs','materials':'grid-materials','container':'grid-container'};
         itemData.forEach(item => {
             const grid = document.getElementById(categoryMap[item.category]);
             if(grid) grid.appendChild(createCard(item));
