@@ -247,6 +247,89 @@ const detailData = {
         
         <p style="margin-top: 20px; padding: 10px; background-color: #fff3cd; border-left: 4px solid #ffc107; border-radius: 4px;"><b>PS：</b>如遇某个功能未生效，请最先查看控制按钮是处于开启状态吗，那个是总开关。</p>
     `,
+    "zhei_xinglan": `
+        <p><b>星澜</b> — 超详细人物介绍（模组向）</p>
+
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">一、模组与定位</h3>
+        <p><b>模组名：</b>星澜*（万物百宝专属角色，需开启万物百宝模组否则会报错。）</p>
+        <p><b>作者自述：</b>万物百宝专属角色，第一次做人物、更新可能较慢、会持续更新，内容还未做完。</p>
+
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">二、选人界面与叙事设定</h3>
+        <table style="border-collapse:collapse; width:100%; max-width:640px; margin:8px 0;">
+            <tr><td style="border:1px solid #ccc; padding:8px; width:100px;"><b>名称</b></td><td style="border:1px solid #ccc; padding:8px;">星澜</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>标题 / 引用</b></td><td style="border:1px solid #ccc; padding:8px;">在宇宙中旅行的少女 / 具有空间亲和</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>生存评价</b></td><td style="border:1px solid #ccc; padding:8px;">再永恒大陆上面来回穿梭</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>性别</b></td><td style="border:1px solid #ccc; padding:8px;">女性</td></tr>
+        </table>
+
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">三、三维与基础战斗</h3>
+        <p>属性数值（modmain <code>TUNING</code>）：</p>
+        <table style="border-collapse:collapse; width:100%; max-width:640px; margin:8px 0;">
+            <tr><td style="border:1px solid #ccc; padding:8px; width:120px;"><b>生命上限</b></td><td style="border:1px solid #ccc; padding:8px;">200</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>饥饿上限</b></td><td style="border:1px solid #ccc; padding:8px;">200</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>理智上限</b></td><td style="border:1px solid #ccc; padding:8px;">150（基础；会随等级提高，见下文）</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>伤害倍率</b></td><td style="border:1px solid #ccc; padding:8px;">1.0</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>减伤</b></td><td style="border:1px solid #ccc; padding:8px;">伤害吸收随等级提升：每级 +2.5%（0.025 × 等级），0 级为 0%，10 级满级为 25%（与薇格弗德同类机制）</td></tr>
+        </table>
+
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">四、开局物品与「解密后的星空」</h3>
+        <ul>
+            <li><b>默认初始物品：</b><code>zhe_xkbaoshix</code>（[[解密后的星空]]，万物百宝中的强大的时空神奇，由星澜带到永恒大陆来的）</li>
+            <li><b>防刷：</b>换人物并不能多给一个解密后的星空哦！</li>
+        </ul>
+
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">五、喜好料理（万物百宝）</h3>
+        <ul>
+            <li><b>最喜爱：</b>熊猫粽子（与百科条目 [[熊猫棕子]] 对应）</li>
+            <li><b>收益倍率：</b>1.8</li>
+        </ul>
+
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">六、诅咒</h3>
+        <p>不怕猴子诅咒。</p>
+
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">七、科技</h3>
+        <p>与维克巴顿类似，自带一级科学加成。</p>
+
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">八、星河之眼（夜视）</h3>
+        <ul>
+            <li>可以通过技能图标开启和关闭，也可通过快捷键（默认为 <b>H</b>；可通过 [[百宝花杖]] 修改快捷键）</li>
+            <li><b>限制：</b>在沙尘暴无护目镜时不能开（宇宙之眼也怕小小的风沙）；开启时会快速消耗饥饿和理智值。</li>
+        </ul>
+
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">九、影袭连击与分身突进（xl_striker）</h3>
+        <ul>
+            <li><b>触发：</b>攻击满 <b>10</b> 次对当前目标进行影子杀（灵感来源王者的李白）</li>
+            <li><b>伤害：</b>每道影子，伤害默认 <b>100</b>。模组配置：可选 50 / 75 / 100 / 125 / 150 / 200</li>
+            <li><b>分身动画与位移：</b>（模组内表现，以游戏内为准）</li>
+        </ul>
+
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">十、等级与经验系统（核心）</h3>
+        <p><b>经验上限与等级</b></p>
+        <ul>
+            <li><b>最大等级：</b>10</li>
+            <li><b>每级所需经验：</b>简单 <b>300</b> / 困难 <b>750</b>；总经验上限：<code>MAX_LEVEL × 每级经验</code>（即 3000 或 7500）</li>
+        </ul>
+        <p><b>经验来源</b></p>
+        <ul>
+            <li><b>[[经验星尘]]</b>（<code>zhei_exp_stardust</code>）：星澜食用时一个加 <b>50</b> 点</li>
+            <li><b>击杀掉落：</b>击杀 Boss 掉落（配置 0～100%，默认 30%）</li>
+        </ul>
+        <p><b>升级属性（ZheiApplyLevelStats）</b></p>
+        <ul>
+            <li><b>理智上限：</b>每升一级加 <b>35</b></li>
+            <li><b>减伤抗性：</b>每级 +2.5%，满级 10 约 +25%（与薇格弗德同类机制）</li>
+        </ul>
+        <p><b>等级</b></p>
+        <ul>
+            <li><b>0 级：</b>可以读书但是不能制作书籍，科技等级比普通人物自动多一级。</li>
+            <li><b>1 级：</b>解锁快速采集能力，和制作书籍的能力。</li>
+            <li><b>2 级：</b>收获锅中食物的时候会有概率额外获得一个当前料理的一个随机调味的料理。</li>
+            <li><b>3～10 级：</b>还未写完，等待后续的更新。</li>
+        </ul>
+
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">十一、后续内容（规划）</h3>
+        <p>后续星澜角色会推出一些<b>专属道具</b>、<b>武器</b>以及<b>护甲</b>，并补充一批<b>有趣的玩法</b>；具体内容与更新时间以模组更新为准。</p>
+    `,
     "zhei_character_test": `
         <p>该角色背景故事：来自永恒领域的神秘探险家。</p>
     `,
@@ -523,6 +606,142 @@ const detailData = {
             <li>可使用[[混沌水晶]]（zhei_chaoscrystal）强化</li>
             <li>强化后：移除耐久系统，变为<span style="color:green;">无限耐久</span></li>
             <li>强化后：永久保持电击攻击能力</li>
+        </ul>
+    `,
+    "zhei_potato_helmet": `
+        <p><b>土豆头</b>（prefab：<code>zhei_potato_helmet</code>）</p>
+        <table style="border-collapse:collapse; width:100%; max-width:640px; margin:12px 0;">
+            <tr><td style="border:1px solid #ccc; padding:8px; width:72px; vertical-align:top;"><b>制作</b></td><td style="border:1px solid #ccc; padding:8px;">土豆 ×3、花瓣 ×2</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>科技</b></td><td style="border:1px solid #ccc; padding:8px;">炼金引擎（二本）</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>护甲</b></td><td style="border:1px solid #ccc; padding:8px;">耐久 <b>630</b>；<b>80%</b> 防御值；和土豆甲有套装效果。</td></tr>
+        </table>
+        <p><b>套装效果：土豆套装（耐饿）</b></p>
+        <ul>
+            <li><b>同时装备：</b>[[土豆头]] + [[土豆甲]]</li>
+            <li><b>表现：</b>饥饿消耗显著变慢（耐饿）</li>
+        </ul>
+        <p><b>与番茄套对比</b></p>
+        <table style="border-collapse:collapse; width:100%; max-width:640px; margin:8px 0; font-size:0.95em;">
+            <tr style="background:#f5f5f5;"><td style="border:1px solid #ccc; padding:6px;"></td><td style="border:1px solid #ccc; padding:6px;"><b>番茄头/番茄甲</b></td><td style="border:1px solid #ccc; padding:6px;"><b>土豆头/土豆甲</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;"><b>材料</b></td><td style="border:1px solid #ccc; padding:6px;">番茄×3 + 花瓣×2（甲多绳子×1）</td><td style="border:1px solid #ccc; padding:6px;">土豆×3 + 花瓣×2（甲多绳子×1）</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;"><b>套装方向</b></td><td style="border:1px solid #ccc; padding:6px;">限伤</td><td style="border:1px solid #ccc; padding:6px;">耐饿</td></tr>
+        </table>
+    `,
+    "zhei_potato_armor": `
+        <p><b>土豆甲</b>（prefab：<code>zhei_potato_armor</code>）</p>
+        <table style="border-collapse:collapse; width:100%; max-width:640px; margin:12px 0;">
+            <tr><td style="border:1px solid #ccc; padding:8px; width:72px; vertical-align:top;"><b>制作</b></td><td style="border:1px solid #ccc; padding:8px;">土豆 ×3、花瓣 ×2、绳子 ×1</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>科技</b></td><td style="border:1px solid #ccc; padding:8px;">炼金引擎（二本）</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>护甲</b></td><td style="border:1px solid #ccc; padding:8px;">耐久 <b>430</b>；防御值与<b>木甲</b>同档</td></tr>
+        </table>
+        <p><b>套装效果：土豆套装（耐饿）</b></p>
+        <ul>
+            <li><b>同时装备：</b>[[土豆头]] + [[土豆甲]]</li>
+            <li><b>表现：</b>饥饿消耗显著变慢（耐饿）</li>
+        </ul>
+        <p><b>与番茄套对比</b></p>
+        <table style="border-collapse:collapse; width:100%; max-width:640px; margin:8px 0; font-size:0.95em;">
+            <tr style="background:#f5f5f5;"><td style="border:1px solid #ccc; padding:6px;"></td><td style="border:1px solid #ccc; padding:6px;"><b>番茄头/番茄甲</b></td><td style="border:1px solid #ccc; padding:6px;"><b>土豆头/土豆甲</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;"><b>材料</b></td><td style="border:1px solid #ccc; padding:6px;">番茄×3 + 花瓣×2（甲多绳子×1）</td><td style="border:1px solid #ccc; padding:6px;">土豆×3 + 花瓣×2（甲多绳子×1）</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;"><b>套装方向</b></td><td style="border:1px solid #ccc; padding:6px;">限伤</td><td style="border:1px solid #ccc; padding:6px;">耐饿</td></tr>
+        </table>
+    `,
+    "zhei_tomato_helmet": `
+        <p><b>番茄头</b>（prefab：<code>zhei_tomato_helmet</code>）</p>
+        <table style="border-collapse:collapse; width:100%; max-width:480px; margin:12px 0;">
+            <tr style="background:#f5f5f5;"><td style="border:1px solid #ccc; padding:8px; width:100px;"><b>项目</b></td><td style="border:1px solid #ccc; padding:8px;"><b>数值</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;">耐久</td><td style="border:1px solid #ccc; padding:8px;"><b>630</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;">防御值</td><td style="border:1px solid #ccc; padding:8px;"><b>80%</b></td></tr>
+        </table>
+        <p><b>制作：</b>番茄 ×3、花瓣 ×2　<b>科技：</b>炼金引擎（二本）</p>
+        <p><b>套装：</b>与 [[番茄甲]] 组成番茄套装（限伤，<code>zhei_tomato_set_*</code>）。与 [[土豆头]] / [[土豆甲]] 对比见土豆套词条。</p>
+        <p><b>限伤效果说明（番茄套装）</b></p>
+        <ul>
+            <li><b>单次伤害上限：</b>非位面类伤害，单次最多按 <b>50</b> 点参与本套装的限伤结算。</li>
+            <li><b>位面伤害：</b><b>不算</b>进上述「单次 50」的限伤规则（位面伤害仍按游戏原有位面/护甲逻辑单独结算）。</li>
+            <li><b>与 80% 防御叠加：</b>番茄头提供 <b>80%</b> 防御值时，实际受到的生命扣除大致可按 <b>50 × (1 − 0.8) = 10</b> 理解（先限伤再按防御比例结算；示意算法，以模组内为准）。</li>
+        </ul>
+    `,
+    "zhei_tomato_armor": `
+        <p><b>番茄甲</b>（prefab：<code>zhei_tomato_armor</code>）</p>
+        <table style="border-collapse:collapse; width:100%; max-width:480px; margin:12px 0;">
+            <tr style="background:#f5f5f5;"><td style="border:1px solid #ccc; padding:8px; width:100px;"><b>项目</b></td><td style="border:1px solid #ccc; padding:8px;"><b>数值</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;">耐久</td><td style="border:1px solid #ccc; padding:8px;"><b>430</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;">防御值</td><td style="border:1px solid #ccc; padding:8px;">与<b>木甲</b>相同</td></tr>
+        </table>
+        <p><b>制作：</b>番茄 ×3、花瓣 ×2、绳子 ×1　<b>科技：</b>炼金引擎（二本）</p>
+        <p><b>套装：</b>与 [[番茄头]] 组成番茄套装（限伤，<code>zhei_tomato_set_*</code>）。与 [[土豆头]] / [[土豆甲]] 对比见土豆套词条。</p>
+        <p><b>限伤效果说明（番茄套装）</b></p>
+        <ul>
+            <li><b>单次伤害上限：</b>非位面类伤害，单次最多按 <b>50</b> 点参与本套装的限伤结算。</li>
+            <li><b>位面伤害：</b><b>不算</b>进上述「单次 50」的限伤规则（位面伤害仍按游戏原有位面/护甲逻辑单独结算）。</li>
+            <li><b>与 80% 防御叠加：</b>番茄头提供 <b>80%</b> 防御值时，实际受到的生命扣除大致可按 <b>50 × (1 − 0.8) = 10</b> 理解（先限伤再按防御比例结算；示意算法，以模组内为准）。</li>
+        </ul>
+    `,
+    "zhei_haotian": `
+        <p><b>昊天锤 · 一览</b></p>
+        <table style="border-collapse:collapse; width:100%; max-width:720px; margin:10px 0;">
+            <tr><td style="border:1px solid #ccc; padding:8px; width:100px;"><b>显示名</b></td><td style="border:1px solid #ccc; padding:8px;">昊天锤</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>Prefab</b></td><td style="border:1px solid #ccc; padding:8px;"><code>zhei_haotian</code></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>获取</b></td><td style="border:1px solid #ccc; padding:8px;">仅 [[百宝鼎]] 炼制</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>炼制时间</b></td><td style="border:1px solid #ccc; padding:8px;"><b>3</b> 游戏天（模组可配置）；与 [[星尘盾]] 同档</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px; vertical-align:top;"><b>材料</b></td><td style="border:1px solid #ccc; padding:8px; line-height:1.5;">生 / 未烤熟 [[星空灵果]] <code>zhei_xklg</code> ×<b>2</b><br>犀角 <code>minotaurhorn</code> ×<b>1</b><br>铥矿 <code>thulecite</code> ×<b>15</b><br>锤 <code>hammer</code> ×<b>1</b><br>→ <b>1</b> 把</td></tr>
+        </table>
+        <p><b>战斗与耐久</b></p>
+        <table style="border-collapse:collapse; width:100%; max-width:720px; margin:8px 0; font-size:0.95em;">
+            <tr style="background:#f5f5f5;"><td style="border:1px solid #ccc; padding:6px;"><b>项目</b></td><td style="border:1px solid #ccc; padding:6px;"><b>数值 / 说明</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">耐久（次数）</td><td style="border:1px solid #ccc; padding:6px;"><b>225</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">普攻消耗</td><td style="border:1px solid #ccc; padding:6px;">每次命中 <b>1</b> 点</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">凌天一击消耗</td><td style="border:1px solid #ccc; padding:6px;">每次 <b>5</b> 点</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">耐久为 0</td><td style="border:1px solid #ccc; padding:6px;">伤害变为 <b>0</b>，凌天一击伤害为 <b>0</b>，无法再打人及施放<b>有效</b>跳劈</td></tr>
+        </table>
+        <p><b>攻击类型与伤害</b></p>
+        <table style="border-collapse:collapse; width:100%; max-width:720px; margin:8px 0; font-size:0.95em;">
+            <tr style="background:#f5f5f5;"><td style="border:1px solid #ccc; padding:6px; width:160px;"><b>攻击类型</b></td><td style="border:1px solid #ccc; padding:6px;"><b>伤害</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">普攻</td><td style="border:1px solid #ccc; padding:6px;"><b>70</b> + 位面 <b>10</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">凌天一击（AOE 跳劈）</td><td style="border:1px solid #ccc; padding:6px;"><b>200</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">凌天一击 · 落地电场</td><td style="border:1px solid #ccc; padding:6px;">约 <b>20%</b> 概率触发；处于电场中的生物会被<b>持续触电</b>；电场持续约 <b>6.5</b> 秒，半径约 <b>6</b></td></tr>
+        </table>
+        <p><b>修复（星空灵果）</b></p>
+        <table style="border-collapse:collapse; width:100%; max-width:640px; margin:8px 0;">
+            <tr><td style="border:1px solid #ccc; padding:8px; width:88px;"><b>材料</b></td><td style="border:1px solid #ccc; padding:8px;">仅<b>未烤熟</b> [[星空灵果]]（<code>zhei_xklg</code>）；<b>熟果不能修锤</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>效率</b></td><td style="border:1px solid #ccc; padding:8px;">每颗灵果 = <b>20</b> 点耐久</td></tr>
+        </table>
+    `,
+    "zhei_stardust_shield": `
+        <p><b>星尘盾 · 一览</b></p>
+        <table style="border-collapse:collapse; width:100%; max-width:720px; margin:10px 0;">
+            <tr><td style="border:1px solid #ccc; padding:8px; width:100px;"><b>显示名</b></td><td style="border:1px solid #ccc; padding:8px;">星尘盾</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>Prefab</b></td><td style="border:1px solid #ccc; padding:8px;"><code>zhei_stardust_shield</code></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>获取</b></td><td style="border:1px solid #ccc; padding:8px;">[[百宝鼎]]炼制；炼制时间与 [[昊天锤]] 相同，默认 <b>3</b> 日（模组配置可改）。</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px; vertical-align:top;"><b>材料</b><br><small>须与鼎内完全一致</small></td><td style="border:1px solid #ccc; padding:8px; line-height:1.5;">[[星星粉尘]] <code>zhei_xingxingfc1</code> ×<b>1</b><br>[[星星碎片]] <code>zhei_xingxingsp</code> ×<b>5</b><br>月亮玻璃 <code>moonglass</code> ×<b>10</b><br>克苏鲁之盾 <code>shieldofterror</code> ×<b>1</b><br>→ 产出 <b>1</b> 面</td></tr>
+        </table>
+        <p><b>面板与形态</b>（对齐克苏鲁之盾思路）</p>
+        <ul>
+            <li>可<b>鼠标右键</b>进行盾反，或<b>通过 [[百宝花杖]]</b>设置盾反快捷键。</li>
+            <li>可<b>喂食</b>。</li>
+            <li><span style="color:#666;">在此感谢棱镜作者梧桐山大佬提供的代码参考与灵感，感谢梧大的付出。</span></li>
+        </ul>
+        <p><b>盾反 · 启迪碎片（环绕）</b></p>
+        <table style="border-collapse:collapse; width:100%; max-width:640px; margin:8px 0; font-size:0.95em;">
+            <tr style="background:#f5f5f5;"><td style="border:1px solid #ccc; padding:6px; width:88px;"><b>项目</b></td><td style="border:1px solid #ccc; padding:6px;"><b>内容</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">上限</td><td style="border:1px solid #ccc; padding:6px;"><b>5</b> 片</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">增长</td><td style="border:1px solid #ccc; padding:6px;">每次<b>盾反成功</b> <b>+1</b> 片</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">挡伤</td><td style="border:1px solid #ccc; padding:6px;"><b>受击</b>时若身上有碎片：用 <b>1</b> 片<b>抵消本次所受伤害</b>并消耗该片</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">卸下</td><td style="border:1px solid #ccc; padding:6px;">卸下盾牌后，碎片<b>仍保留在玩家身上</b>并继续可用于挡伤</td></tr>
+        </table>
+        <p><b>盾反成功时的其它效果</b></p>
+        <ul>
+            <li><b>吸血：</b>若血量未满，按本次<b>格挡相关伤害</b>的 <b>8%</b> 回血。</li>
+            <li><b>满 5 片：</b>本段<b>举盾结束</b>时清空全部碎片，各自落下<b>月晶陨石</b>：每个目标连砸 <b>5</b> 次，单次 <b>50</b> 伤害。</li>
+        </ul>
+        <p><b>其它</b></p>
+        <ul>
+            <li>当碎片数量达到 <b>5</b> 片时，若同时存在<b>很多目标</b>的攻击且本段盾反成功，会<b>锁定所有盾反成功的目标</b>并分别降下月晶陨石。</li>
+        </ul>
+        <p><b>快捷键</b></p>
+        <ul>
+            <li>星尘盾<b>盾反 / 举盾</b>可用快捷键（默认 <b>V</b>）；亦可在 [[百宝花杖]] 中设置「星尘盾盾反快捷键」。</li>
         </ul>
     `,
     "zhei_staff": `
@@ -1240,6 +1459,185 @@ const detailData = {
             <li><b>饭桶识别：</b>饭桶的大厨锅模式或者普通模式都可以识别百宝炊具</li>
         </ul>
     `,
+    "zhei_qiding": `
+        <p><b>百宝鼎</b>（zhei_qiding）是百宝制作栏中的炼制建筑：鼎上有容器格子，放入与某条配方种类、数量一致的材料（部分配方要求<b>恰好</b>这些物品、不能多不能少，避免与别的配方冲突）。关盖后界面有「炼制」；炼制结束再「取出」产物。鼠标悬停鼎身可看当前炼制状态/预测。</p>
+        
+        <p><b>制作配方：</b>龙蝇鳞片 × 1 + [[太阳火种]] × 1 + 石砖 × 5 + 红宝石 × 1</p>
+        <p><b>科技要求：</b>需在[[太阳雕像仿品]]旁作为制作站解锁/制作</p>
+        <p><b>制作分类：</b>百宝制作栏</p>
+        
+        <p><b>使用说明：</b></p>
+        <ul>
+            <li>鼎内容器放入材料 → 关盖 → 点击「炼制」→ 时间到后「取出」</li>
+            <li>[[昊天锤]]、[[星尘盾]]等长耗时可在模组配置里改炼制天数（默认 <b>3</b> 天，与昼夜相关配置一致）</li>
+        </ul>
+        
+        <p><b>可炼制物品一览：</b></p>
+        <div style="overflow-x:auto;">
+        <table style="border-collapse:collapse; width:100%; min-width:720px; font-size:0.82em;">
+            <tr style="background:#f0f0f0;"><th style="border:1px solid #ccc; padding:6px; white-space:nowrap;">类型</th><th style="border:1px solid #ccc; padding:6px;">产物（数量）</th><th style="border:1px solid #ccc; padding:6px;">材料（逐项数量）</th><th style="border:1px solid #ccc; padding:6px; white-space:nowrap;">炼制时间</th><th style="border:1px solid #ccc; padding:6px;">备注</th></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">神兵</td><td style="border:1px solid #ccc; padding:6px;">[[昊天锤]] ×<b>1</b>（zhei_haotian）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">未烤熟星空果实（zhei_xklg）×<b>2</b><br>犀牛角（minotaurhorn）×<b>1</b><br>铥矿（thulecite）×<b>15</b><br>锤子（hammer）×<b>1</b></td><td style="border:1px solid #ccc; padding:6px;">模组可配置天数 × 一昼夜（默认 3 天）</td><td style="border:1px solid #ccc; padding:6px;">无制作栏配方，仅鼎炼</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">盾</td><td style="border:1px solid #ccc; padding:6px;">[[星尘盾]] ×<b>1</b>（zhei_stardust_shield）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">星星粉尘（zhei_xingxingfc1）×<b>1</b><br>星星碎片（zhei_xingxingsp）×<b>5</b><br>月亮玻璃（moonglass）×<b>10</b><br>克苏鲁之盾（shieldofterror）×<b>1</b></td><td style="border:1px solid #ccc; padding:6px;">与 [[昊天锤]] 同档（默认约 3 天）</td><td style="border:1px solid #ccc; padding:6px;">须<b>恰好</b>四种、数量完全匹配；多放易误匹配</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">粉尘</td><td style="border:1px solid #ccc; padding:6px;">星星粉尘 ×<b>1</b>/套（zhei_xingxingfc1）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">星星碎片（zhei_xingxingsp）×<b>4</b>（每套）<br><small>总量为 4 的倍数时可一次多套</small></td><td style="border:1px solid #ccc; padding:6px;">1 天/套</td><td style="border:1px solid #ccc; padding:6px;">总量为 4 的倍数可按套数一次炼多份</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">灯笼</td><td style="border:1px solid #ccc; padding:6px;">星星灯笼 ×<b>1</b>（zhei_lantern_2）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">星星碎片（zhei_xingxingsp）×<b>1</b><br>荧光果（lightbulb）×<b>10</b><br>木头（log）×<b>5</b><br>莎草纸（papyrus）×<b>5</b></td><td style="border:1px solid #ccc; padding:6px;">1 天</td><td style="border:1px solid #ccc; padding:6px;">须<b>恰好</b>四种、数量完全匹配；暖金照明，荧光果补燃料</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">精华</td><td style="border:1px solid #ccc; padding:6px;">相思断肠红精华 ×<b>1</b>/套（zhei_xiangsijh）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">相思断肠红芽穗（zhei_xiaoxiangsi）×<b>3</b><br>[[相思断肠红花]]（zhei_xiangsiflower）×<b>1</b></td><td style="border:1px solid #ccc; padding:6px;">120 秒/套（约 2 分钟）</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">精华</td><td style="border:1px solid #ccc; padding:6px;">八角玄冰草精华 ×<b>1</b>/套（zhei_xuanbinjh）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">八角玄冰芽穗（zhei_xiaoice）×<b>3</b><br>[[八角玄冰草花]]（zhei_iceflower）×<b>1</b></td><td style="border:1px solid #ccc; padding:6px;">120 秒/套（约 2 分钟）</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">精华</td><td style="border:1px solid #ccc; padding:6px;">烈火杏娇疏精华 ×<b>1</b>/套（zhei_liehuojh）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">烈火杏娇疏芽穗（zhei_xiaoblaze）×<b>3</b><br>[[烈火杏娇疏花]]（zhei_blazeflower）×<b>1</b></td><td style="border:1px solid #ccc; padding:6px;">90 秒/套（约 1 分 30 秒）</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">精华</td><td style="border:1px solid #ccc; padding:6px;">鸡冠凤凰葵精华 ×<b>1</b>/套（zhei_jiguanjh）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">鸡冠凤凰葵芽穗（zhei_xiaophoenix）×<b>3</b><br>[[鸡冠凤凰葵花]]（zhei_phoenixflower）×<b>1</b></td><td style="border:1px solid #ccc; padding:6px;">70 秒/套（约 1 分 10 秒）</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">灵药</td><td style="border:1px solid #ccc; padding:6px;">相思断肠灵药 ×<b>1</b>/份（zhei_xiangsiyao）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">相思断肠红精华 ×<b>3</b>（每份灵药）<br><small>精华共 6、9…（3 的倍数）时可一次多份</small></td><td style="border:1px solid #ccc; padding:6px;">240 秒/份（4 分钟）</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">灵药</td><td style="border:1px solid #ccc; padding:6px;">烈火杏娇疏灵药 ×<b>1</b>/份（zhei_liehuoyao）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">烈火杏娇疏精华 ×<b>3</b>（每份灵药）<br><small>精华共 6、9…（3 的倍数）时可一次多份</small></td><td style="border:1px solid #ccc; padding:6px;">240 秒/份</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">灵药</td><td style="border:1px solid #ccc; padding:6px;">八角玄冰灵药 ×<b>1</b>/份（zhei_xuanbinyao）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">八角玄冰草精华 ×<b>3</b>（每份灵药）<br><small>精华共 6、9…（3 的倍数）时可一次多份</small></td><td style="border:1px solid #ccc; padding:6px;">240 秒/份</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">灵药</td><td style="border:1px solid #ccc; padding:6px;">鸡冠凤凰灵药 ×<b>1</b>/份（zhei_jiguanyao）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">鸡冠凤凰葵精华 ×<b>3</b>（每份灵药）<br><small>精华共 6、9…（3 的倍数）时可一次多份</small></td><td style="border:1px solid #ccc; padding:6px;">240 秒/份</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
+        </table>
+        </div>
+        <p><b>补充说明：</b></p>
+        <ul>
+            <li>星星粉尘：炼制时间为 1 天/套（与星星灯笼同档）。</li>
+            <li>四种精华：芽穗与花按套数成比例增加时，产物份数同比（倍数炼制）。</li>
+            <li>四种灵药：精华数量为 <b>3 的倍数</b>时可一次炼出多份（例如 6 份精华 → 2 份灵药）。</li>
+        </ul>
+    `,
+    "zhei_xiangsiyao": `
+        <p><b>Buff 标签：</b>名刀司命</p>
+        <p><b>Buff 作用：</b>被救起的队友获得：保命类效果 <b>3 秒</b>内免伤。</p>
+        <p><b>相思断肠灵药</b>偏<b>团队救援</b>：自己吃下后，尝试拉起身边倒地的队友。</p>
+        <p><b>获取：</b>[[百宝鼎]]炼制，鼎内放入<b>相思断肠红精华 ×3</b>，炼制约 <b>4 分钟</b>/份；精华为 3 的倍数时可一次多份。</p>
+        <p><b>自身：</b>作为料理食用回复 <b>10</b> 点生命。</p>
+        <p><b>队友：</b>以食用者为中心、半径约 <b>45</b> 内，每名需要救援的其他玩家（鬼魂 / 死亡等）：复活并拉满生命（清除生命惩罚、血条满），饥饿与理智约 <b>50%</b>，体温约 <b>25℃</b>；并为其挂名刀司命 buff。</p>
+        <p><span style="color:#666;"><b>一句话：</b>自吃回血，大范围复活队友并赋予保命增益。</span></p>
+    `,
+    "zhei_liehuoyao": `
+        <p><b>Buff 标签：</b>火免抗性</p>
+        <p><b>Buff 作用：</b>持续 <b>2</b> 天——火焰免疫、免疫火焰伤害和过热，大力士肌肉不掉。命中敌人时在常规伤害外再追加 <b>20</b> 点位面真伤。</p>
+        <p><b>烈火杏娇疏灵药</b>食用后获得火免抗性 buff。</p>
+        <p><b>获取：</b>[[百宝鼎]]炼制，鼎内放入<b>烈火杏娇疏精华 ×3</b>，炼制约 <b>4 分钟</b>/份；精华为 3 的倍数时可一次多份。</p>
+        <p><span style="color:#666;"><b>一句话：</b>2 天火免 + 攻击追加真伤。</span></p>
+    `,
+    "zhei_xuanbinyao": `
+        <p><b>Buff 标签：</b>极致寒冰</p>
+        <p><b>Buff 作用：</b>持续 <b>1</b> 天——免疫过冷导致的扣血；保持干燥、不潮湿；攻击 <b>15%</b> 概率触发与[[八角玄冰棕]]同类冰冻；目标解冻或碎冰时再受 <b>30</b> 点物理伤害。</p>
+        <p><b>八角玄冰灵药</b>食用后获得极致寒冰 buff。</p>
+        <p><b>获取：</b>[[百宝鼎]]炼制，鼎内放入<b>八角玄冰草精华 ×3</b>，炼制约 <b>4 分钟</b>/份；精华为 3 的倍数时可一次多份。</p>
+        <p><span style="color:#666;"><b>一句话：</b>1 天防寒防潮 + 概率冰冻与碎冰补刀。</span></p>
+    `,
+    "zhei_jiguanyao": `
+        <p><b>Buff 标签：</b>熬夜大师</p>
+        <p><b>Buff 作用：</b>持续 <b>1</b> 天——昏睡值抗性 + 免疫；攻击时召唤与启迪之冠同类的月灵，每次攻击扣 <b>1</b> 理智。</p>
+        <p><b>鸡冠凤凰灵药</b>食用后获得熬夜大师 buff。</p>
+        <p><b>获取：</b>[[百宝鼎]]炼制，鼎内放入<b>鸡冠凤凰葵精华 ×3</b>，炼制约 <b>4 分钟</b>/份；精华为 3 的倍数时可一次多份。</p>
+        <p><span style="color:#666;"><b>一句话：</b>1 日防睡 + 启迪之冠式月灵追击（每次攻扣 1 理智）。</span></p>
+    `,
+    "zhei_xiangsijh": `
+        <p><b>检视：</b>相思之力凝成的一滴精粹，温润却有韧性。</p>
+        <p><b>炼制：</b>[[百宝鼎]]中放入 [[相思断肠红芽穗]] ×3、[[相思断肠红花]] ×1，炼制 <b>2 分钟</b>。</p>
+        <p><b>补充（玩法）：</b>四种精华在鼎内均可按芽穗 + 花的套数成比例一次炼多份（与百宝鼎 allow_multiples 逻辑一致）。精华可再用于炼制对应灵药（各需同种精华 ×3，炼 <b>4 分钟</b>）。对应灵药：[[相思断肠灵药]]。</p>
+    `,
+    "zhei_xuanbinjh": `
+        <p><b>检视：</b>寒意被提炼得更纯粹，握久了指尖都发凉。</p>
+        <p><b>炼制：</b>[[百宝鼎]]中放入 [[八角玄冰芽穗]] ×3、[[八角玄冰草花]] ×1，炼制 <b>2 分钟</b>。</p>
+        <p><b>补充（玩法）：</b>四种精华在鼎内均可按芽穗 + 花的套数成比例一次炼多份（与百宝鼎 allow_multiples 逻辑一致）。精华可再用于炼制对应灵药（各需同种精华 ×3，炼 <b>4 分钟</b>）。对应灵药：[[八角玄冰灵药]]。</p>
+    `,
+    "zhei_liehuojh": `
+        <p><b>检视：</b>炽热药性被锁在其中，像一簇收束的火苗。</p>
+        <p><b>炼制：</b>[[百宝鼎]]中放入 [[烈火杏娇疏芽穗]] ×3、[[烈火杏娇疏花]] ×1，炼制 <b>1 分 30 秒</b>。</p>
+        <p><b>补充（玩法）：</b>四种精华在鼎内均可按芽穗 + 花的套数成比例一次炼多份（与百宝鼎 allow_multiples 逻辑一致）。精华可再用于炼制对应灵药（各需同种精华 ×3，炼 <b>4 分钟</b>）。对应灵药：[[烈火杏娇疏灵药]]。</p>
+    `,
+    "zhei_jiguanjh": `
+        <p><b>检视：</b>如同凤凰尾焰留下的精华，暖意轻盈却绵长。</p>
+        <p><b>炼制：</b>[[百宝鼎]]中放入 [[鸡冠凤凰葵芽穗]] ×3、[[鸡冠凤凰葵花]] ×1，炼制 <b>1 分 10 秒</b>。</p>
+        <p><b>补充（玩法）：</b>四种精华在鼎内均可按芽穗 + 花的套数成比例一次炼多份（与百宝鼎 allow_multiples 逻辑一致）。精华可再用于炼制对应灵药（各需同种精华 ×3，炼 <b>4 分钟</b>）。对应灵药：[[鸡冠凤凰灵药]]。</p>
+    `,
+    "zhei_seed_bundle": `
+        <p><b>星空种子包 · 一览</b></p>
+        <table style="border-collapse:collapse; width:100%; max-width:720px; margin:10px 0;">
+            <tr><td style="border:1px solid #ccc; padding:8px; width:100px;"><b>显示名</b></td><td style="border:1px solid #ccc; padding:8px;">星空种子包</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>Prefab</b></td><td style="border:1px solid #ccc; padding:8px;"><code>zhei_seed_bundle</code></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>科技</b></td><td style="border:1px solid #ccc; padding:8px;">二本（<code>TECH.SCIENCE_TWO</code>），即炼金引擎</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px; vertical-align:top;"><b>配方</b></td><td style="border:1px solid #ccc; padding:8px; line-height:1.5;">普通种子 <code>seeds</code> × <b>3</b> → 星空种子包 × <b>1</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px; vertical-align:top;"><b>拆包内容</b></td><td style="border:1px solid #ccc; padding:8px; line-height:1.5;"><b>星空果实种子</b> <code>zhei_xklg_seeds</code>：随机 <b>1～2</b> 颗；<b>灭霸果种子</b> <code>zhei_mbg_seeds</code>：随机 <b>1～2</b> 颗（两类<b>独立随机</b>，合计一般 <b>2～4</b> 颗）。</td></tr>
+        </table>
+        <p><span style="color:#666;">用于种植 [[星空灵果]]、[[灭霸果]]，详见作物词条。</span></p>
+    `,
+    "zhei_xingxingsp": `
+        <p><b>星星碎片</b>（prefab：<code>zhei_xingxingsp</code>）</p>
+        <p><b>基本</b></p>
+        <table style="border-collapse:collapse; width:100%; max-width:640px; margin:8px 0;">
+            <tr><td style="border:1px solid #ccc; padding:8px; width:88px;"><b>名称</b></td><td style="border:1px solid #ccc; padding:8px;">星星碎片</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>堆叠</b></td><td style="border:1px solid #ccc; padding:8px;">最大 <b>20</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>地面光</b></td><td style="border:1px solid #ccc; padding:8px;">丢在地上时有淡<b>紫</b>光（半径约 <b>1.05</b>）</td></tr>
+        </table>
+        <p><b>获取方式</b></p>
+        <ul>
+            <li><b>1）普通夜晚 · 地表坠落</b><br>仅<b>地表主世界</b>，<b>洞穴不触发</b>。每个<b>进入夜晚</b>的时刻，默认 <b>25%</b> 概率（见模组配置「星星碎片·夜晚掉落概率」）。<b>全员有份</b>。</li>
+            <li><b>2）月圆 · 流星雨（额外碎片 + 祝福）</b><br>满月夜，默认 <b>5%</b>（可配 <b>0%</b> 关闭）。全服公告，并给有效玩家祝福。流星雨结束后可有<b>星沐祝福</b>，可拆成<b>星沐·微光</b> / <b>缓愈</b> / <b>星屑拖尾</b>等。</li>
+        </ul>
+        <p><b>主要用途（合成 / 放置）</b></p>
+        <table style="border-collapse:collapse; width:100%; max-width:720px; margin:8px 0; font-size:0.95em;">
+            <tr style="background:#f5f5f5;"><td style="border:1px solid #ccc; padding:6px; width:90px;"><b>用途</b></td><td style="border:1px solid #ccc; padding:6px;"><b>材料/条件</b></td><td style="border:1px solid #ccc; padding:6px;"><b>备注</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">[[星星粉尘]]</td><td style="border:1px solid #ccc; padding:6px;">[[百宝鼎]]：星星碎片 ×<b>4</b>，<b>1 游戏天</b>；总量为 <b>4 的倍数</b>时可一次多份炼制</td><td style="border:1px solid #ccc; padding:6px;">详见 [[星星粉尘]]、[[百宝鼎]] 可炼总表</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">[[星星灯笼]]</td><td style="border:1px solid #ccc; padding:6px;">[[百宝鼎]]：碎片×1 + 荧光果×10 + 木头×5 + 莎草纸×5，<b>1 游戏天</b>；须四种数量恰好匹配</td><td style="border:1px solid #ccc; padding:6px;">详见 [[星星灯笼]]</td></tr>
+        </table>
+        <p><span style="color:#666;">另：星尘盾等仍见 [[百宝鼎]] 可炼总表。</span></p>
+    `,
+    "zhei_xingxingfc1": `
+        <p><b>星星粉尘</b>（zhei_xingxingfc1）— 万物百宝 Treasure Chest</p>
+        <table style="border-collapse:collapse; width:100%; max-width:640px; margin:12px 0;">
+            <tr><td style="border:1px solid #ccc; padding:8px; width:72px; vertical-align:top;"><b>来源</b></td><td style="border:1px solid #ccc; padding:8px;">[[百宝鼎]]炼制：放入 [[星星碎片]] ×4，炼制 <b>1 游戏天</b>；碎片为 <b>4 的倍数</b>时可一次炼多份。</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px; vertical-align:top;"><b>用途</b></td><td style="border:1px solid #ccc; padding:8px;">炼 [[星尘盾]] 的材料之一：星星粉尘 ×1、星星碎片 ×5、月亮玻璃 ×10、克苏鲁之盾 ×1（与 [[昊天锤]] 同档长耗时；鼎内须<b>恰好匹配</b>）。</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px; vertical-align:top;"><b>其它</b></td><td style="border:1px solid #ccc; padding:8px;">物品带微光，落地时较亮。</td></tr>
+        </table>
+    `,
+    "zhei_lantern_2": `
+        <p><b>星星灯笼 · 一览</b></p>
+        <table style="border-collapse:collapse; width:100%; max-width:720px; margin:10px 0;">
+            <tr><td style="border:1px solid #ccc; padding:8px; width:100px;"><b>显示名</b></td><td style="border:1px solid #ccc; padding:8px;">星星灯笼</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>Prefab</b></td><td style="border:1px solid #ccc; padding:8px;"><code>zhei_lantern_2</code></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>获取</b></td><td style="border:1px solid #ccc; padding:8px;">[[百宝鼎]]炼制 <b>1 游戏天</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px; vertical-align:top;"><b>配方</b></td><td style="border:1px solid #ccc; padding:8px; line-height:1.5;">须与鼎内物品<b>完全一致</b>（四种、数量恰好）：<br>[[星星碎片]] <code>zhei_xingxingsp</code> ×<b>1</b>、荧光果 <code>lightbulb</code> ×<b>10</b>、木头 <code>log</code> ×<b>5</b>、莎草纸 <code>papyrus</code> ×<b>5</b> → 产出 <b>1</b> 个</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>装备</b></td><td style="border:1px solid #ccc; padding:8px;"><b>手部</b>；移速 = 原版<b>步行手杖</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px; vertical-align:top;"><b>燃料</b></td><td style="border:1px solid #ccc; padding:8px;">与原版<b>提灯</b>同类：荧光果等洞穴燃料，或投入 <b>[[星星碎片]]</b>（比荧光果加的耐久<b>更多</b>）。初始耐久约比红灯笼多约 <b>18%</b>。</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>补充</b></td><td style="border:1px solid #ccc; padding:8px;"><b>雨天</b>会加速消耗；有遮蔽 / 雨免等时按<b>原版逻辑</b>减轻。</td></tr>
+        </table>
+    `,
+    "zhei_exp_stardust": `
+        <p><b>经验星尘</b>（zhei_exp_stardust）— 星澜角色模组 zhei_xinglan</p>
+        <table style="border-collapse:collapse; width:100%; max-width:640px; margin:12px 0;">
+            <tr><td style="border:1px solid #ccc; padding:8px; width:72px; vertical-align:top;"><b>定位</b></td><td style="border:1px solid #ccc; padding:8px;">星澜（zhei_xinglan）专用成长道具：只有星澜吃掉才会加经验，每颗 <b>+50</b>。</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px; vertical-align:top;"><b>掉落</b></td><td style="border:1px solid #ccc; padding:8px;">星澜击 Boss 掉落，按概率额外掉落 1 个经验星尘（默认概率 <b>30%</b>）。</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px; vertical-align:top;"><b>其它</b></td><td style="border:1px solid #ccc; padding:8px;">可食用、可堆叠（最大 <b>20</b>）；地面有淡天蓝微光。</td></tr>
+        </table>
+    `,
+    "zhei_xklg": `
+        <p><b>星空灵果</b>（prefab：<code>zhei_xklg</code>）— 万物百宝农作物</p>
+        <p><b>农田与生长</b></p>
+        <ul>
+            <li><b>适宜季节：</b>秋、春、夏</li>
+            <li><b>产物名称：</b>星空果实（生/熟）— 烹饪标签 <b>1</b> 单位果度（<code>fruit = 1</code>）</li>
+        </ul>
+        <p><b>星空果注意：</b>田里采摘会<b>触电</b>，需佩戴<b>防电类装备</b>后再采收。</p>
+        <p><b>获取种子</b></p>
+        <ul>
+            <li><b>[[星空种子包]]：</b>在炼金引擎（二本）用<b>普通种子 ×3</b>合成；拆包规则与 prefab 见 [[星空种子包]] 词条。</li>
+        </ul>
+        <p><b>其它用途（星空灵果 / 星空果实）</b></p>
+        <ul>
+            <li><b>[[昊天锤]]：</b>[[百宝鼎]]炼制配方需<b>未烤熟星空果实</b>（<code>zhei_xklg</code>）×<b>2</b>；每颗参与修理时提供 <b>20</b> 点耐久。</li>
+        </ul>
+        <p><b>棱镜联动：</b>长出<b>巨大的星空灵果</b>后，可使用<b>棱镜</b>模组的<b>幻想法杖</b>对其进行幻化；<b>巨大的灭霸果</b>同理。</p>
+    `,
+    "zhei_mbg": `
+        <p><b>灭霸果</b>（prefab：<code>zhei_mbg</code>）— 万物百宝农作物</p>
+        <p><b>农田与生长</b></p>
+        <ul>
+            <li><b>适宜季节：</b>秋、冬、春</li>
+            <li><b>产物：</b>灭霸果（生/熟）— 烹饪标签 <b>1</b> 单位蔬菜度（<code>veggie = 1</code>）</li>
+        </ul>
+        <p><b>获取种子</b></p>
+        <ul>
+            <li>与 [[星空灵果]] 共用 <b>[[星空种子包]]</b>：炼金引擎（二本）普通种子 ×3 合成；拆包见 [[星空种子包]]。</li>
+        </ul>
+        <p><b>棱镜联动：</b>长出<b>巨大的灭霸果</b>后，可使用<b>棱镜</b>模组的<b>幻想法杖</b>对其进行幻化；<b>巨大的星空灵果</b>同理）。</p>
+    `,
     "zhei_dengg": `
         <p><b>百宝灯</b>是自动昼夜开关的装饰性照明建筑，提供自动昼夜开关、光照系统等功能。适合需要自动照明和装饰的玩家使用。</p>
         
@@ -1267,6 +1665,34 @@ const detailData = {
         <ul>
             <li>障碍物物理：半径 <b>0.2格</b></li>
             <li>放置半径：<b>0.5格</b>（智能放置）</li>
+        </ul>
+    `,
+    "zhei_yots_lantern_post_item": `
+        <p><b>荷花灯柱套装</b>是可部署的照明建筑物品，先做出套装放入物品栏，再右键部署为地面实体<b>荷花灯柱</b>。点亮方式与原版喜庆灯柱相同。</p>
+        
+        <p><b>图片展示：</b></p>
+        <div style="text-align:center; margin: 15px 0;">
+            <img src="img/zhei_yots_lantern_post.png" alt="荷花灯柱套装" style="max-width:100%; border: 2px solid #d35400; border-radius: 8px;">
+        </div>
+        
+        <p><b>制作配方：</b>花瓣 × 2 + 莎草纸 × 4 + 绳子 × 1 + 荧光果（灯泡果）× 1</p>
+        <p><b>科技要求：</b>炼金引擎（二本）；需在炼金引擎旁解锁原型；制作分类为百宝（TC_BAIBAO）</p>
+        
+        <p><b>部署：</b></p>
+        <ul>
+            <li>将「荷花灯柱套装」放入物品栏，右键部署为地面实体「荷花灯柱」</li>
+        </ul>
+        
+        <p><b>点亮：</b></p>
+        <ul>
+            <li>与原版喜庆灯柱相同：灯柱带<b>单格槽</b>，放入光源即可点亮</li>
+            <li>例如：荧光果、孢子等带 <b>lightbattery</b> / <b>spore</b> / <b>lightcontainer</b> 的物品</li>
+        </ul>
+        
+        <p><b>星星碎片：</b></p>
+        <ul>
+            <li>槽内放入模组<b>星星碎片</b>时，灯光为偏紫的星辉色，照明范围大于普通燃料</li>
+            <li>并带与人造日光类似的逻辑，利于夜间农田/作物在夜晚生长</li>
         </ul>
     `,
     "zhei_displaytable": `
