@@ -6,6 +6,14 @@
  */
 const logData = [
     {
+        version: 'V1.4.4',
+        date: '2026-04-12',
+        updates: [
+            '【修复】流星雨崩档问题',
+            '【优化】[[星尘盾]]的碎片抵挡逻辑'
+        ]
+    },
+    {
         version: 'V1.4.2',
         date: '2026-04-11',
         updates: [
