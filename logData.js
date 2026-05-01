@@ -6,6 +6,13 @@
  */
 const logData = [
     {
+        version: 'V1.4.6',
+        date: '2026-05-01',
+        updates: [
+            '【修复】修复[[昊天锤]]导致的报错'
+        ]
+    },
+    {
         version: 'V1.4.5',
         date: '2026-04-30',
         updates: [
