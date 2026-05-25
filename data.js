@@ -918,7 +918,7 @@ const itemData = [
         name: '巧克力',
         image:'img/zhei_chocolate.png',
         category: 'cuisine',
-        recipe: '蝴蝶翅膀或月蝶翅膀 × 1 + 甜味剂 × 2 + 蛋 × 1',
+        recipe: '胡萝卜 × 1 + 甜味剂 × 1 + 熟或生的浆果/熟或生的多汁浆果 × 2',
         buff: '素食Buff',
         attributes: '+60血 / +75饱食 / +33San',
         features: ['食物类型：好东西', '保鲜时间：15天', '烹饪时间：2分钟', '素食buff（仅对薇格弗德和妥协的角色Wathom生效）', '持续时间：4分钟', '效果：允许薇格弗德和Wathom食用素食', '备注：龙炎的最爱']
