@@ -1566,28 +1566,28 @@ const detailData = {
             <tr><td style="border:1px solid #ccc; padding:6px;">盾</td><td style="border:1px solid #ccc; padding:6px;">[[星尘盾]] ×<b>1</b>（zhei_stardust_shield）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">星星粉尘（zhei_xingxingfc1）×<b>1</b><br>星星碎片（zhei_xingxingsp）×<b>5</b><br>月亮玻璃（moonglass）×<b>10</b><br>克苏鲁之盾（shieldofterror）×<b>1</b></td><td style="border:1px solid #ccc; padding:6px;">与 [[昊天锤]] 同档（默认约 3 天）</td><td style="border:1px solid #ccc; padding:6px;">须<b>恰好</b>四种、数量完全匹配；多放易误匹配</td></tr>
             <tr><td style="border:1px solid #ccc; padding:6px;">粉尘</td><td style="border:1px solid #ccc; padding:6px;">星星粉尘 ×<b>1</b>/套（zhei_xingxingfc1）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">星星碎片（zhei_xingxingsp）×<b>4</b>（每套）<br><small>总量为 4 的倍数时可一次多套</small></td><td style="border:1px solid #ccc; padding:6px;">1 天/套</td><td style="border:1px solid #ccc; padding:6px;">总量为 4 的倍数可按套数一次炼多份</td></tr>
             <tr><td style="border:1px solid #ccc; padding:6px;">灯笼</td><td style="border:1px solid #ccc; padding:6px;">星星灯笼 ×<b>1</b>（zhei_lantern_2）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">星星碎片（zhei_xingxingsp）×<b>1</b><br>荧光果（lightbulb）×<b>10</b><br>木头（log）×<b>5</b><br>莎草纸（papyrus）×<b>5</b></td><td style="border:1px solid #ccc; padding:6px;">1 天</td><td style="border:1px solid #ccc; padding:6px;">须<b>恰好</b>四种、数量完全匹配；暖金照明，荧光果补燃料</td></tr>
-            <tr><td style="border:1px solid #ccc; padding:6px;">精华</td><td style="border:1px solid #ccc; padding:6px;">相思断肠红精华 ×<b>1</b>/套（zhei_xiangsijh）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">相思断肠红芽穗（zhei_xiaoxiangsi）×<b>3</b><br>[[相思断肠红花]]（zhei_xiangsiflower）×<b>1</b></td><td style="border:1px solid #ccc; padding:6px;">120 秒/套（约 2 分钟）</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
-            <tr><td style="border:1px solid #ccc; padding:6px;">精华</td><td style="border:1px solid #ccc; padding:6px;">八角玄冰草精华 ×<b>1</b>/套（zhei_xuanbinjh）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">八角玄冰芽穗（zhei_xiaoice）×<b>3</b><br>[[八角玄冰草花]]（zhei_iceflower）×<b>1</b></td><td style="border:1px solid #ccc; padding:6px;">120 秒/套（约 2 分钟）</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
-            <tr><td style="border:1px solid #ccc; padding:6px;">精华</td><td style="border:1px solid #ccc; padding:6px;">烈火杏娇疏精华 ×<b>1</b>/套（zhei_liehuojh）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">烈火杏娇疏芽穗（zhei_xiaoblaze）×<b>3</b><br>[[烈火杏娇疏花]]（zhei_blazeflower）×<b>1</b></td><td style="border:1px solid #ccc; padding:6px;">90 秒/套（约 1 分 30 秒）</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
-            <tr><td style="border:1px solid #ccc; padding:6px;">精华</td><td style="border:1px solid #ccc; padding:6px;">鸡冠凤凰葵精华 ×<b>1</b>/套（zhei_jiguanjh）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">鸡冠凤凰葵芽穗（zhei_xiaophoenix）×<b>3</b><br>[[鸡冠凤凰葵花]]（zhei_phoenixflower）×<b>1</b></td><td style="border:1px solid #ccc; padding:6px;">70 秒/套（约 1 分 10 秒）</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
-            <tr><td style="border:1px solid #ccc; padding:6px;">灵药</td><td style="border:1px solid #ccc; padding:6px;">相思断肠灵药 ×<b>1</b>/份（zhei_xiangsiyao）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">相思断肠红精华 ×<b>3</b>（每份灵药）<br><small>精华共 6、9…（3 的倍数）时可一次多份</small></td><td style="border:1px solid #ccc; padding:6px;">240 秒/份（4 分钟）</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
-            <tr><td style="border:1px solid #ccc; padding:6px;">灵药</td><td style="border:1px solid #ccc; padding:6px;">烈火杏娇疏灵药 ×<b>1</b>/份（zhei_liehuoyao）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">烈火杏娇疏精华 ×<b>3</b>（每份灵药）<br><small>精华共 6、9…（3 的倍数）时可一次多份</small></td><td style="border:1px solid #ccc; padding:6px;">240 秒/份</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
-            <tr><td style="border:1px solid #ccc; padding:6px;">灵药</td><td style="border:1px solid #ccc; padding:6px;">八角玄冰灵药 ×<b>1</b>/份（zhei_xuanbinyao）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">八角玄冰草精华 ×<b>3</b>（每份灵药）<br><small>精华共 6、9…（3 的倍数）时可一次多份</small></td><td style="border:1px solid #ccc; padding:6px;">240 秒/份</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
-            <tr><td style="border:1px solid #ccc; padding:6px;">灵药</td><td style="border:1px solid #ccc; padding:6px;">鸡冠凤凰灵药 ×<b>1</b>/份（zhei_jiguanyao）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">鸡冠凤凰葵精华 ×<b>3</b>（每份灵药）<br><small>精华共 6、9…（3 的倍数）时可一次多份</small></td><td style="border:1px solid #ccc; padding:6px;">240 秒/份</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">精华</td><td style="border:1px solid #ccc; padding:6px;">相思断肠红精华 ×<b>1</b>/套（zhei_xiangsijh）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">相思断肠红芽穗（zhei_xiaoxiangsi）×<b>2</b><br>[[相思断肠红花]]（zhei_xiangsiflower）×<b>2</b></td><td style="border:1px solid #ccc; padding:6px;">120 秒/套（约 2 分钟）</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">精华</td><td style="border:1px solid #ccc; padding:6px;">八角玄冰草精华 ×<b>1</b>/套（zhei_xuanbinjh）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">八角玄冰芽穗（zhei_xiaoice）×<b>2</b><br>[[八角玄冰草花]]（zhei_iceflower）×<b>2</b></td><td style="border:1px solid #ccc; padding:6px;">120 秒/套（约 2 分钟）</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">精华</td><td style="border:1px solid #ccc; padding:6px;">烈火杏娇疏精华 ×<b>1</b>/套（zhei_liehuojh）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">烈火杏娇疏芽穗（zhei_xiaoblaze）×<b>2</b><br>[[烈火杏娇疏花]]（zhei_blazeflower）×<b>2</b></td><td style="border:1px solid #ccc; padding:6px;">90 秒/套（约 1 分 30 秒）</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">精华</td><td style="border:1px solid #ccc; padding:6px;">鸡冠凤凰葵精华 ×<b>1</b>/套（zhei_jiguanjh）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">鸡冠凤凰葵芽穗（zhei_xiaophoenix）×<b>2</b><br>[[鸡冠凤凰葵花]]（zhei_phoenixflower）×<b>2</b></td><td style="border:1px solid #ccc; padding:6px;">70 秒/套（约 1 分 10 秒）</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">灵药</td><td style="border:1px solid #ccc; padding:6px;">相思断肠灵药 ×<b>2</b>/批（zhei_xiangsiyao）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">相思断肠红精华 ×<b>3</b>（每批）<br><small>精华共 6、9…（3 的倍数）时可一次多批（6→4、9→6…）</small></td><td style="border:1px solid #ccc; padding:6px;">240 秒/批（4 分钟）</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">灵药</td><td style="border:1px solid #ccc; padding:6px;">烈火杏娇疏灵药 ×<b>2</b>/批（zhei_liehuoyao）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">烈火杏娇疏精华 ×<b>3</b>（每批）<br><small>精华共 6、9…（3 的倍数）时可一次多批（6→4、9→6…）</small></td><td style="border:1px solid #ccc; padding:6px;">240 秒/批</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">灵药</td><td style="border:1px solid #ccc; padding:6px;">八角玄冰灵药 ×<b>2</b>/批（zhei_xuanbinyao）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">八角玄冰草精华 ×<b>3</b>（每批）<br><small>精华共 6、9…（3 的倍数）时可一次多批（6→4、9→6…）</small></td><td style="border:1px solid #ccc; padding:6px;">240 秒/批</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">灵药</td><td style="border:1px solid #ccc; padding:6px;">鸡冠凤凰灵药 ×<b>2</b>/批（zhei_jiguanyao）</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">鸡冠凤凰葵精华 ×<b>3</b>（每批）<br><small>精华共 6、9…（3 的倍数）时可一次多批（6→4、9→6…）</small></td><td style="border:1px solid #ccc; padding:6px;">240 秒/批</td><td style="border:1px solid #ccc; padding:6px;">可倍数炼制</td></tr>
         </table>
         </div>
         <p><b>补充说明：</b></p>
         <ul>
             <li>星星粉尘：炼制时间为 1 天/套（与星星灯笼同档）。</li>
-            <li>四种精华：芽穗与花按套数成比例增加时，产物份数同比（倍数炼制）。</li>
-            <li>四种灵药：精华数量为 <b>3 的倍数</b>时可一次炼出多份（例如 6 份精华 → 2 份灵药）。</li>
+            <li>四种精华：每套需对应<b>芽穗 ×2 + 花 ×2</b>；材料按套数成比例增加时，产物份数同比（倍数炼制）。</li>
+            <li>四种灵药：每批需对应精华 ×<b>3</b>，炼出 <b>2</b> 份灵药；精华总数为 3 的倍数时可一次多批（例如 6 份精华 → 4 份灵药，9 → 6…）。</li>
         </ul>
     `,
     "zhei_xiangsiyao": `
         <p><b>Buff 标签：</b>名刀司命</p>
         <p><b>Buff 作用：</b>被救起的队友获得：保命类效果 <b>3 秒</b>内免伤。</p>
         <p><b>相思断肠灵药</b>偏<b>团队救援</b>：自己吃下后，尝试拉起身边倒地的队友。</p>
-        <p><b>获取：</b>[[百宝鼎]]炼制，鼎内放入<b>相思断肠红精华 ×3</b>，炼制约 <b>4 分钟</b>/份；精华为 3 的倍数时可一次多份。</p>
+        <p><b>获取：</b>[[百宝鼎]]炼制，鼎内放入<b>相思断肠红精华 ×3</b>，炼制约 <b>4 分钟</b>，产出 <b>2</b> 份；精华为 3 的倍数时可一次多批（6→4、9→6…）。</p>
         <p><b>自身：</b>作为料理食用回复 <b>10</b> 点生命。</p>
         <p><b>队友：</b>以食用者为中心、半径约 <b>45</b> 内，每名需要救援的其他玩家（鬼魂 / 死亡等）：复活并拉满生命（清除生命惩罚、血条满），饥饿与理智约 <b>50%</b>，体温约 <b>25℃</b>；并为其挂名刀司命 buff。</p>
         <p><span style="color:#666;"><b>一句话：</b>自吃回血，大范围复活队友并赋予保命增益。</span></p>
@@ -1596,42 +1596,42 @@ const detailData = {
         <p><b>Buff 标签：</b>火免抗性</p>
         <p><b>Buff 作用：</b>持续 <b>2</b> 天——火焰免疫、免疫火焰伤害和过热，大力士肌肉不掉。命中敌人时在常规伤害外再追加 <b>20</b> 点位面真伤。</p>
         <p><b>烈火杏娇疏灵药</b>食用后获得火免抗性 buff。</p>
-        <p><b>获取：</b>[[百宝鼎]]炼制，鼎内放入<b>烈火杏娇疏精华 ×3</b>，炼制约 <b>4 分钟</b>/份；精华为 3 的倍数时可一次多份。</p>
+        <p><b>获取：</b>[[百宝鼎]]炼制，鼎内放入<b>烈火杏娇疏精华 ×3</b>，炼制约 <b>4 分钟</b>，产出 <b>2</b> 份；精华为 3 的倍数时可一次多批（6→4、9→6…）。</p>
         <p><span style="color:#666;"><b>一句话：</b>2 天火免 + 攻击追加真伤。</span></p>
     `,
     "zhei_xuanbinyao": `
         <p><b>Buff 标签：</b>极致寒冰</p>
         <p><b>Buff 作用：</b>持续 <b>1</b> 天——免疫过冷导致的扣血；保持干燥、不潮湿；攻击 <b>15%</b> 概率触发与[[八角玄冰棕]]同类冰冻；目标解冻或碎冰时再受 <b>30</b> 点物理伤害。</p>
         <p><b>八角玄冰灵药</b>食用后获得极致寒冰 buff。</p>
-        <p><b>获取：</b>[[百宝鼎]]炼制，鼎内放入<b>八角玄冰草精华 ×3</b>，炼制约 <b>4 分钟</b>/份；精华为 3 的倍数时可一次多份。</p>
+        <p><b>获取：</b>[[百宝鼎]]炼制，鼎内放入<b>八角玄冰草精华 ×3</b>，炼制约 <b>4 分钟</b>，产出 <b>2</b> 份；精华为 3 的倍数时可一次多批（6→4、9→6…）。</p>
         <p><span style="color:#666;"><b>一句话：</b>1 天防寒防潮 + 概率冰冻与碎冰补刀。</span></p>
     `,
     "zhei_jiguanyao": `
         <p><b>Buff 标签：</b>熬夜大师</p>
         <p><b>Buff 作用：</b>持续 <b>1</b> 天——昏睡值抗性 + 免疫；攻击时召唤与启迪之冠同类的月灵，每次攻击扣 <b>1</b> 理智。</p>
         <p><b>鸡冠凤凰灵药</b>食用后获得熬夜大师 buff。</p>
-        <p><b>获取：</b>[[百宝鼎]]炼制，鼎内放入<b>鸡冠凤凰葵精华 ×3</b>，炼制约 <b>4 分钟</b>/份；精华为 3 的倍数时可一次多份。</p>
+        <p><b>获取：</b>[[百宝鼎]]炼制，鼎内放入<b>鸡冠凤凰葵精华 ×3</b>，炼制约 <b>4 分钟</b>，产出 <b>2</b> 份；精华为 3 的倍数时可一次多批（6→4、9→6…）。</p>
         <p><span style="color:#666;"><b>一句话：</b>1 日防睡 + 启迪之冠式月灵追击（每次攻扣 1 理智）。</span></p>
     `,
     "zhei_xiangsijh": `
         <p><b>检视：</b>相思之力凝成的一滴精粹，温润却有韧性。</p>
-        <p><b>炼制：</b>[[百宝鼎]]中放入 [[相思断肠红芽穗]] ×3、[[相思断肠红花]] ×1，炼制 <b>2 分钟</b>。</p>
-        <p><b>补充（玩法）：</b>四种精华在鼎内均可按芽穗 + 花的套数成比例一次炼多份（与百宝鼎 allow_multiples 逻辑一致）。精华可再用于炼制对应灵药（各需同种精华 ×3，炼 <b>4 分钟</b>）。对应灵药：[[相思断肠灵药]]。</p>
+        <p><b>炼制：</b>[[百宝鼎]]中放入 [[相思断肠红芽穗]] ×2、[[相思断肠红花]] ×2，炼制 <b>2 分钟</b>/套。</p>
+        <p><b>补充（玩法）：</b>四种精华在鼎内均可按「芽穗 ×2 + 花 ×2」为一套成比例一次炼多份（与百宝鼎 allow_multiples 逻辑一致）。同种精华 ×3 可炼 [[相思断肠灵药]] ×2（炼 <b>4 分钟</b>）。</p>
     `,
     "zhei_xuanbinjh": `
         <p><b>检视：</b>寒意被提炼得更纯粹，握久了指尖都发凉。</p>
-        <p><b>炼制：</b>[[百宝鼎]]中放入 [[八角玄冰芽穗]] ×3、[[八角玄冰草花]] ×1，炼制 <b>2 分钟</b>。</p>
-        <p><b>补充（玩法）：</b>四种精华在鼎内均可按芽穗 + 花的套数成比例一次炼多份（与百宝鼎 allow_multiples 逻辑一致）。精华可再用于炼制对应灵药（各需同种精华 ×3，炼 <b>4 分钟</b>）。对应灵药：[[八角玄冰灵药]]。</p>
+        <p><b>炼制：</b>[[百宝鼎]]中放入 [[八角玄冰芽穗]] ×2、[[八角玄冰草花]] ×2，炼制 <b>2 分钟</b>/套。</p>
+        <p><b>补充（玩法）：</b>四种精华在鼎内均可按「芽穗 ×2 + 花 ×2」为一套成比例一次炼多份（与百宝鼎 allow_multiples 逻辑一致）。同种精华 ×3 可炼 [[八角玄冰灵药]] ×2（炼 <b>4 分钟</b>）。</p>
     `,
     "zhei_liehuojh": `
         <p><b>检视：</b>炽热药性被锁在其中，像一簇收束的火苗。</p>
-        <p><b>炼制：</b>[[百宝鼎]]中放入 [[烈火杏娇疏芽穗]] ×3、[[烈火杏娇疏花]] ×1，炼制 <b>1 分 30 秒</b>。</p>
-        <p><b>补充（玩法）：</b>四种精华在鼎内均可按芽穗 + 花的套数成比例一次炼多份（与百宝鼎 allow_multiples 逻辑一致）。精华可再用于炼制对应灵药（各需同种精华 ×3，炼 <b>4 分钟</b>）。对应灵药：[[烈火杏娇疏灵药]]。</p>
+        <p><b>炼制：</b>[[百宝鼎]]中放入 [[烈火杏娇疏芽穗]] ×2、[[烈火杏娇疏花]] ×2，炼制 <b>1 分 30 秒</b>/套。</p>
+        <p><b>补充（玩法）：</b>四种精华在鼎内均可按「芽穗 ×2 + 花 ×2」为一套成比例一次炼多份（与百宝鼎 allow_multiples 逻辑一致）。同种精华 ×3 可炼 [[烈火杏娇疏灵药]] ×2（炼 <b>4 分钟</b>）。</p>
     `,
     "zhei_jiguanjh": `
         <p><b>检视：</b>如同凤凰尾焰留下的精华，暖意轻盈却绵长。</p>
-        <p><b>炼制：</b>[[百宝鼎]]中放入 [[鸡冠凤凰葵芽穗]] ×3、[[鸡冠凤凰葵花]] ×1，炼制 <b>1 分 10 秒</b>。</p>
-        <p><b>补充（玩法）：</b>四种精华在鼎内均可按芽穗 + 花的套数成比例一次炼多份（与百宝鼎 allow_multiples 逻辑一致）。精华可再用于炼制对应灵药（各需同种精华 ×3，炼 <b>4 分钟</b>）。对应灵药：[[鸡冠凤凰灵药]]。</p>
+        <p><b>炼制：</b>[[百宝鼎]]中放入 [[鸡冠凤凰葵芽穗]] ×2、[[鸡冠凤凰葵花]] ×2，炼制 <b>1 分 10 秒</b>/套。</p>
+        <p><b>补充（玩法）：</b>四种精华在鼎内均可按「芽穗 ×2 + 花 ×2」为一套成比例一次炼多份（与百宝鼎 allow_multiples 逻辑一致）。同种精华 ×3 可炼 [[鸡冠凤凰灵药]] ×2（炼 <b>4 分钟</b>）。</p>
     `,
     "zhei_seed_bundle": `
         <p><b>星空种子包 · 一览</b></p>
