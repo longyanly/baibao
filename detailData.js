@@ -284,94 +284,157 @@ const detailData = {
         <p><b>皮肤：</b>支持与万物百宝共用的资源展示月亮主题皮肤（如「万物百宝小型-月亮」）。</p>
     `,
     "zhei_xinglan": `
-        <p><b>星澜</b> — 超详细人物介绍（模组向）</p>
+        <p><b>星澜</b>是<b>万物百宝专属角色</b>，需与万物百宝模组一同开启。具备空间亲和、等级成长与多项屏幕技能，并与百宝料理、材料深度联动。</p>
 
-        <h3 style="margin:1em 0 0.5em; color:#c0392b;">一、模组与定位</h3>
-        <p><b>模组名：</b>星澜*（万物百宝专属角色，需开启万物百宝模组否则会报错。）</p>
-        <p><b>作者自述：</b>万物百宝专属角色，第一次做人物、更新可能较慢、会持续更新，内容还未做完。</p>
-
-        <h3 style="margin:1em 0 0.5em; color:#c0392b;">二、选人界面与叙事设定</h3>
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">一、模组与选人信息</h3>
         <table style="border-collapse:collapse; width:100%; max-width:640px; margin:8px 0;">
             <tr><td style="border:1px solid #ccc; padding:8px; width:100px;"><b>名称</b></td><td style="border:1px solid #ccc; padding:8px;">星澜</td></tr>
-            <tr><td style="border:1px solid #ccc; padding:8px;"><b>标题 / 引用</b></td><td style="border:1px solid #ccc; padding:8px;">在宇宙中旅行的少女 / 具有空间亲和</td></tr>
-            <tr><td style="border:1px solid #ccc; padding:8px;"><b>生存评价</b></td><td style="border:1px solid #ccc; padding:8px;">再永恒大陆上面来回穿梭</td></tr>
-            <tr><td style="border:1px solid #ccc; padding:8px;"><b>性别</b></td><td style="border:1px solid #ccc; padding:8px;">女性</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>标题</b></td><td style="border:1px solid #ccc; padding:8px;">在宇宙中旅行的少女 / 具有空间亲和</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>生存评价</b></td><td style="border:1px solid #ccc; padding:8px;">在永恒大陆上面来回穿梭</td></tr>
         </table>
 
-        <h3 style="margin:1em 0 0.5em; color:#c0392b;">三、三维与基础战斗</h3>
-        <p>属性数值（modmain <code>TUNING</code>）：</p>
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">二、三维与等级成长</h3>
         <table style="border-collapse:collapse; width:100%; max-width:640px; margin:8px 0;">
-            <tr><td style="border:1px solid #ccc; padding:8px; width:120px;"><b>生命上限</b></td><td style="border:1px solid #ccc; padding:8px;">200</td></tr>
-            <tr><td style="border:1px solid #ccc; padding:8px;"><b>饥饿上限</b></td><td style="border:1px solid #ccc; padding:8px;">200</td></tr>
-            <tr><td style="border:1px solid #ccc; padding:8px;"><b>理智上限</b></td><td style="border:1px solid #ccc; padding:8px;">150（基础；会随等级提高，见下文）</td></tr>
-            <tr><td style="border:1px solid #ccc; padding:8px;"><b>伤害倍率</b></td><td style="border:1px solid #ccc; padding:8px;">1.0</td></tr>
-            <tr><td style="border:1px solid #ccc; padding:8px;"><b>减伤</b></td><td style="border:1px solid #ccc; padding:8px;">伤害吸收随等级提升：每级 +2.5%（0.025 × 等级），0 级为 0%，10 级满级为 25%（与薇格弗德同类机制）</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px; width:120px;"><b>生命</b></td><td style="border:1px solid #ccc; padding:8px;">基础 <b>200</b>，满 10 级上限 <b>350</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>饥饿</b></td><td style="border:1px solid #ccc; padding:8px;"><b>200</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>理智</b></td><td style="border:1px solid #ccc; padding:8px;">基础 <b>150</b>，每升 1 级 <b>+35</b>（满级 +350）</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>攻击倍率</b></td><td style="border:1px solid #ccc; padding:8px;">0 级 <b>1 倍</b>，满级 <b>2 倍</b>，随等级线性提升</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px;"><b>减伤</b></td><td style="border:1px solid #ccc; padding:8px;">每级 <b>+2.5%</b> 伤害吸收，满级 <b>25%</b>（机制类似薇格弗德）</td></tr>
         </table>
 
-        <h3 style="margin:1em 0 0.5em; color:#c0392b;">四、开局物品与「解密后的星空」</h3>
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">三、开局与防刷</h3>
         <ul>
-            <li><b>默认初始物品：</b><code>zhe_xkbaoshix</code>（[[解密后的星空]]，万物百宝中的强大的时空神奇，由星澜带到永恒大陆来的）</li>
-            <li><b>防刷：</b>换人物并不能多给一个解密后的星空哦！</li>
+            <li><b>初始物品：</b>[[解密后的星空]] × 1 + [[星星粉尘]] × 10</li>
+            <li><b>防刷：</b>同一档内换角色不会重复获得第二份[[解密后的星空]]；开局[[星星粉尘]]会归一化为 10 个</li>
+            <li><b>经验保留：</b>换人物再选回星澜时，等级经验不会清零</li>
         </ul>
 
-        <h3 style="margin:1em 0 0.5em; color:#c0392b;">五、喜好料理（万物百宝）</h3>
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">四、特质与爱好</h3>
         <ul>
-            <li><b>最喜爱：</b>熊猫粽子（与百科条目 [[熊猫棕子]] 对应）</li>
-            <li><b>收益倍率：</b>1.8</li>
+            <li><b>最喜爱：</b>[[熊猫棕子]]，生命 / 饥饿 / 理智收益 <b>× 1.8</b></li>
+            <li><b>科技：</b>自带一级科学加成（类似维克巴顿）</li>
+            <li><b>读书：</b>天生会读书；可读能力勋章专属书而<b>无需佩戴智慧勋章</b>（0 级可读，1 级前还不能制作书籍类配方）</li>
+            <li><b>诅咒：</b>免疫猴子诅咒</li>
+            <li><b>0 级特质：</b>随身携带或手持五种<b>热能工具</b>（裂隙斧 / 镐 / 铲 / 锤 / 锄）时，工具储存的温度不会被动下降</li>
+            <li><b>表情：</b>特定舞蹈表情期间，会周期性照料附近农田作物（约 25 格内）</li>
+            <li><b>棱镜：</b>自带星界亲和，靠近棱镜颤栗花不会惊动它</li>
         </ul>
 
-        <h3 style="margin:1em 0 0.5em; color:#c0392b;">六、诅咒</h3>
-        <p>不怕猴子诅咒。</p>
-
-        <h3 style="margin:1em 0 0.5em; color:#c0392b;">七、科技</h3>
-        <p>与维克巴顿类似，自带一级科学加成。</p>
-
-        <h3 style="margin:1em 0 0.5em; color:#c0392b;">八、星河之眼（夜视）</h3>
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">五、等级与经验</h3>
         <ul>
-            <li>可以通过技能图标开启和关闭，也可通过快捷键（默认为 <b>H</b>；可通过 [[百宝花杖]] 修改快捷键）</li>
-            <li><b>限制：</b>在沙尘暴无护目镜时不能开（宇宙之眼也怕小小的风沙）；开启时会快速消耗饥饿和理智值。</li>
+            <li><b>满级：</b>10 级；简单模式每级 <b>300</b> 经验（共 3000），困难模式每级 <b>750</b>（共 7500），可在模组设置中切换</li>
+            <li><b>[[经验星尘]]：</b>仅星澜食用，每颗 <b>+50</b> 经验</li>
+            <li><b>Boss 掉落：</b>星澜<b>击杀</b>大型 Boss 或雕像 Boss 时，按概率在尸体处额外掉落 1 颗（默认 <b>30%</b>，可在模组设置中调整）</li>
+            <li><b>助攻：</b>对同一 Boss 造成有效攻击后，若由<b>他人完成击杀</b>，星澜也可按同样概率获得掉落（多阶段 Boss 按当前阶段计算；克劳斯须进入二阶段）</li>
+            <li><b>幸运：</b>佩戴马蹄铁等提升幸运的装备时，掉落概率还有额外加成（最多约再提高 35 个百分点）</li>
+            <li><b>界面：</b>屏幕会显示当前等级与本级经验进度</li>
         </ul>
 
-        <h3 style="margin:1em 0 0.5em; color:#c0392b;">九、影袭连击与分身突进（xl_striker）</h3>
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">六、各等级解锁（摘要）</h3>
+        <table style="border-collapse:collapse; width:100%; max-width:720px; margin:8px 0; font-size:0.95em;">
+            <tr style="background:#f5f5f5;"><td style="border:1px solid #ccc; padding:6px; width:48px;"><b>等级</b></td><td style="border:1px solid #ccc; padding:6px;"><b>解锁内容</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">0</td><td style="border:1px solid #ccc; padding:6px;">人物栏可制荆棘甲、女武神盔、茶几、五种热能工具、热能陷阱、裂隙药膏等；百宝联动可炼虫腺体（[[火焰牛排]]×2）、[[太阳火种]]（[[火焰牛排]]×100）等</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">1</td><td style="border:1px solid #ccc; padding:6px;">采集 / 建造 / 烹饪 / 播种 / 收获等动作<b>明显加快</b>；可制作书籍类配方；[[星空伞]]、[[星空基站套装]]、[[星空盛宴]]（炼金引擎人物配方）；种子、空瓶、堆肥纸、猴尾草等合成；百宝[[百宝瓶]]（月亮玻璃×5）</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">2</td><td style="border:1px solid #ccc; padding:6px;">屏幕技能<b>「星河之邀」</b>；从任意锅收菜时<b>概率额外获得随机调味版</b>（基础 30%，3 级起每级 +10%）；可制小恶魔灵魂、绝望石甲、绝望头盔；棱镜电气重铸台旁可制作[[灵魂契约]]；人物栏 500 金锭可合成子圭奇型岩</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">3</td><td style="border:1px solid #ccc; padding:6px;">屏幕技能<b>「星河治愈」</b>：点地释放法阵（消耗 15 理智 + 15 饥饿，冷却 60 秒）；可制沙之石；起锅调味概率继续随等级上升</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">4</td><td style="border:1px solid #ccc; padding:6px;">四季书 [[春分]] / [[夏立]] / [[秋收]] / [[冬藏]]（[[太阳雕像仿品]]四阶科技 + [[经验星尘]]×3 等）；食人花种子合成</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">5</td><td style="border:1px solid #ccc; padding:6px;">黄 / 绿 / 彩虹宝石、硝石、大理石、月岩、金丝雀羽毛、独角鲸角等人物栏转化配方</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">10</td><td style="border:1px solid #ccc; padding:6px;">纯粹辉煌、虚空布、[[星星粉尘]]（[[星星碎片]]×5 转化）</td></tr>
+        </table>
+
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">七、屏幕技能</h3>
+        <p><b>星河之眼（夜视）</b></p>
         <ul>
-            <li><b>触发：</b>攻击满 <b>10</b> 次对当前目标进行影子杀（灵感来源王者的李白）</li>
-            <li><b>伤害：</b>每道影子，伤害默认 <b>100</b>。模组配置：可选 50 / 75 / 100 / 125 / 150 / 200</li>
-            <li><b>分身动画与位移：</b>（模组内表现，以游戏内为准）</li>
+            <li>技能栏或快捷键开启（默认 <b>H</b>，可在[[百宝花杖]]→快捷键设置中修改，也可选「无」仅用按钮）</li>
+            <li>开启后持续消耗约 <b>0.6 饥饿 / 秒</b>、<b>0.5 理智 / 秒</b></li>
+            <li>沙尘暴中若无护目镜则无法开启，已开会被强制关闭</li>
+        </ul>
+        <p><b>星河之邀（2 级）</b></p>
+        <ul>
+            <li>消耗 <b>10 理智 + 10 饥饿</b>，在附近队友身旁生成<b>星界道标</b>（持续约 10 秒）</li>
+            <li>队友右键触摸道标可<b>传送到星澜身边</b>；技能冷却与道标存在时间一致</li>
+        </ul>
+        <p><b>星河治愈（3 级）</b></p>
+        <ul>
+            <li>点地释放：消耗 <b>15 理智 + 15 饥饿</b>，冷却 <b>60 秒</b>，施法距离约 <b>12</b> 格</li>
+            <li>法阵半径约 <b>8</b>，持续 <b>48 秒</b>；圈内星澜与队友缓慢回血，并获得 <b>+10% 攻击与移速</b>（离圈或法阵结束消失）</li>
         </ul>
 
-        <h3 style="margin:1em 0 0.5em; color:#c0392b;">十、等级与经验系统（核心）</h3>
-        <p><b>经验上限与等级</b></p>
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">八、影袭连击</h3>
         <ul>
-            <li><b>最大等级：</b>10</li>
-            <li><b>每级所需经验：</b>简单 <b>300</b> / 困难 <b>750</b>；总经验上限：<code>MAX_LEVEL × 每级经验</code>（即 3000 或 7500）</li>
-        </ul>
-        <p><b>经验来源</b></p>
-        <ul>
-            <li><b>[[经验星尘]]</b>（<code>zhei_exp_stardust</code>）：星澜食用时一个加 <b>50</b> 点</li>
-            <li><b>击杀掉落：</b>击杀 Boss 掉落（配置 0～100%，默认 30%）</li>
-        </ul>
-        <p><b>升级属性（ZheiApplyLevelStats）</b></p>
-        <ul>
-            <li><b>理智上限：</b>每升一级加 <b>35</b></li>
-            <li><b>减伤抗性：</b>每级 +2.5%，满级 10 约 +25%（与薇格弗德同类机制）</li>
-        </ul>
-        <p><b>等级</b></p>
-        <ul>
-            <li><b>0 级：</b>可以读书但是不能制作书籍，科技等级比普通人物自动多一级。</li>
-            <li><b>1 级：</b>解锁快速采集能力，和制作书籍的能力。</li>
-            <li><b>2 级：</b>收获锅中食物时有概率额外获得一份随机调味版本；并解锁传送系道具制作（[[星空伞]] / [[星空基站套装]]）。</li>
-            <li><b>3 级：</b>解锁专属锅 [[星空盛宴]] 制作（可研磨/烹饪/调味，队友可用）。</li>
-            <li><b>4 级：</b>解锁四季专属书籍制作：[[春分]]、[[夏立]]、[[秋收]]、[[冬藏]]（仅星澜可诵读）。</li>
-            <li><b>5～10 级：</b>持续获得属性成长（理智上限与减伤提升）。</li>
+            <li>对同一目标普通攻击累计 <b>10</b> 次后，触发<b>四道分身</b>从四周突进</li>
+            <li>每道分身伤害默认 <b>100</b>（模组设置可选 50 / 75 / 100 / 125 / 150 / 200）</li>
         </ul>
 
-        <h3 style="margin:1em 0 0.5em; color:#c0392b;">十一、已实装专属内容（本次版本）后续还有内容会慢慢更新</h3>
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">九、锅收菜调味（2 级起）</h3>
         <ul>
-            <li><b>传送体系：</b>[[星空伞]] + [[星空基站套装]]，支持折跃传送与基站网络。</li>
-            <li><b>专属锅：</b>[[星空盛宴]]，便携部署、双成品位、支持研磨/烹饪/调味，且可多人共用。</li>
-            <li><b>四季书：</b>[[春分]]、[[夏立]]、[[秋收]]、[[冬藏]]，仅星澜可读，分别引导季节变化。</li>
-            <li><b>战斗技能：</b>影袭连击与分身突进（连击触发）。</li>
-            <li><b>成长系统：</b>[[经验星尘]]、Boss 掉落与等级成长链路已接入。</li>
+            <li>星澜从<b>任意锅</b>收取成品时，概率额外获得一份<b>随机调味版</b>同种料理（含棱镜料理）</li>
+            <li>2 级概率为基础 <b>30%</b>；3 级起每升 1 级再 <b>+10%</b>（上限 100%）</li>
+            <li>[[白熊冰箱]]的「收锅」功能与上述规则一致</li>
+        </ul>
+
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">十、专属道具（详见各词条）</h3>
+        <ul>
+            <li><b>传送：</b>[[星空伞]] + [[星空基站套装]] — 手持伞右键选基站，再在地图上点选折跃；附近约 <b>3 格</b>内队友可<b>一同传送</b>；伞耐久可用[[星星碎片]]补充（约 5%/次）</li>
+            <li><b>烹饪：</b>[[星空盛宴]] — 研磨 / 烹饪 / 调味三合一便携锅，<b>1 级</b>可制作（[[星星粉尘]]×10 + [[熊猫棕子]]×8 + 蓝宝石×2）；部署后<b>队友可用</b>；锅内保鲜可在模组设置中单独调整</li>
+            <li><b>四季书：</b>[[春分]] / [[夏立]] / [[秋收]] / [[冬藏]] — <b>4 级</b>、太阳雕像四阶科技；<b>仅星澜</b>可诵读改季，[[薇克巴顿]]不可用</li>
+        </ul>
+
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">十一、模组设置</h3>
+        <ul>
+            <li>影袭分身单次伤害、等级经验模式（简单 / 困难）、Boss 经验星尘掉落概率</li>
+            <li>[[星空盛宴]]锅内保鲜强度（与万物百宝箱类设置相互独立）</li>
+        </ul>
+
+        <h3 style="margin:1em 0 0.5em; color:#c0392b;">十二、与其他模组联动</h3>
+        <p>星澜必须和<b>万物百宝</b>一起开；未开百宝时选人界面会提示。下面按常见模组说明已做的联动——没装对应模组时，相关功能自然用不上，一般也不影响其它玩法。</p>
+
+        <p><b>万物百宝（必开）</b></p>
+        <ul>
+            <li>[[解密后的星空]]、[[星星粉尘]]、[[星星碎片]]、[[熊猫棕子]]、[[火焰牛排]]、[[太阳火种]] 等核心材料均来自百宝</li>
+            <li>[[百宝花杖]]里可改<b>星河之眼</b>快捷键（默认 H）；星澜皮肤在百宝小店 / 花杖皮肤页统一管理</li>
+            <li>[[白熊冰箱]]「收锅」同样享受星澜 2 级起的<b>起锅调味</b>加成</li>
+            <li>悬停星澜或[[星空盛宴]]时，百宝会显示等级、锅内保鲜等信息；锅界面拖拽方式与百宝容器一致</li>
+            <li>[[星空盛宴]]「整理储物」的归类顺序与百宝大箱相同</li>
+            <li>星澜手持热能园艺锄刨地时，可<b>一次开垦 3×3</b>（与[[封印法杖]]的刨地效果类似）</li>
+        </ul>
+
+        <p><b>棱镜</b></p>
+        <ul>
+            <li><b>2 级</b>可在激活的<b>电气重铸台</b>旁制作[[灵魂契约]]，材料与棱镜原版相同（灵魂×20、地图卷轴×5、告密的心×2、噩梦燃料×20）</li>
+            <li><b>2 级</b>还可用 500 金锭在人物栏合成<b>子圭奇型岩</b></li>
+            <li>靠近棱镜<b>颤栗花</b>不会把它吓跑</li>
+            <li>[[星空盛宴]]可<b>无视月圆</b>制作棱镜月相四件套——<b>月饼</b>、<b>月酿</b>须在<b>白天</b>；<b>花儿粑</b>、<b>花儿酒</b>须在<b>黑夜</b>（食材规则仍与棱镜一致）；另支持研磨棱镜花瓣等，星澜 2 级起收锅调味对棱镜料理生效</li>
+            <li>星澜 2 级起从锅收菜时，<b>棱镜料理</b>同样有机会额外获得调味版</li>
+        </ul>
+
+        <p><b>能力勋章</b></p>
+        <ul>
+            <li>星澜<b>不用戴智慧勋章</b>也能读勋章专属书，例如：陷阱重置、不朽、怪物、未解、自动陷阱、种植书等</li>
+            <li>[[星空盛宴]]研磨时，会一并识别能力勋章的研磨配方（与原版盐 / 椒 / 蒜 / 蜜等规则并存）</li>
+        </ul>
+
+        <p><b>丰耘秘境</b></p>
+        <ul>
+            <li>[[星空盛宴]]研磨支持丰耘秘境的专属原料；精华类材料的产出份数与丰耘锅一致</li>
+        </ul>
+
+        <p><b>永不妥协</b></p>
+        <ul>
+            <li><b>爆破蓝莓：</b>星澜靠近不会引爆；星澜挖掘时也不会连锁炸响周围的蓝莓</li>
+        </ul>
+
+        <p><b>联机版官方内容</b></p>
+        <ul>
+            <li>制作[[夏立]]需要<b>红眼冠</b>（联机版「猪镇」饰品）</li>
+            <li>四季书需先解锁[[太阳雕像仿品]]四阶科技</li>
+            <li>[[星空盛宴]]另支持<b>原版沃利便携烹饪锅</b>食谱；安装了<b>神话书说</b>等模组时，须其料理写入便携锅食谱池方可制作（未满四格也会预览，与[[饭桶]]类似）</li>
+        </ul>
+
+        <p><b>信息辅助类模组（可选）</b></p>
+        <ul>
+            <li>安装 <b>ShowMe</b> 时，悬停[[星空盛宴]]格子可查看腐烂等信息</li>
+            <li>安装 <b>Insight</b> 时，悬停锅本体可查看锅内保鲜倍率</li>
         </ul>
     `,
     "zhei_character_test": `
@@ -418,40 +481,78 @@ const detailData = {
         <p><span style="color:orange;">提示：饭桶不是桶</span></p>
     `,
     "zhei_zfantong": `
-        <p><b>真饭桶</b>（预制体 <code>zhei_zfantong</code>）是落地<b>烹饪站建筑</b>：在联动范围内从冰箱类容器<b>扣取食材</b>，自动填入附近的<b>空锅</b>并开始烹饪。可视作手持[[饭桶]]的「定点升级版」——不再依赖装备施法，而是用界面编排配方与下锅。</p>
+        <p><b>真饭桶</b>（预制体 <code>zhei_zfantong</code>）是落地<b>烹饪站建筑</b>：在联动范围内从冰箱类容器<b>扣取食材</b>，抛物飞入附近的<b>空锅</b>并自动开煮。可视作手持[[饭桶]]的「定点升级版」——不消耗理智、不依赖装备施法，用书本式界面编排三排方案、浏览料理图鉴并一键下锅。</p>
 
         <p><b>制作配方：</b>石砖 × 15 + 电子元件 × 10 + 荧光果 × 8 + [[饭桶]] × 1（会<b>消耗</b>一只饭桶）</p>
         <p><b>制作科技：</b>暗影操控器（四本）；制作栏为百宝结构/容器类</p>
 
-        <p><b>放置与范围：</b></p>
+        <p><b>两种距离（勿混用）：</b></p>
         <ul>
-            <li>放置时辅助圈大致对应<b>联动识别半径</b>（默认世界单位 <b>12</b>，建议在模组配置中取 4 的倍数；具体约合几格以游戏内悬停提示为准）</li>
-            <li>该半径用于：<b>发现可用冰箱/盐盒</b>、校验取料是否在范围内、以及<b>搜索可用锅</b>——三者一致</li>
-            <li><b>激活打开界面</b>仍需角色靠近真饭桶本体（代码上约 <b>4</b> 单位内），不会因把联动半径调大而在远处点开 UI</li>
+            <li><b>联动半径</b>（默认世界单位 <b>12</b>，模组配置 <code>ZHEI_ZFANTONG_LINK_RANGE</code>，建议取 4 的倍数）：以真饭桶为中心的<b>球半径</b>，用于发现[[白熊冰箱]]/盐盒/原版冰箱、校验扣料是否在范围内、搜索可用空锅。放置预览圈与悬停文案（「联动识别半径：N，约合 X 格」）与此一致</li>
+            <li><b>贴身范围</b>（固定约 <b>4</b> 世界单位 ≈ 1 格）：打开界面、点「烹饪」、同步锁定方案等 RPC 须在此距离内；<b>不会</b>随联动半径变大而在远处操作</li>
+            <li>占用期间若开门者<b>走远</b>超出贴身范围，服务端会强制关界面、释放占用并播放关闭动画；主动点「关闭」也会释放占用</li>
         </ul>
 
         <p><b>认可的「食材来源」：</b></p>
         <ul>
-            <li>默认包含：[[白熊冰箱]]（<code>bx_binxiang</code>）、原版冰箱、盐盒</li>
-            <li>其它模组容器：预制体上加标签 <code>zhei_zfantong_fridge</code> 且具备标准容器组件即可参与</li>
-            <li>棱镜联动：月藏宝匣 <code>hiddenmoonlight</code>、月藏宝匣·无限 <code>hiddenmoonlight_inf</code> 等在代码白名单内</li>
+            <li>默认：[[白熊冰箱]]（<code>bx_binxiang</code>）、原版冰箱、盐盒</li>
+            <li>棱镜：月藏宝匣 <code>hiddenmoonlight</code>、月藏宝匣·无限 <code>hiddenmoonlight_inf</code>（白名单兼容）</li>
+            <li>全息投影魔方等：预制体带 <code>zhei_zfantong_fridge</code> 标签且具备标准容器组件即可参与</li>
+            <li>其它模组容器：在预制体上添加同上标签即可接入</li>
         </ul>
 
-        <p><b>界面与料理：</b></p>
+        <p><b>界面结构：</b></p>
         <ul>
-            <li>标题界面为「真饭桶」书本式 UI：可浏览<b>原版 / 大厨 / 模组料理</b>等书签；模组料理列表变更后可使用<b>刷新模组料理</b></li>
-            <li>多排格子可锁定内容与「本排入锅」方案，逻辑上与[[饭桶]]的方案键类似：选定一排四格作为配方，由主机校验联动容器内食材并发起到最近可用锅</li>
-            <li>预测与入锅的<b>锅类型档位</b>对应三套配方表：<b>普通锅</b>、<b>大厨便携锅</b>（与大厨配方一致）、<b>[[百宝炊具]]</b>（<code>zhei_cookpot1</code>，与便携大厨表同源预测）</li>
+            <li>右键专用动作「打开」（<code>ZHEI_ZFANTONG_OPEN</code>，联机/专用服可用；他人占用时提示「队友使用中」）</li>
+            <li><b>「烹饪」页</b>（主工作区）：
+                <ul>
+                    <li>左侧：联动范围内冰箱/盐盒食材格（可筛选肉/菜/果/其他），带滚动条</li>
+                    <li><b>第一步</b>：三排 × 四格食材槽；点空槽切换当前编辑排；每排可「锁定」保留四格（关界面仍保留），「选用」指定哪一排入锅；点槽内食材可清除</li>
+                    <li><b>第二步</b>：切换锅型档位（普通锅 / 大厨便携锅 / [[百宝炊具]]）</li>
+                    <li><b>第三步</b>：根据当前四格与锅型显示预测成品与属性</li>
+                    <li>底部「关闭 / 烹饪」：确认后从冰箱扣料，食材<b>抛物飞入</b>目标锅（飞行中带 <code>zhei_wetgoop_exclude_autocollect</code>，不会被百宝自动收集吸走），四格到齐后自动 <code>StartCooking</code></li>
+                </ul>
+            </li>
+            <li><b>料理书签</b>：烹饪锅 / 大厨便携锅 / 百宝料理 / 模组料理等（与百宝小店料理页数据同源；「模组料理」页可点「刷新模组料理」重扫列表）。在书签里点某道菜：先在「烹饪」页选好锅型，再点该菜可<b>自动选料</b>并下锅（<code>zhei_zfantong_recipe_fill</code>，优先较便宜的同类食材；百宝与原版料理均有四格需求表）</li>
         </ul>
 
-        <p><b>烹饪失败提示（节选）：</b></p>
+        <p><b>口渴 mod 兼容（<code>zhei_thirst_kettle_recipes</code>）：</b></p>
         <ul>
-            <li>离真饭桶过远无法下锅；联动冰箱无效或过远；食材不足；附近没有符合当前档位的空锅；目标锅中途失效等——均以游戏内飘字为准</li>
+            <li>启用<b>口渴 mod</b>且其已向 <code>cooking.recipes</code> 注册对应配方表时，真饭桶 UI 会<b>动态追加</b>下列书签（未检测到则不显示；顺序固定为 煮饮 → 酿酒 → 蒸馏）：
+                <ul>
+                    <li><b>「煮饮」</b>：读取 <code>kettle</code> 或 <code>portablekettle</code>（茶壶 / 便携茶壶）</li>
+                    <li><b>「酿酒」</b>：读取 <code>brewery</code>（酿酒桶）</li>
+                    <li><b>「蒸馏」</b>：读取 <code>distillers</code>（蒸馏台）</li>
+                </ul>
+            </li>
+            <li><b>仅查阅，不能自动下锅</b>：这些书签用于浏览饮品配方与属性，<b>不会</b>像烹饪锅 / 百宝料理页那样点选后自动选料、抛物入锅；仍须在口渴 mod 自己的煮饮站建筑上制作</li>
+            <li>展示内容：中文饮品名、配方字符串（含手写覆盖与推断兜底）、生命 / 饥饿 / 理智 / <b>口渴</b> 四维属性，以及 <code>oneat_desc</code> 食用效果（由 <code>zhei_thirst_zh_strings</code> 汉化，不依赖当前游戏语言）</li>
+            <li>会自动跳过失败产物占位（如 <code>goopydrink</code>、<code>spoiled_drink</code>、<code>disinfectant</code> 等）</li>
+            <li>与百宝小店「料理」页的口渴标签逻辑一致；书签总数 ≥ 7 时界面会分两行排布标签</li>
         </ul>
 
-        <p><b>多人规则：</b>同一时间仅一名玩家占用界面；他人激活会提示「有人正在使用」。开门玩家掉线离开档时，服务端会清理占用并播放关闭动画。</p>
+        <p><b>锅型与批量烹饪：</b></p>
+        <ul>
+            <li>三档锅型对应三套预测表：普通锅（非大厨、非百宝炊具）、大厨便携锅（须玩家带 <code>masterchef</code> 标签）、[[百宝炊具]]（<code>zhei_cookpot1</code>）</li>
+            <li>目标须为<b>空锅</b>：未在煮、未完工、容器关闭、无在途飞行占位；<b>不含</b>便携香料站</li>
+            <li>一次「烹饪」会按联动范围内<b>空锅数量</b>与<b>各 prefab 总库存</b>取较小值，尽量<b>同时入多口锅</b>；UI 四格主要用于指定配方，补料时可从其它冰箱按距离就近取同 prefab</li>
+            <li>扣料中途失败时，已扣下的料会丢在目标锅脚下（不会退回冰箱）</li>
+        </ul>
 
-        <p><b>拆除：</b>可用锤子拆除（有耐久工作量），会掉落合成材料类战利品（以游戏内为准）。</p>
+        <p><b>方案持久化：</b></p>
+        <ul>
+            <li>锁定的排会同步至服务端实体存档（<code>_zhei_zfantong_row_state</code>），读档后可通过 RPC 拉回；客户端另有按 GUID 的会话缓存</li>
+            <li>未锁定排在下厨后关界面会清空；锁定排缺货时飘字「锁定方案已保留，范围内冰箱暂缺该食材…」</li>
+        </ul>
+
+        <p><b>烹饪失败提示（节选，以游戏内飘字为准）：</b></p>
+        <ul>
+            <li>离真饭桶太远；冰箱无效或已失效；有食材不在联动范围内；格子无效；槽里不是可用食材；联动范围内食材不够；附近没有符合档位的空锅；目标锅失效；取料失败（可能被别人先用掉）等</li>
+        </ul>
+
+        <p><b>多人规则：</b>同一时间仅一名玩家占用；他人无法打开。开门者离档（<code>ms_playerleft</code>）会释放占用并关动画。</p>
+
+        <p><b>其它：</b>手持可部署物靠近真饭桶时，会显示与联动半径一致的辅助圈（与万物百宝 deployhelper 同类）；可用锤子拆除（工作量 4），掉落合成材料类战利品。</p>
     `,
     "zhei_qianjisan": `
         <p><b>千机伞</b>是一款具有跳劈能力的强力武器，攻击附带<b>高贵的真伤</b>，并具有随机伤害倍率、吸血效果等多种特性。</p>
@@ -1180,53 +1281,210 @@ const detailData = {
         </ul>
     `,
     "zhei_chaoscrystal": `
-        <p><b>混沌水晶</b>是蕴含混沌力量的水晶，可对多种物品使用：对紫水晶武器、丰耘秘境工具为<b>移除耐久</b>（变为无限耐久），对月之魔典、千机伞、园艺学简编、亮茄炸弹、羽扇为<b>变异</b>为对应混沌版本；还可对[[百宝背包]]触发<b>混沌保鲜</b>升级。</p>
+        <p><b>混沌水晶</b>（zhei_chaoscrystal）蕴含混沌力量，可对多种百宝或联动物品使用。手持水晶对<b>物品栏中</b>的目标右键，消耗 1 颗水晶，效果永久（同一目标不可重复处理）。</p>
         
-        <p><b>获取方式：</b></p>
+        <p><b>获取方式：</b>[[月食雕像仿品]]（zhei_moon_statue）完成献祭后获得 1 颗。</p>
+        
+        <p><b>可作用物品一览：</b></p>
+        <div style="overflow-x:auto;">
+        <table style="border-collapse:collapse; width:100%; min-width:720px; font-size:0.9em;">
+            <tr style="background:#f0f0f0;"><th style="border:1px solid #ccc; padding:6px; white-space:nowrap;">类型</th><th style="border:1px solid #ccc; padding:6px;">目标</th><th style="border:1px solid #ccc; padding:6px;">结果 / 效果</th><th style="border:1px solid #ccc; padding:6px;">动作提示</th><th style="border:1px solid #ccc; padding:6px;">备注</th></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">移除耐久</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">[[紫水晶剑]]（zhei_zishuijingjian）<br>[[紫水晶刀]]（zhei_zishuijingdao）</td><td style="border:1px solid #ccc; padding:6px;">无限耐久；剑会恢复伤害与电击</td><td style="border:1px solid #ccc; padding:6px;">移除耐久</td><td style="border:1px solid #ccc; padding:6px;">须手持于物品栏；有 finiteuses 且未处理过</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">移除耐久</td><td style="border:1px solid #ccc; padding:6px; line-height:1.5;">丰耘秘境：自然亲和子塔（honor_stower）<br>辉煌多用工具（honor_multitool）</td><td style="border:1px solid #ccc; padding:6px;">无限耐久</td><td style="border:1px solid #ccc; padding:6px;">移除耐久</td><td style="border:1px solid #ccc; padding:6px;">已有 hide_percentage 标签则不可再用</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">变异</td><td style="border:1px solid #ccc; padding:6px;">月之魔典（book_moon）</td><td style="border:1px solid #ccc; padding:6px;">[[月之魔典混沌]]</td><td style="border:1px solid #ccc; padding:6px;">变异</td><td style="border:1px solid #ccc; padding:6px;">保留当前耐久</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">变异</td><td style="border:1px solid #ccc; padding:6px;">[[千机伞]]（zhei_qianjisan）</td><td style="border:1px solid #ccc; padding:6px;">[[千机伞混沌]]</td><td style="border:1px solid #ccc; padding:6px;">变异</td><td style="border:1px solid #ccc; padding:6px;">可传递皮肤</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">变异</td><td style="border:1px solid #ccc; padding:6px;">园艺学简编（book_horticulture）</td><td style="border:1px solid #ccc; padding:6px;">园艺学简编混沌</td><td style="border:1px solid #ccc; padding:6px;">变异</td><td style="border:1px solid #ccc; padding:6px;">—</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">变异</td><td style="border:1px solid #ccc; padding:6px;">亮茄炸弹（bomb_lunarplant）</td><td style="border:1px solid #ccc; padding:6px;">[[亮茄炸弹混沌]]</td><td style="border:1px solid #ccc; padding:6px;">变异</td><td style="border:1px solid #ccc; padding:6px;">无 finiteuses 也可变异</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">变异</td><td style="border:1px solid #ccc; padding:6px;">[[羽扇]]（zhei_yushan）</td><td style="border:1px solid #ccc; padding:6px;">[[羽扇混沌]]</td><td style="border:1px solid #ccc; padding:6px;">变异</td><td style="border:1px solid #ccc; padding:6px;">—</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">独立变异</td><td style="border:1px solid #ccc; padding:6px;">[[百宝包装]]（tc_baibao_giftwrap）</td><td style="border:1px solid #ccc; padding:6px;">[[百宝包装·混沌]]</td><td style="border:1px solid #ccc; padding:6px;">混沌包装</td><td style="border:1px solid #ccc; padding:6px;">须手持；叠多张→1 张混沌版</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">独立变异</td><td style="border:1px solid #ccc; padding:6px;">百宝迁移打包纸（zhei_superpack_wrap）</td><td style="border:1px solid #ccc; padding:6px;">[[百宝迁移装置·混沌]]</td><td style="border:1px solid #ccc; padding:6px;">混沌迁移</td><td style="border:1px solid #ccc; padding:6px;">须手持；叠多张→1 张混沌版</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">背包升级</td><td style="border:1px solid #ccc; padding:6px;">[[百宝背包]]（zhei_backpackd）</td><td style="border:1px solid #ccc; padding:6px;">混沌保鲜（腐烂倍率 0）</td><td style="border:1px solid #ccc; padding:6px;">混沌保鲜</td><td style="border:1px solid #ccc; padding:6px;">不可重复升级</td></tr>
+        </table>
+        </div>
+
+        <p><b>使用条件（通用）：</b></p>
         <ul>
-            <li>来源：月食雕像仿品（zhei_moon_statue）完成献祭后获得</li>
+            <li>除[[百宝背包]]外，「移除耐久 / 变异」类目标须在物品栏中且为<b>手持</b>状态（不可对地上物品使用）</li>
+            <li>「移除耐久」类：目标须有 finiteuses 组件且未标记 chaos_crystal_used（亮茄炸弹除外）</li>
+            <li>包装纸 / 迁移纸的独立变异：同样须手持；无论叠多少张，成功时<b>只保留 1 张</b>混沌版且不可再堆叠</li>
         </ul>
         
-        <p><b>可作用物品：</b></p>
-        <ul>
-            <li><b>移除耐久（无限耐久）：</b>
-                <ul>
-                    <li>[[紫水晶剑]]（zhei_zishuijingjian）</li>
-                    <li>[[紫水晶刀]]（zhei_zishuijingdao）</li>
-                    <li>丰耘秘境：自然亲和子塔（honor_stower）、辉煌多用工具（honor_multitool）</li>
-                </ul>
-            </li>
-            <li><b>变异为混沌版本：</b>
-                <ul>
-                    <li>月之魔典（book_moon）→ 月之魔典混沌</li>
-                    <li>[[千机伞]]（zhei_qianjisan）→ [[千机伞混沌]]</li>
-                    <li>园艺学简编（book_horticulture）→ 园艺学简编混沌</li>
-                    <li>亮茄炸弹（bomb_lunarplant）→ 亮茄炸弹混沌</li>
-                    <li>[[羽扇]]（zhei_yushan）→ 羽扇混沌</li>
-                </ul>
-            </li>
-            <li><b>百宝背包升级：</b>
-                <ul>
-                    <li>[[百宝背包]]（zhei_backpackd）→ 混沌保鲜（暂停腐烂）</li>
-                </ul>
-            </li>
-        </ul>
+        <p><b>消耗：</b>每次成功使用消耗 1 颗混沌水晶（移除、变异、混沌保鲜均消耗）。</p>
         
-        <p><b>使用方式：</b></p>
+        <p><span style="color:#666;">游戏内检视文案亦列出：紫水晶武器、月之魔典、千机伞、园艺学简编、亮茄炸弹、[[百宝包装]]、百宝迁移打包纸，以及[[百宝背包]]混沌保鲜。</span></p>
+    `,
+    "tc_baibao_giftwrap": `
+        <p><b>百宝包装</b>（tc_baibao_giftwrap）是万物百宝模组自带的<b>礼物打包纸</b>，用法类似原版节日礼物包装，但打包界面为更大的 <b>4×4（16 格）</b>，一次能装入更多物品。</p>
+
+        <p><b>打包界面：</b></p>
+        <div style="text-align:center; margin: 15px 0;">
+            <img src="img/giftwrap_ui.png" alt="百宝包装界面" style="max-width:100%; border: 2px solid #d35400; border-radius: 8px;">
+        </div>
+
+        <p><b>制作配方：</b>莎草纸 × 1 + 花瓣 × 1</p>
+        <p><b>制作科技：</b>炼金引擎（二本）；<b>一次制作 4 张</b>（与原版 giftwrap 产出数量一致）</p>
+        <p><b>制作分类：</b>百宝工具栏</p>
+
+        <p><b>使用方法：</b></p>
         <ul>
-            <li>手持混沌水晶，对物品栏中上述任意目标物品右键使用（移除耐久、变异或混沌保鲜）</li>
+            <li>手持或在物品栏中右键包装纸，打开 4×4 打包界面</li>
+            <li>放入要打包的物品后点击「打包」按钮（WRAPBUNDLE）</li>
+            <li>成功打包后<b>消耗 1 张</b>百宝包装，产出<b>百宝礼物</b>（tc_baibao_gift，显示名「百宝礼物」）</li>
         </ul>
-        
-        <p><b>消耗：</b></p>
+
+        <p><b>与原版礼物包装对比：</b></p>
         <ul>
-            <li>使用后：混沌水晶会被消耗（移除）</li>
+            <li><b>格口：</b>百宝包装 <b>4×4</b>；原版节日礼物包装 <b>2×2</b></li>
+            <li><b>产出物：</b>百宝礼物（独立 prefab），与节日包装产出的 gift 分开，互不影响</li>
+            <li>礼物外观仍使用 gift 动画（小/中/大盒随装入格数变化）</li>
         </ul>
-        
-        <p><b>特殊机制：</b></p>
+
+        <p><b>不可放入打包格的物品：</b>带 <code>irreplaceable</code>、<code>_container</code>、<code>bundle</code>、<code>nobundling</code> 标签的物品（与 bundle 类容器通用限制一致）。</p>
+
+        <p><b>百宝礼物（产出物）：</b></p>
         <ul>
-            <li>每种目标物品只能使用一次混沌水晶</li>
-            <li>移除耐久或变异后为永久效果</li>
+            <li>可 unwrap 取回内容；燃烧/鬼魂作祟等行为对齐原版 gift</li>
+            <li><b>鼠标悬停</b>可查看盒内完整物品列表（百宝悬停 RPC，不截断省略；兼容 Show Me / Insight 等模组）</li>
         </ul>
+
+        <p><b>混沌升级：</b>手持[[混沌水晶]]，对物品栏中<b>已拿在手上</b>的百宝包装右键「混沌包装」，消耗 1 颗水晶，变为[[百宝包装·混沌]]；若当时叠有多张，变异后<b>只保留 1 张</b>混沌版。</p>
+
+        <p><b>其它：</b>可堆叠（中等堆叠上限）；可作微量燃料；会沉水。</p>
+    `,
+    "tc_baibao_giftwrap_chaos": `
+        <p><b>百宝包装·混沌</b>（tc_baibao_giftwrap_chaos）是[[百宝包装]]经[[混沌水晶]]变异后的<b>永久打包工具</b>：界面仍为 4×4，但格内可无限堆叠，且打包时<b>不再消耗自身</b>。</p>
+
+        <p><b>获取：</b>手持[[混沌水晶]]，对物品栏中的[[百宝包装]]右键使用（须为手持状态）；消耗 1 颗混沌水晶。无论当时叠有多少张普通包装，变异后<b>只得到 1 张</b>混沌包装，且<b>不可再堆叠</b>。</p>
+
+        <p><b>与普通百宝包装差异：</b></p>
+        <table style="border-collapse:collapse; width:100%; max-width:640px; margin:8px 0; font-size:0.95em;">
+            <tr style="background:#f5f5f5;"><td style="border:1px solid #ccc; padding:6px; width:120px;"><b>项目</b></td><td style="border:1px solid #ccc; padding:6px;"><b>百宝包装</b></td><td style="border:1px solid #ccc; padding:6px;"><b>百宝包装·混沌</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">打包格口</td><td style="border:1px solid #ccc; padding:6px;">4×4</td><td style="border:1px solid #ccc; padding:6px;">4×4</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">格内堆叠</td><td style="border:1px solid #ccc; padding:6px;">原版堆叠规则</td><td style="border:1px solid #ccc; padding:6px;"><b>无限堆叠</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">每次打包</td><td style="border:1px solid #ccc; padding:6px;">消耗 1 张纸</td><td style="border:1px solid #ccc; padding:6px;"><b>不消耗</b>，可反复使用</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">物品堆叠</td><td style="border:1px solid #ccc; padding:6px;">可堆叠</td><td style="border:1px solid #ccc; padding:6px;">不可堆叠（仅 1 张）</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">产出</td><td style="border:1px solid #ccc; padding:6px;" colspan="2">百宝礼物（tc_baibao_gift），悬停预览相同</td></tr>
+        </table>
+
+        <p><b>机制说明：</b>混沌版在开始打包时会清空 bundler 对包装纸的引用，避免取消打包时误退还一张普通纸；因此实际表现为「这张混沌纸永远在物品栏里，只产出礼物盒」。</p>
+
+        <p><span style="color:#666;">已是混沌版时无法再次混沌化；失败时角色会提示「无法将百宝包装混沌化」。</span></p>
+    `,
+    "tc_baibao_broom": `
+        <p><b>百宝扫把</b>（预制体 <code>tc_baibao_broom</code>）是在原版<b>清洁扫把</b>基础上附加百宝咒术的<b>批量换肤工具</b>。动画与物品栏图标暂用原版清洁扫把资源，逻辑独立（不修改原版 <code>reskin_tool</code>）。</p>
+
+        <p><b>制作配方：</b>清洁扫把 × 1 + 花瓣 × 4 + 绳子 × 1</p>
+        <p><b>制作科技：</b>炼金引擎（二本）；百宝工具栏</p>
+
+        <p><b>操作方式（对齐棱镜「敝帚之珍」）：</b></p>
+        <ul>
+            <li><b>装备</b>后：对可换肤目标<b>左键</b> = 副模式；<b>右键</b> = 主模式</li>
+            <li>已装备时在<b>物品栏右键</b>扫把 → 「切换」，循环主模式：顺序 → 逆序 → 随机 → 复制粘贴</li>
+            <li>对地面<b>范围施法</b>（AOE 准星）→ 以落点为中心、半径 <b>4</b> 批量换肤，使用当前主模式（复制模式下范围施法等同粘贴）</li>
+            <li>悬停物品栏扫把可查看「当前模式」；复制模式下另显示「已复制：种类·皮肤名」</li>
+        </ul>
+
+        <p><b>四种模式：</b></p>
+        <ul>
+            <li><b>顺序</b>：在已拥有的皮肤列表中切到下一张</li>
+            <li><b>逆序</b>：切到上一张；部分仅皮肤、不可选「原皮」的种类到边界会停住</li>
+            <li><b>随机</b>：从已拥有皮肤中随机挑选（尽量不同于当前）</li>
+            <li><b>复制粘贴</b>：主模式为「复制」时右键目标只记录皮肤不更换；副模式为「粘贴」时左键对<b>同 prefab 种类</b>目标应用已复制皮肤。左键点不同种类会先复制</li>
+        </ul>
+
+        <p><b>目标与限制：</b></p>
+        <ul>
+            <li>规则与原版清洁扫把一致：须为 <code>PREFAB_SKINS</code> 登记种类，且玩家<b>拥有</b>对应皮肤（含可解锁皮肤差异）</li>
+            <li>他人绑定建筑（<code>_playerlink</code> 非本人）不可换肤；地上掉落物不可换肤</li>
+            <li>百宝相关换肤特效针对部分 prefab 做了偏移/缩放（如 [[万物百宝]]、[[百宝小型]]、[[百宝炊具]]、[[百宝背包]]、[[百宝灯]]、[[星星灯笼]]、[[水晶蜡烛]]、[[星槎护符]]、[[饭桌]] 等）</li>
+            <li>[[万物百宝]]若处于全息投影魔方皮肤，扫把会读取魔方当前映射的皮肤再切换</li>
+            <li>虫洞、洞穴出入口等仍支持成对换肤（与原版扫把相同）</li>
+        </ul>
+
+        <p><b>其它：</b>换肤成功播放清洁扫把 FX 并延迟触发 <code>reskinned</code> 事件（供百宝灯、背包等刷新外观）；可作中等燃料；主模式与复制信息随物品存档。</p>
+    `,
+    "zhei_baibao_detector_item": `
+        <p><b>百宝探测器</b>（物品 <code>zhei_baibao_detector_item</code>，放置后为 <code>zhei_baibao_detector</code>）参考原版档案馆共振器，用于<b>一次扫描同时指示多个重要目标</b>。</p>
+
+        <p><b>制作配方：</b>石头 × 5 + 电子元件 × 2 + [[星星碎片]] × 1</p>
+        <p><b>制作科技：</b>炼金引擎（二本）；百宝结构 / 工具栏</p>
+
+        <p><b>使用方法：</b></p>
+        <ul>
+            <li>从物品栏<b>部署</b>到地面 → 播放放置动画，约 <b>5 秒</b>后开始扫描（扫描半径极大，等效<b>全图</b>）</li>
+            <li>找到目标后：本体转向<b>最近</b>目标并发射光束；在每个目标方向地面生成<b>箭头标记</b>（<code>zhei_baibao_detector_base</code>），持续 <b>30 秒</b></li>
+            <li>扫描结束（无论是否找到）消耗 <b>1</b> 次耐久；未找到时进入 idle 循环动画</li>
+            <li>处于 idle 状态时可<b>收起</b>为物品（便携结构 dismantle），耐久按比例保留；部署者靠近时会自动收回背包</li>
+        </ul>
+
+        <p><b>可同时探测的目标：</b></p>
+        <table style="border-collapse:collapse; width:100%; max-width:560px; margin:8px 0; font-size:0.95em;">
+            <tr style="background:#f5f5f5;"><td style="border:1px solid #ccc; padding:6px;"><b>目标</b></td><td style="border:1px solid #ccc; padding:6px;"><b>说明</b></td><td style="border:1px solid #ccc; padding:6px;"><b>标记颜色</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">流浪商人</td><td style="border:1px solid #ccc; padding:6px;">含剧情藏起来（<code>RemoveFromScene</code>）时仍可定位；也会查 <code>wanderingtraderspawner</code></td><td style="border:1px solid #ccc; padding:6px;">白</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">[[太阳雕像珍品]]</td><td style="border:1px solid #ccc; padding:6px;"><code>zhei_sunsculpture1</code>，须在地上且非 limbo</td><td style="border:1px solid #ccc; padding:6px;">橙</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">[[月食雕像珍品]]</td><td style="border:1px solid #ccc; padding:6px;"><code>zhei_moon_statue1</code></td><td style="border:1px solid #ccc; padding:6px;">紫</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">艾力冈之剑</td><td style="border:1px solid #ccc; padding:6px;">掉落在地上的 <code>agronssword</code></td><td style="border:1px solid #ccc; padding:6px;">红</td></tr>
+        </table>
+
+        <p><b>耐久与拆除：</b></p>
+        <ul>
+            <li>共 <b>10</b> 次；耗尽后小型坍塌 FX 并消失</li>
+            <li>锤子拆除（工作量 3）按拆解配方返还：石头 × 5 + 电子元件 × 2 + [[星星碎片]] × 1</li>
+        </ul>
+
+        <p><b>音效 / 动画：</b>复用 grotto 档案馆共振器的放置、扫描、光束与收起音效。</p>
+    `,
+    "zhei_superpack_wrap_chaos": `
+        <p><b>百宝迁移装置·混沌</b>（预制体 <code>zhei_superpack_wrap_chaos</code>）是百宝迁移<b>打包纸</b>（<code>zhei_superpack_wrap</code>）经[[混沌水晶]]变异后的<b>永久工具</b>：外观、动画与普通迁移纸相同，但带有 <code>zhei_superpack_wrap_chaos</code> 标签，且成功「迁移」后<b>不再消耗自身</b>。</p>
+
+        <p><b>与普通纸 / 包裹的区别：</b></p>
+        <ul>
+            <li><b>zhei_superpack_wrap</b>（普通打包纸）：远古科技制作（捆绑包装 + 金块 + 绳子），可堆叠；每次迁移 -1 张</li>
+            <li><b>zhei_superpack_wrap_chaos</b>（本条目）：混沌变异获得，<b>不可堆叠</b>；迁移不消耗</li>
+            <li><b>zhei_superpack</b>（迁移产物）：打包后生成的「xxx包裹」，可 unwrap 或<b>栽种</b>部署还原实体——不是本条目</li>
+        </ul>
+
+        <p><b>获取：</b></p>
+        <ul>
+            <li>先制作普通百宝迁移打包纸（配方见[[百宝迁移装置]]词条）</li>
+            <li>手持[[混沌水晶]]，对物品栏中<b>已拿在手上</b>的普通打包纸右键，选择<b>「混沌迁移」</b>（动作 <code>ZHEI_CHAOS_MUTATE_SUPERPACK</code>）</li>
+            <li>消耗 1 颗混沌水晶；无论当时叠有多少张普通纸，成功时<b>只保留 1 张</b>混沌纸</li>
+            <li>已是混沌版或条件不符时会提示「无法将百宝迁移装置混沌化」</li>
+        </ul>
+
+        <p><b>使用方法（迁移）：</b></p>
+        <ul>
+            <li>手持混沌打包纸，对<b>场景中</b>或<b>物品栏里</b>符合条件的目标右键，选择<b>「迁移」</b>（<code>ZHEI_MIGRATE</code>，有效距离约 20）</li>
+            <li>目标被移除，并在你的物品栏生成名为「<i>目标名</i>包裹」的 <code>zhei_superpack</code></li>
+            <li><b>混沌版关键差异：</b>代码在迁移成功后<b>不会</b> <code>Remove</code> 手中的打包纸，可反复迁移；普通纸会扣 1 张</li>
+        </ul>
+
+        <p><b>可迁移目标（CanBundleItem）：</b></p>
+        <ul>
+            <li><b>默认（模组配置关闭「打包所有物品」）：</b>[[万物百宝]]（tc_chest）、[[百宝小型]]（tc_chest_small）、[[月食雕像仿品]]（zhei_moon_statue）</li>
+            <li><b>配置开启后：</b>凡带 <code>inspectable</code>、且不是玩家/角色/已是 bundle/包裹类（unwrappable）的可检视实体，范围更广（仍不能打包包裹本身）</li>
+            <li>具体开关见模组配置「百宝迁移装置允许打包所有物品」（<code>ZHEI_SUPERPACK_ALLOW_ALL</code>）</li>
+        </ul>
+
+        <p><b>产出包裹（zhei_superpack）特性：</b></p>
+        <ul>
+            <li><b>unwrap：</b>解开取回内容，并掉落 1 张蜡纸（waxpaper）</li>
+            <li><b>栽种部署：</b>在地面部署可还原被打包的实体（含容器内物品状态）</li>
+            <li><b>放置预览：</b>百宝模组建筑优先用 <code>prefab_placer</code>；其它物品若无 placer 则尝试读取 bank/build/anim 用动态放置器预览</li>
+            <li><b>传送门：</b>若打包前目标与其它传送门成对绑定，会写入包裹并在部署时恢复链接</li>
+        </ul>
+
+        <p><b>与普通打包纸对照：</b></p>
+        <table style="border-collapse:collapse; width:100%; max-width:640px; margin:8px 0; font-size:0.95em;">
+            <tr style="background:#f5f5f5;"><td style="border:1px solid #ccc; padding:6px; width:120px;"><b>项目</b></td><td style="border:1px solid #ccc; padding:6px;"><b>普通打包纸</b></td><td style="border:1px solid #ccc; padding:6px;"><b>百宝迁移装置·混沌</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">堆叠</td><td style="border:1px solid #ccc; padding:6px;">可堆叠</td><td style="border:1px solid #ccc; padding:6px;"><b>不可堆叠</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">每次迁移</td><td style="border:1px solid #ccc; padding:6px;">消耗 1 张</td><td style="border:1px solid #ccc; padding:6px;"><b>不消耗</b></td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">迁移逻辑</td><td style="border:1px solid #ccc; padding:6px;" colspan="2">相同（产出 zhei_superpack、目标范围一致）</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">沉水</td><td style="border:1px solid #ccc; padding:6px;" colspan="2">均不沉水；可浮水</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:6px;">燃料</td><td style="border:1px solid #ccc; padding:6px;" colspan="2">中等燃料；可燃烧、作祟点燃</td></tr>
+        </table>
+
+        <p><span style="color:#666;">检视文案：被混沌侵蚀的迁移装置——多张叠放变异后合并为一张，不可再堆叠；每次迁移不消耗自身，可反复使用。</span></p>
     `,
     "zhei_eclipserelics": `
         <p><b>月食遗物</b>是月亮上掉落的某种东西，或许有什么大作用。</p>
@@ -1686,10 +1944,10 @@ const detailData = {
         </table>
     `,
     "zhei_exp_stardust": `
-        <p><b>经验星尘</b>（zhei_exp_stardust）— 星澜角色模组 zhei_xinglan</p>
+        <p><b>经验星尘</b> — [[星澜]]专用成长道具。</p>
         <table style="border-collapse:collapse; width:100%; max-width:640px; margin:12px 0;">
-            <tr><td style="border:1px solid #ccc; padding:8px; width:72px; vertical-align:top;"><b>定位</b></td><td style="border:1px solid #ccc; padding:8px;">星澜（zhei_xinglan）专用成长道具：只有星澜吃掉才会加经验，每颗 <b>+50</b>。</td></tr>
-            <tr><td style="border:1px solid #ccc; padding:8px; vertical-align:top;"><b>掉落</b></td><td style="border:1px solid #ccc; padding:8px;">星澜击 Boss 掉落，按概率额外掉落 1 个经验星尘（默认概率 <b>30%</b>）。</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px; width:72px; vertical-align:top;"><b>定位</b></td><td style="border:1px solid #ccc; padding:8px;">只有[[星澜]]吃掉才会加经验，每颗 <b>+50</b>。</td></tr>
+            <tr><td style="border:1px solid #ccc; padding:8px; vertical-align:top;"><b>掉落</b></td><td style="border:1px solid #ccc; padding:8px;">星澜<b>击杀</b> epic / 雕像 Boss 时按概率额外掉落 1 颗（默认 <b>30%</b>，可配置）；<b>助攻</b>（对该 Boss 实体造成有效攻击后由他人击杀）同样可结算。马蹄铁等幸运可饱和提高概率。</td></tr>
             <tr><td style="border:1px solid #ccc; padding:8px; vertical-align:top;"><b>其它</b></td><td style="border:1px solid #ccc; padding:8px;">可食用、可堆叠（最大 <b>20</b>）；地面有淡天蓝微光。</td></tr>
         </table>
     `,
@@ -1782,7 +2040,7 @@ const detailData = {
         </ul>
     `,
     "zhei_displaytable": `
-        <p><b>展示柜</b>是能展示物品的容器建筑，提供物品展示、自动收集、整理、升级等功能。适合用于基地装饰和物品管理。</p>
+        <p><b>展示柜</b>是能展示物品的容器建筑，提供物品展示、<b>全图收集</b>、整理、升级等功能。适合用于基地装饰和物品管理。</p>
         
         <p><b>图片展示：</b></p>
         <div style="text-align:center; margin: 15px 0;">
@@ -1803,23 +2061,20 @@ const detailData = {
             <li>展示机制：前11个槽位的物品会在建筑上显示图标</li>
         </ul>
         
-        <p><b>自动收集功能：</b></p>
+        <p><b>收集按钮：</b></p>
         <ul>
-            <li>收集时机：关闭容器时自动收集</li>
-            <li>收集范围：半径 <b>12格</b></li>
-            <li>收集条件：
-                <ul>
-                    <li>只收集容器中已有的物品（可以堆叠）</li>
-                    <li>可堆叠物品：直接收集</li>
-                    <li>不可堆叠物品：检查是否有空位再收集</li>
-                </ul>
-            </li>
-            <li>兼容性：兼容防卡模组（不收集鸟笼中的鸟）</li>
+            <li>打开展示柜 UI 后，界面下方左侧为<b>「收集」</b>按钮（悬停提示：<b>全图收集</b>）</li>
+            <li>点击后触发一次<b>全图扫描</b>（<code>DoCollect(true)</code>，与[[百宝小型]]手动点收集相同），不是关容器时自动收，也<b>没有 12 格半径</b>限制</li>
+            <li><b>收集规则：</b>只吸入<b>展示柜里已经有的 prefab</b>（同类堆叠进格；不可堆叠物须有空位）</li>
+            <li><b>额外：</b>若柜内已有垃圾类/预加工食物等（与万物百宝橙宝石收集相同的 rubbish 规则），也会一并吸</li>
+            <li><b>不会收集：</b>已被拾取/在容器中的物品；鸟笼诱饵、陷阱 bait 等「占用中」物品；饭桶/真饭桶抛物飞行中（<code>zhei_wetgoop_exclude_autocollect</code> 等）；模组配置关闭时的小动物</li>
+            <li><b>兼容：</b>与万物百宝共用收集缓存，不吸鸟笼内鸟等（与防卡逻辑一致）</li>
         </ul>
         
-        <p><b>整理功能：</b></p>
+        <p><b>整理按钮：</b></p>
         <ul>
-            <li>整理按钮：容器界面有整理按钮</li>
+            <li>界面下方右侧<b>「整理」</b>按钮（悬停：整理展示柜中的物品）</li>
+            <li>对 25 格按万物百宝左侧相同的 <code>PreciseClassification</code> 规则分类排序，并优先合并同类</li>
         </ul>
         
         <p><b>升级功能：</b></p>
@@ -1834,9 +2089,8 @@ const detailData = {
             <li>建议：放置在基地，用于展示收藏品</li>
             <li>技巧：
                 <ul>
-                    <li>使用整理功能快速整理物品</li>
-                    <li>使用升级功能启用无限堆叠</li>
-                    <li>利用自动收集功能收集周围物品</li>
+                    <li>先放入要收纳的物品种类，再点<b>收集</b>做全图同类回收</li>
+                    <li>使用<b>整理</b>合并堆叠；可用弹性空间扩展器启用无限堆叠</li>
                 </ul>
             </li>
         </ul>
@@ -2148,13 +2402,13 @@ const detailData = {
         </ul>
     `,
     "zhei_xinglan_portablecookpot_item": `
-        <p><b>星空盛宴</b>（zhei_xinglan_portablecookpot_item）是[[星澜]]的专属便携锅，集<b>研磨</b>、<b>烹饪</b>、<b>调味</b>于一体。</p>
+        <p><b>星空盛宴</b>是[[星澜]]的专属便携锅，集<b>研磨</b>、<b>烹饪</b>、<b>调味</b>于一体。</p>
         
         <p><b>制作条件：</b></p>
         <ul>
-            <li>角色条件：仅[[星澜]]可制作（三级解锁）</li>
-            <li>科技条件：太阳雕像科技</li>
-            <li>配方：[[星星粉尘]] × 10 + [[熊猫棕子]] × 8 + [[经验星尘]] × 5</li>
+            <li>角色条件：仅[[星澜]]可制作（<b>一级</b>解锁）</li>
+            <li>科技条件：炼金引擎（二本）</li>
+            <li>配方：[[星星粉尘]] × 10 + [[熊猫棕子]] × 8 + 蓝宝石 × 2</li>
         </ul>
         
         <p><b>核心功能：</b></p>
@@ -2166,18 +2420,48 @@ const detailData = {
             <li><b>进度保持：</b>收回/再部署会保留容器内容、开关状态与计时进度</li>
         </ul>
         
-        <p><b>联机说明：</b></p>
+        <p><b>使用方法：</b></p>
+        <ol>
+            <li>[[星澜]]一级后在人物栏制作，随身携带或部署到地面</li>
+            <li>打开锅界面，上方分别开关<b>研磨 · 烹饪 · 调味</b>（可单独或组合使用）</li>
+            <li><b>研磨：</b>原料放入研磨格，开启后产出调料；支持原版盐/椒/蒜/蜜及棱镜、能力勋章、丰耘秘境等原料</li>
+            <li><b>烹饪：</b>四格食材放入烹饪区并开启「烹饪」；界面会预览将做出的菜（不必放满四格）</li>
+            <li><b>调味：</b>成品 + 调料放入对应格，开启后产出调味版料理</li>
+            <li>下方 6×3 储物格可备料；点「整理」归类顺序与[[万物百宝]]大箱相同</li>
+            <li>收回再部署会保留格内物品、开关状态与计时进度；队友也可使用已部署的锅</li>
+        </ol>
+
+        <p><b>棱镜月相四件套（本锅特色）：</b></p>
         <ul>
-            <li>虽然制作权限是星澜专属，但锅本体放下后队友也可以使用</li>
-            <li>适合多人分工：星澜负责制作，队友负责补料和取菜</li>
+            <li>安装<b>棱镜</b>后，本锅可<b>无视月圆</b>制作月相四件套，不必等棱镜月炆宝炊的月圆条件</li>
+            <li>限制改为<b>白天 / 黑夜</b>（看游戏内昼夜，不是月相盘上的月亮形态）：
+                <ul>
+                    <li><b>白天</b>可做：<b>月饼</b>、<b>月酿</b></li>
+                    <li><b>黑夜</b>可做：<b>花儿粑</b>、<b>花儿酒</b></li>
+                </ul>
+            </li>
+            <li>食材搭配仍按棱镜规则（需棱镜花瓣等），只是时间与锅具不同</li>
+        </ul>
+
+        <p><b>其它烹饪说明：</b></p>
+        <ul>
+            <li>除上述四道菜外，「烹饪」侧走<b>沃利便携烹饪锅</b>食谱池；其它模组料理须写入该池才能制作</li>
+            <li>[[星澜]] 2 级起从任意锅收菜有概率额外获得调味版，本锅收菜同样适用</li>
+        </ul>
+
+        <p><b>与其他模组联动：</b></p>
+        <ul>
+            <li><b>能力勋章 / 丰耘秘境：</b>研磨侧合并对应调味原料规则</li>
+            <li>若安装了 ShowMe 或 Insight，悬停可查看格内腐烂与锅内保鲜信息</li>
+            <li>更多人物级联动见 [[星澜]]词条「与其他模组联动」</li>
         </ul>
     `,
     "zhei_xinglan_starsky_umbrella": `
-        <p><b>星空伞</b>（zhei_xinglan_starsky_umbrella）是[[星澜]]的折跃传送道具，可与[[星空基站套装]]构成传送网络。</p>
+        <p><b>星空伞</b>是[[星澜]]的折跃传送道具，可与[[星空基站套装]]构成传送网络。</p>
         
         <p><b>制作条件：</b></p>
         <ul>
-            <li>角色条件：[[星澜]]二级解锁</li>
+            <li>角色条件：[[星澜]]<b>一级</b>解锁</li>
             <li>科技条件：炼金引擎（二本）</li>
             <li>配方：蜘蛛丝 × 2 + 金块 × 2 + 电子元件 × 1</li>
         </ul>
@@ -2192,15 +2476,15 @@ const detailData = {
         <p><b>能量与联机：</b></p>
         <ul>
             <li>可用[[星星碎片]]补充能量（每次约恢复 5%）</li>
-            <li>支持携带附近队友一同传送</li>
+            <li>支持携带附近约 <b>3 格</b>内队友一同传送</li>
         </ul>
     `,
     "zhei_xinglan_starsky_pad_item": `
-        <p><b>星空基站套装</b>（zhei_xinglan_starsky_pad_item）是可部署的传送站道具，部署后生成[[星空基站]]，作为星空伞的折跃锚点。</p>
+        <p><b>星空基站套装</b>是可部署的传送站道具，部署后生成[[星空基站]]，作为星空伞的折跃锚点。</p>
         
         <p><b>制作条件：</b></p>
         <ul>
-            <li>角色条件：[[星澜]]二级解锁</li>
+            <li>角色条件：[[星澜]]<b>一级</b>解锁</li>
             <li>科技条件：炼金引擎（二本）</li>
             <li>配方：石砖 × 2 + 齿轮 × 1 + 金块 × 2</li>
         </ul>
@@ -2219,7 +2503,7 @@ const detailData = {
         </ul>
     `,
     "zhei_chun_books": `
-        <p><b>春分</b>（zhei_chun_books）是[[星澜]]四季书之一，仅星澜可诵读的季节法典。</p>
+        <p><b>春分</b>是[[星澜]]四季书之一，仅星澜可诵读的季节法典。</p>
         <ul>
             <li><b>解锁：</b>[[星澜]]四级 + 太阳雕像科技</li>
             <li><b>配方：</b>莎草纸 × 5 + 食人花肉茎球 × 1 + 彩虹宝石 × 1 + [[经验星尘]] × 3</li>
@@ -2228,7 +2512,7 @@ const detailData = {
         </ul>
     `,
     "zhei_summer_books": `
-        <p><b>夏立</b>（zhei_summer_books）是[[星澜]]四季书之一，仅星澜可诵读的季节法典。</p>
+        <p><b>夏立</b>是[[星澜]]四季书之一，仅星澜可诵读的季节法典。</p>
         <ul>
             <li><b>解锁：</b>[[星澜]]四级 + 太阳雕像科技</li>
             <li><b>配方：</b>莎草纸 × 5 + 红眼冠（COTL 饰品）× 1 + 彩虹宝石 × 1 + [[经验星尘]] × 3</li>
@@ -2237,7 +2521,7 @@ const detailData = {
         </ul>
     `,
     "zhei_qiu_books": `
-        <p><b>秋收</b>（zhei_qiu_books）是[[星澜]]四季书之一，仅星澜可诵读的季节法典。</p>
+        <p><b>秋收</b>是[[星澜]]四季书之一，仅星澜可诵读的季节法典。</p>
         <ul>
             <li><b>解锁：</b>[[星澜]]四级 + 太阳雕像科技</li>
             <li><b>配方：</b>莎草纸 × 5 + 熊皮 × 1 + 彩虹宝石 × 1 + [[经验星尘]] × 3</li>
@@ -2246,12 +2530,70 @@ const detailData = {
         </ul>
     `,
     "zhei_dong_books": `
-        <p><b>冬藏</b>（zhei_dong_books）是[[星澜]]四季书之一，仅星澜可诵读的季节法典。</p>
+        <p><b>冬藏</b>是[[星澜]]四季书之一，仅星澜可诵读的季节法典。</p>
         <ul>
             <li><b>解锁：</b>[[星澜]]四级 + 太阳雕像科技</li>
             <li><b>配方：</b>莎草纸 × 5 + 麋鹿茸 × 1 + 彩虹宝石 × 1 + [[经验星尘]] × 3</li>
             <li><b>效果：</b>读完后将世界季节引向冬季</li>
             <li><b>限制：</b>仅星澜可读，薇克巴顿与其他角色不可用</li>
+        </ul>
+    `,
+    "tips": `
+        <h3 style="margin:0 0 0.8em; color:#c0392b;">一、实用技巧</h3>
+        <p>想到啥写啥，供开荒与日常参考。</p>
+        <ol>
+            <li>若有幸得到[[紫水晶剑]]，再吃[[八角玄冰棕]]，配合潮湿加成，能体验「刀刀烈火」的爽感。</li>
+            <li>[[混沌水晶]]是什么？模组里有一位神秘男子，给予特定物品后可发挥奇妙效果——详见[[混沌水晶]]词条。</li>
+            <li>[[千机伞]]想跳劈更丝滑？试试<b>关闭延迟补偿</b>，改为<b>点按</b>攻击键触发。</li>
+            <li>纯粹辉煌配合[[万物百宝]]非常强：140 格超大书架、三倍耐久修理等，后期省心不少。</li>
+            <li>想「挥挥手」就吃上饭？用[[真饭桶]]连冰箱带锅，一键下锅。</li>
+            <li>不想被猴子变成小力士？快吃[[火焰牛排]]。</li>
+            <li>嫌划船出海麻烦？装备[[封印之杖]]可<b>水上行走</b>，还能穿障探索，不必一直划船。</li>
+            <li>传说混沌之力可令[[紫水晶剑]]、[[紫水晶刀]]融合升级（手持[[混沌水晶]]强化为无限耐久）。</li>
+            <li>想要可爱的海绵宝宝皮肤？欢迎加入万物百宝官方群：<b>808847558</b>。</li>
+            <li>向[[太阳雕像仿品]]献祭料理，可触碰到混沌的力量（获得[[混沌水晶]]等）。</li>
+            <li>想大量刷木头、大理石？集中种植 + [[羽扇]]（或[[羽扇混沌]]）或许是正解。</li>
+            <li>地里菜烂了？用[[封印之杖2]]的<b>施肥</b>法术照料农田。</li>
+            <li>通过太阳的试炼（[[太阳雕像仿品]]相关流程），可获得随意穿梭时空的能力——[[星空伞]]、[[解密后的星空]]等。</li>
+            <li>想快乐种地、分分钟巨大化？交给万物百宝：[[万物百宝]]绿宝石照料、[[百宝鼎]]灵药等。</li>
+            <li>与建家党联动的[[星槎护符]]，非常适合喜欢建家的玩家。</li>
+            <li>吃下[[相思断肠糕]]，可在濒死时挽救队友（自动救援类效果）。</li>
+            <li>[[酸辣土豆丝]]能为沃尔夫冈提供<b>额外 80%</b>的料理回复，大力士专属福利。</li>
+            <li>[[封印之杖]]、[[封印之杖2]]、[[百宝花杖]]等是非常方便的万用工具：采集、建造、烹饪、农场管理、施肥……</li>
+            <li>百宝的趣味料理（如[[八角玄冰棕]]、[[火焰牛排]]、[[熊猫棕子]]等）真的能解决大部分烦恼。</li>
+            <li>[[玉食盒]]、[[百宝背包]]、[[展示柜]]、[[白熊冰箱]]等可用原版<b>弹性空间扩展器</b>升级为无限堆叠（敲掉容器会返还扩展器；白熊冰箱默认须先升级，也可用棱镜月石角撑）</li>
+            <li>[[万物百宝]]的<b>橙色宝石</b>全图自动收集，特别适合各类资源工厂收纳。</li>
+            <li>[[混沌水晶]]与丰耘秘境的<b>自然亲和子塔</b>融合，可解锁<b>无限耐久</b>（详见[[混沌水晶]]）。</li>
+        </ol>
+
+        <h3 style="margin:1.2em 0 0.8em; color:#c0392b;">二、快速获得[[万物百宝]]</h3>
+        <p>百宝是本模组核心建筑，早点做出来能极大改善体验。</p>
+        <p><b>需要什么</b></p>
+        <ul>
+            <li>制作配方：[[月食遗物]] × 2 + [[太阳火种]] × 2 + 金块 × 50</li>
+            <li>科技：[[太阳雕像仿品]]（太阳雕像四阶）</li>
+            <li><b>[[太阳火种]]：</b>击杀龙蝇掉落；月圆夜采集格罗姆之花；或向[[太阳雕像仿品]]献祭[[火焰牛排]]兑换（有冷却）</li>
+            <li><b>[[月食遗物]]：</b>向[[月食雕像仿品]]献祭[[八角玄冰棕]]等；流程与太阳线类似，需下洞找[[月食雕像珍品]]</li>
+        </ul>
+        <p><b>推荐流程（太阳线）</b></p>
+        <ol>
+            <li>准备[[八角玄冰棕]]等百宝料理，配合土豆甲等续航，<b>击杀龙蝇</b>拿到[[太阳火种]]</li>
+            <li>用火种在[[太阳雕像珍品]]处换取<b>仿品雕像图纸</b></li>
+            <li>制作[[太阳雕像仿品]]，献祭[[火焰牛排]]等方式持续获取火种</li>
+            <li>反复击败龙蝇、积累材料，凑齐仿品与献祭所需</li>
+            <li>月食线：下洞找[[月食雕像珍品]] → 换图纸 → 建[[月食雕像仿品]] → 献祭[[八角玄冰棕]]等换[[月食遗物]]</li>
+            <li>材料齐备后，在[[太阳雕像仿品]]旁制作[[万物百宝]]</li>
+        </ol>
+        <p>掌握「珍品 → 仿品 → 献祭换材料 → 做百宝」这条链，就能源源不断造出百宝相关建筑与资源。</p>
+
+        <h3 style="margin:1.2em 0 0.8em; color:#c0392b;">三、能力勋章懒人刷包裹</h3>
+        <p><span style="color:#666;">仅限同时爱玩多模组的朋友。</span></p>
+        <p><b>前置模组：</b>能力勋章、丰耘秘境、万物百宝、棱镜。</p>
+        <ul>
+            <li>较舒适地刷取<b>能力勋章包裹</b>与<b>不朽果实</b>等后期资源</li>
+            <li>丰耘秘境的<b>自然亲和子塔</b>经[[混沌水晶]]强化后变为<b>无限耐久</b></li>
+            <li>棱镜的<b>子圭崇明</b>在水肥充足时，可长期挂机刷材料</li>
+            <li>玩[[星澜]]时，佩戴原版<b>幸运马蹄铁</b>等可提升[[经验星尘]] Boss 掉落概率；助攻击杀同样可结算，详见[[星澜]]词条</li>
         </ul>
     `
 };
