@@ -174,6 +174,7 @@
             <li><a href="#elixirs">🧪 灵药篇</a></li>
             <li><a href="#materials">📦 材料篇</a></li>
             <li><a href="#container">📋 容器篇</a></li>
+            <li><a href="#tips">💡 使用小技巧</a></li>
             <li><a href="#boss">👹 专属BOSS</a></li>
             <li><a href="#character">🎭 专属角色</a></li>
             <li><a href="#terrain">⛰️ 专属地形</a></li>
@@ -191,6 +192,7 @@
         <section id="elixirs" class="wiki-section"><h2 class="section-title">灵药篇</h2><div class="grid" id="grid-elixirs"></div></section>
         <section id="materials" class="wiki-section"><h2 class="section-title">材料篇</h2><div class="grid" id="grid-materials"></div></section>
         <section id="container" class="wiki-section"><h2 class="section-title">容器篇</h2><div class="grid" id="grid-container"></div></section>
+        <section id="tips" class="wiki-section"><h2 class="section-title">💡 使用小技巧</h2><div class="grid" id="tips-grid"></div></section>
         
         <section id="boss" class="wiki-section"><h2 class="section-title">专属BOSS</h2><div class="grid" id="boss-grid"></div></section>
         <section id="character" class="wiki-section"><h2 class="section-title">专属角色</h2><div class="grid" id="character-grid"></div></section>
@@ -215,6 +217,7 @@
 <script src="characterData.js"></script>
 <script src="terrainData.js"></script>
 <script src="logData.js"></script>
+<script src="tipsData.js"></script>
 <script src="modConfigData.js"></script>
 <script src="detailData.js"></script> <script>
 const parseLinks = (text) => {
@@ -230,10 +233,10 @@ function openModal(id, name) {
     const header = document.getElementById("modal-header");
     
     header.innerText = name + " - 详细资料";
-    const content = (typeof detailData !== 'undefined' && detailData[id]) ? 
+    const raw = (typeof detailData !== 'undefined' && detailData[id]) ? 
                     detailData[id] : `<p>暂无关于 <b>${name}</b> 的详细文字介绍。</p>`;
     
-    body.innerHTML = content;
+    body.innerHTML = parseLinks(raw);
     modal.style.display = "block";
 }
 
@@ -287,6 +290,7 @@ function renderAll() {
     }
 
     const extraModules = [
+        { data: typeof tipsData !== 'undefined' ? tipsData : [], id: 'tips-grid' },
         { data: typeof bossData !== 'undefined' ? bossData : [], id: 'boss-grid' },
         { data: typeof characterData !== 'undefined' ? characterData : [], id: 'character-grid' },
         { data: typeof terrainData !== 'undefined' ? terrainData : [], id: 'terrain-grid' }
