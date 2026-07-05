@@ -155,6 +155,22 @@ const modConfigData = [
         options: '1倍（正常速度）、2-10倍、15倍、20倍、500倍',
         defaultValue: '5倍',
         description: '设置神秘腐烂箱中物品的腐烂速度倍数，控制腐烂箱加速腐烂的效果'
+    },
+    {
+        id: 'ZHEI_FARMGOD_WORK_RADIUS',
+        name: '百宝种地的神工作半径',
+        category: '其他物品相关',
+        options: '10、12、14、16（默认）、18、20、24、32 码',
+        defaultValue: '16 码',
+        description: '同时影响[[星塔]]工作圈范围与[[百宝种地的神]]的农活半径（放置星塔时可预览该圈）'
+    },
+    {
+        id: 'ZHEI_FARM_ZONE_CONVERT_TIME',
+        name: '星塔转化时间',
+        category: '其他物品相关',
+        options: '30 秒、1 分钟、5 分钟、8 分钟（默认）、3 游戏天',
+        defaultValue: '8 分钟',
+        description: '[[星塔]]格内批量转化的默认耗时；仅木头→木炭固定 3 秒；格内任一有耐久物则整批固定 8 分钟'
     }
 ];
 
