@@ -171,6 +171,14 @@ const modConfigData = [
         options: '30 秒、1 分钟、5 分钟、8 分钟（默认）、3 游戏天',
         defaultValue: '8 分钟',
         description: '[[星塔]]格内批量转化的默认耗时；仅木头→木炭固定 3 秒；格内任一有耐久物则整批固定 8 分钟'
+    },
+    {
+        id: 'ZHEI_WA_REMOTE_CMD_RADIUS',
+        name: '种地神遥控器指挥范围',
+        category: '其他物品相关',
+        options: '32 码、48 码（默认）、全图（0）',
+        defaultValue: '48 码',
+        description: '[[种地神遥控器]]「休息」「开始工作」生效范围：0 为全图所有种地神；大于 0 时仅指挥玩家附近该距离内的种地神'
     }
 ];
 
