@@ -94,11 +94,19 @@ const modConfigData = [
     },
     {
         id: 'ZHEI_FOODSBOX_FRESH_RATE',
-        name: '玉食盒反鲜速率',
+        name: '玉食盒/好运石反鲜速率',
         category: '其他物品相关',
         options: '5%（默认）、10%、15%、20%、25%、30%、40%、50%、60%、70%、80%、90%、100%、120%、150%、200%',
         defaultValue: '5%（0.05）',
-        description: '设置玉食盒的反鲜速率，控制玉食盒恢复食物新鲜度的速度'
+        description: '设置[[玉食盒]]与[[好运石]]容器的反鲜速率，控制恢复食物新鲜度的速度'
+    },
+    {
+        id: 'ZHEI_GOOD_LUCK_SOAK_REGEN',
+        name: '好运池泡澡回血回san速度',
+        category: '其他物品相关',
+        options: '0.5x、0.75x、1x（默认）、1.25x、1.5x、2x、3x',
+        defaultValue: '1x（默认：血+5/秒、san+2.5/秒）',
+        description: '调节[[好运池]]泡澡时的回血与回 san 速度倍数'
     },
     {
         id: 'ZHEI_SUPERPACK_ALLOW_ALL',
